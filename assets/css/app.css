@@ -1,0 +1,84 @@
+html {
+    overflow-y: scroll;
+}
+body {
+	margin: 0;
+    font-family: sans-serif;
+    background: url(/images/shinki.jpg) center no-repeat fixed;
+    background-size: cover;
+}
+* {
+	color: #fff;
+	text-decoration: none;
+}
+main {
+    margin: 0px auto 0px auto;
+    max-width: 100%;
+    min-width: 90%;
+}
+.content {
+    background-color: #222;
+    box-shadow: 4px 4px 4px 2px #888;
+    opacity: 0.9;
+    padding: 15px;
+}
+h1 {
+    margin-top: 64px;
+    font-size: 40px;
+}
+.moverdowner {
+	height: 0;
+	background-color: #222;
+}
+.header {
+	background-color: #222;
+	box-shadow: 1px 1px 4px 0 #888;
+    position: absolute;
+	width: 100%;
+    z-index: 1;
+}
+.header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: #222;
+}
+.header ul .subpage {
+	display: block;
+	text-decoration: none;
+}
+.header ul .subpage:not(.flag_container) {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 58px;
+}
+.header ul .subpage:hover, .menu-icon:hover, .lang-icon:hover {
+	background-color: #444;
+}
+.header ul .subpage:active, .menu-icon:active, .lang-icon:active {
+	background-color: #888;
+}
+@media (min-width: 1050px) {
+    content {
+        margin-top: 40px;
+        max-width: fit-content;
+    }
+    h1 {
+        margin-top: inherit;
+    }
+    .header li {
+		float: left;
+	}
+    .header .menu, .header .languages {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+    .header ul .subpage {
+		border-left: 1px solid #888;
+	}
+    .moverdowner {
+		height: 58px;
+	}
+}
