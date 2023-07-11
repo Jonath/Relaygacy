@@ -17,7 +17,14 @@ defmodule RelaygacyWeb.Router do
   scope "/", RelaygacyWeb do
     pipe_through :browser
 
-    get "/", WelcomeController, :home
+    get "/", PageController, :home
+    get "/events", PageController, :events
+    get "/resources", PageController, :resources
+    get "/partners", PageController, :partners
+    get "/credits", PageController, :credits
+    get "/discord", PageController, :discord
+    get "/games/twinklestar", PageController, :twinklestar
+    get "/games/kiohgyoku", PageController, :kiohgyoku
   end
 
   # Other scopes may use custom stacks.

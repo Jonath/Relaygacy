@@ -4,81 +4,221 @@ html {
 body {
 	margin: 0;
     font-family: sans-serif;
-    background: url(/images/shinki.jpg) center no-repeat fixed;
+    background: url(/images/space.png) center no-repeat fixed;
     background-size: cover;
 }
 * {
 	color: #fff;
 	text-decoration: none;
 }
-main {
+section {
     margin: 0px auto 0px auto;
-    max-width: 100%;
-    min-width: 90%;
-}
-.content {
+    width: 70%;
     background-color: #222;
     box-shadow: 4px 4px 4px 2px #888;
     opacity: 0.9;
     padding: 15px;
 }
+section a {
+	color: #19f;
+}
 h1 {
     margin-top: 64px;
     font-size: 40px;
 }
-.moverdowner {
-	height: 0;
-	background-color: #222;
+.separator {
+	height: 120px;
 }
-.header {
+.social {
+    width: 50px;
+    height: 50px;
+}
+header {
 	background-color: #222;
 	box-shadow: 1px 1px 4px 0 #888;
     position: absolute;
 	width: 100%;
     z-index: 1;
 }
-.header ul {
+header ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	overflow: hidden;
 	background-color: #222;
 }
-.header ul .subpage {
+header ul .subpage {
 	display: block;
 	text-decoration: none;
 }
-.header ul .subpage:not(.flag_container) {
+header ul .subpage:not(.flag_container) {
     padding-left: 20px;
     padding-right: 20px;
     line-height: 58px;
 }
-.header ul .subpage:hover, .menu-icon:hover, .lang-icon:hover {
+header ul .subpage:hover, .menu-icon:hover, .lang-icon:hover {
 	background-color: #444;
 }
-.header ul .subpage:active, .menu-icon:active, .lang-icon:active {
+header ul .subpage:active, .menu-icon:active, .lang-icon:active {
 	background-color: #888;
 }
+li.item:not(:last-child) { 
+    margin-bottom: 10px;  
+}
+hr {
+    margin-top: 25px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+figcaption {
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+    color: #BBB;
+}
+.nodot ul {
+    list-style-type: none;
+}
+.nodot ul li {
+    margin: 5px;
+}
+.nodot ul li img {
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+.nodot ul li img .gauge {
+    width: 252px;
+}
+.nodot ul li img .coin {
+    width: 32px;
+}
+.nodot ul li div {
+    margin-left: 35px;
+    margin-bottom: inherit;
+    display: inline-block;
+    width: 400px;
+}
+.box {
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+}
+.purple {
+    background-color: #ff00ff;
+}
+.blue {
+    background-color: #0000ff;
+}
+.green {
+    background-color: #00ff00;
+}
+.yellow {
+    background-color: #ffff00;
+}
+.red {
+    background-color: #ff0000;
+}
+table {
+    margin-left:auto;
+    margin-right:auto
+}
+.noborder {
+    border: none;
+}
+th {
+    font-size: 32px;
+    color: black;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #000
+}
+.character {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url(/images/tss/characters.png);
+}
 @media (min-width: 1050px) {
-    content {
-        margin-top: 40px;
-        max-width: fit-content;
-    }
     h1 {
         margin-top: inherit;
     }
-    .header li {
+    header li {
 		float: left;
 	}
-    .header .menu, .header .languages {
+    header .menu, header .languages {
 		clear: none;
 		float: right;
 		max-height: none;
 	}
-    .header ul .subpage {
+    header ul .subpage {
 		border-left: 1px solid #888;
 	}
-    .moverdowner {
-		height: 58px;
-	}
+    section {
+        max-width: 75%;
+    }
+    #s {
+        background:radial-gradient(#8b0000,#c54500,#ff8c00)
+    }
+    #a {
+        background:radial-gradient(#ff8c00,orange,#ff0)
+    }
+    #b {
+        background:radial-gradient(#ff0,#d6ff18,#adff2f)
+    }
+    #c {
+        background:radial-gradient(#adff2f,#57a818,green)
+    }
+    #d {
+        background:radial-gradient(#004040,#006060,teal)
+    }
+    #e {
+        background:radial-gradient(teal,#00bfbf,#0ff)
+    }
+    #meirin {
+        background-position: 120px;
+    }
+    #sprites {
+        background-position: 240px;
+    }
+    #memory {
+        background-position: 360px;
+    }
+    #mevious {
+        background-position: 480px;
+    }
+    #darkran {
+        background-position: 600px;
+    }
+    #griffon {
+        background-position: 720px;
+    }
+    #tinker {
+        background-position: 840px;
+    }
+    #kim {
+        background-position: 960px;
+    }
+    #macky {
+        background-position: 1080px;
+    }
+    #nanja {
+        background-position: 1200px;
+    }
+    #yan {
+        background-position: 1320px;
+    }
+    #schmitt {
+        background-position: 1440px;
+    }
+    #till {
+        background-position: 1560px;
+    }
+    #loadran {
+        background-position: 1680px;
+    }
 }

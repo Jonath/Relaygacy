@@ -1,0 +1,194 @@
+<head>
+  <title>Relaygacy</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <ul class="menu">
+        <li><a class="subpage" href="/">Home</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/resources">Resources</a></li>
+        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/credits">Credits</a></li>
+      </ul>
+    </header>
+    <div class="separator"></div>
+    <section>
+      <h1>Twinkle Star Sprites</h1>
+      <p>
+        Twinkle Star Sprites is a competitive scrolling shooter arcade game first released in 1996, originally created by ADK. It is characterized as
+        the first of its type: a combination of a shoot'em up style with the versus puzzle game genre (PuyoPuyo). This is the oldest entry in our
+        Phantasmagoria tournament event, as it is the one that essentially kickstarted the genre, and its basic gameplay elements.
+      </p>
+      <h2>Gameplay Basics</h2>
+      <h3>Player field</h3>
+      <p>
+        The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
+        to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
+      </p>
+      <h3>Hearts</h3>
+      <img src="/images/tss/hearts.png" class="hearts">
+      <p>
+        You start the game with five hearts. They are your lifeline: if you reach none, you lose the current round.<br>
+        Whenever you are hit, your opponent also gets back some life (half a heart if you hit an enemy, one heart for anything else).
+      </p>
+      <h3>Enemies</h3>
+      <p>
+        As will become the staple of other games in this genre, the player is expected to destroy enemies that arrive from the top and corners of the screen
+        in chains that allow them to send fireball projectiles on the opponent's screen. What essentially causes an enemy being destroyed to chain with others is
+        the fact that they explode on kill in a rather large radius, which also damages other nearby enemies (but not the player).
+      </p>
+      <p>
+        Enemies come in different sizes and colors. The size of the enemy only impacts the size of their on death explosion, which might make it more interesting for
+        someone to concentrate on (as they are both easier to hit and the bigger explosion means more potential for combo chains). The color of enemies, on the other hand,
+        indicates the number of times you have to shoot an enemy before it dies. Here is the list of them, and the associated number of hits necessary for a kill:
+      </p>
+      <div class="nodot">
+        <ul>
+          <li class="box purple"><div>5 hits</div></li>
+          <li class="box blue"><div>4 hits</div></li>
+          <li class="box green"><div>3 hits</div></li>
+          <li class="box yellow"><div>2 hits</div></li>
+          <li class="box red"><div>1 hit</div></li>
+        </ul>
+      </div>
+      <p>
+        Colliding into normal enemies makes you lose one heart, you will also get stunned for a noticeable time. You can be hit again during this stun, however, after recovering
+        from being hit a second time, you get some invincibility frames (as lonk as your character sprite blinks). The game encourages you to recover faster from a stun by mashing
+        buttons and wiggling the directional controls. After recovering from such a stun, your character will be considerably slowed down, and their shot will be weaker, for around
+        5 seconds, before returning to normal. You cannot die from running into normal enemies, only go down to half a heart.
+      </p>
+      <h3>Fireballs</h3>
+      <p>
+        The first time a player destroys enemies in a chain is done sends over Normal Fireballs (vertical) over to the opponent's screen, aimed at them but rather slow.
+        They can be cancelled as well by the enemy's own shot, and in turn, returned back to the first player, however, they have more health than
+        basic enemies, so it may be a bit difficult to take them head on. Because of that, destroying normal enemies next to fireballs is preferable.
+        Doing so reflects them back in the form of Reversal Fireballs (which are also aimed but come at a diagonal angle and with greater speed).
+        Finally, if one player manages to chain at least 3 Reversal Fireballs, a Boss Attack (or EX Attack if a Boss is already present) is sent over to the enemy screen. 
+      </p>
+      <p>
+        This means there is also a strategy element involved: so that to avoid being punished: you may want to minimize Reversal Fireballs sent over to the enemy screen
+        (despite them being able to surprise someone as they are rather fast), especially in times of high enemy density on your screen, as that may expose you to EX
+        attacks and/or Boss attacks coming from your opponent. The way you do that is simple: it only involves you skipping an enemy formation as you wait for the
+        density of elements on the screen to come back down to something more tolerable (namely lower fireball density on your end).
+      </p>
+      <h3>Gauge</h3>
+      <p>
+        The player gauge in this game has 3 levels, which fill up as you chain enemy combos. You can charge it by holding down the shot button, then releasing it
+        to trigger an attack.<br>
+        Here is a list of the attacks charging the gauge up to each level allows:
+      </p>
+      <div class="nodot">
+        <ul>
+          <li><img src="/images/tss/lvl1.png"><div>Level 1: Special shot</div></li>
+          <li><img src="/images/tss/lvl2.png"><div>Level 2: EX attacks (and special shot)</div></li>
+          <li><img src="/images/tss/lvl3.png"><div>Level 3: Boss attack (and special shot)</div></li>
+        </ul>
+      </div>
+      <p>
+        The special shot is useful to clear up massively enemies and fireballs on the screen, however, it should be used sparingly, because killing with it typically
+        doesn't set off a combo chain.<br>
+        The EX attacks can be sent automatically when you chain Reversal Fireballs, however, the lvl2 sends several of them on the opponent's screen
+        (typically 2-4 depending on your character).<br>
+        The boss attack can also be sent automatically when you chain Reversal Fireballs, typically if you attain a Max Combo.
+      </p>
+      <h3>Formations</h3>
+      <p>
+        Twinke Star Sprites has 36 formations that appear throughout the game. When a match begins, your first eight formations will be selected between groups 0-3
+        (formations 0-15). After the eighth formation, the game will only use groups 2-7, placed in a random sequence (for instance 2, 5, 3, 6, 7, 4) and then randomly
+        select one formation from each group until all formations have been used. If the match is still ongoing after that, the game will keep reusing the selected
+        sequence but continue to select a random formation from each group.
+      </p>
+      <img src="/images/tss/formations.png" class="center">
+      <p>
+        Recognizing and understanding the way formations work and how to clear them for max combo is a pretty good way to aggressively swarm the opponent with attacks
+        and is thus one of the main key to victory in this game. <a href="https://www.nicovideo.jp/watch/sm42124804">Here</a> is a pretty good guide on how to optimize
+        each of them (in Japanese).
+      </p>
+      <h3>Bubbles</h3>
+      <p>
+        In the formation spritesheet above, you may see some formations in which enemies have been circled. This indicates these enemies spawn with protective bubbles:
+        they will take one additional shot (to destroy said bubble). However, popping the bubble in itself takes time (around half a second) during which the enemy cannot
+        be damaged. Formations 32-35, which aren't part of basic groups described above, follow an event countdown. In these formations, all enemies spawn with a bubble,
+        but an additional star coin item also spawns which allows the player to pop them all as you collect it.
+      </p>
+      <h3>Coins</h3>
+      <p>There are 3 types of coins, which flip between a special item symbol and a dollar sign. The effect you get when collecting one differs depending on its icon:</p>
+      <div class="nodot">
+        <ul>
+          <li><img src="/images/tss/coind.png" class="coin"><div>Grants points (avoid if possible)</div></li>
+          <li><img src="/images/tss/coinbblue.png" class="coin"><div>Grants an additional bomb</div></li>
+          <li><img src="/images/tss/coinpblue.png" class="coin"><div>Grants an additional gauge level</div></li>
+          <li><img src="/images/tss/coinsblue.png" class="coin"><div>Removes bubbles on all the screen</div></li>
+        </ul>
+      </div>
+      <p>Note that the color of the coin symbol as you collect it doesn't matter.</p>
+      <h3>Characters</h3>
+      <p>This tier-list is, as all tier lists, potentially inaccurate. However, it is also in good part based on the opinions of the TSS competitive community.</p>
+      <table>
+        <tr>
+          <th id="s" class="tier">S</th>
+          <td>
+            <span id="meirin" class="character" title="Meirin"></span>
+          </td>
+          <td>
+            <span id="mevious"class="character" title="Mevious"></span>
+          </td>
+          <td>
+            <span id="memory" class="character" title="Memory"></span>
+          </td>
+        </tr>
+        <tr>
+          <th id="a" class="tier">A</th>
+          <td>
+            <span id="nanja" class="character" title="Nanja Manja"></span>
+          </td>
+          <td>
+            <span id="sprites"class="character" title="Sprites"></span>
+          </td>
+          <td>
+            <span id="tinker" class="character" title="TinkerLinker"></span>
+          </td>
+        </tr>
+        <tr>
+          <th id="b" class="tier">B</th>
+          <td>
+            <span id="loadran" class="character" title="Load Ran"></span>
+          </td>
+          <td>
+            <span id="darkran"class="character" title="Dark Ran"></span>
+          </td>
+        </tr>
+        <tr>
+          <th id="c" class="tier">C</th>
+          <td>
+            <span id="macky" class="character" title="MackyPentell"></span>
+          </td>
+          <td>
+            <span id="yan"class="character" title="Yan Yanyung"></span>
+          </td>
+          <td>
+            <span id="till"class="character" title="Realy Till"></span>
+          </td>
+        </tr>
+        <tr>
+          <th id="d" class="tier">D</th>
+          <td>
+            <span id="kim" class="character" title="Kim"></span>
+          </td>
+          <td>
+            <span id="schmitt"class="character" title="Arthur Schmitt"></span>
+          </td>
+        </tr>
+        <tr>
+          <th id="e" class="tier">E</th>
+          <td>
+            <span id="griffon" class="character" title="Griffon"></span>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
