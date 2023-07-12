@@ -141,7 +141,12 @@ th {
     height: 120px;
     cursor: pointer;
     display: inline-block;
-    background-image: url(/images/tss/characters.png);
+}
+.tss .character {
+    background-image: url(/images/twinklestar/characters.png);
+}
+.kg .character {
+    background-image: url(/images/kiohgyoku/characters.png);
 }
 @media (min-width: 1050px) {
     h1 {
@@ -220,5 +225,32 @@ th {
     }
     #loadran {
         background-position: 1680px;
+    }
+    #yuuka {
+        background-position: 120px;
+    }
+    #muse {
+        background-position: 240px;
+    }
+    #morgan {
+        background-position: 360px;
+    }
+    #elrich {
+        background-position: 480px;
+    }
+    #marie {
+        background-position: 600px;
+    }
+    #gates {
+        background-position: 720px;
+    }
+    #maimei {
+        background-position: 840px;
+    }
+    #milia {
+        background-position: 960px;
+    }
+    #vivit {
+        background-position: 1080px;
     }
 }
