@@ -28,4 +28,12 @@ defmodule RelaygacyWeb.PageController do
   def kiohgyoku(conn, _params) do
     render(conn, "kiohgyoku.html")
   end
+
+  def podd(conn, _params) do
+    render(conn, "podd.html")
+  end
+
+  def pofv(conn, _params) do
+    render(conn, "pofv.html")
+  end
 end

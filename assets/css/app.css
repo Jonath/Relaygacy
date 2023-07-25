@@ -122,6 +122,10 @@ figcaption {
 .red {
     background-color: #ff0000;
 }
+.tetra {
+    margin-right: 1%;
+    height: 200px;
+}
 table {
     margin-left:auto;
     margin-right:auto
@@ -147,6 +151,12 @@ th {
 }
 .kg .character {
     background-image: url(/images/kiohgyoku/characters.png);
+}
+.podd .character {
+    background-image: url(/images/podd/characters.png);
+}
+.pofv .character {
+    background-image: url(/images/pofv/characters.png);
 }
 @media (min-width: 1050px) {
     h1 {
@@ -226,7 +236,7 @@ th {
     #loadran {
         background-position: 1680px;
     }
-    #yuuka {
+    #yuuka_kg {
         background-position: 120px;
     }
     #muse {
@@ -252,5 +262,80 @@ th {
     }
     #vivit {
         background-position: 1080px;
+    }
+    #yumemi {
+        background-position: 120px;
+    }
+    #chiyuri {
+        background-position: 240px;
+    }
+    #rikako {
+        background-position: 360px;
+    }
+    #kana {
+        background-position: 480px;
+    }
+    #kotohime {
+        background-position: 600px;
+    }
+    #ellen {
+        background-position: 720px;
+    }
+    #marisa_podd {
+        background-position: 840px;
+    }
+    #mima {
+        background-position: 960px;
+    }
+    #reimu_podd {
+        background-position: 1080px;
+    }
+    #shikieiki {
+        background-position: 120px;
+    }
+    #komachi {
+        background-position: 240px;
+    }
+    #yuuka_pofv {
+        background-position: 360px;
+    }
+    #medicine {
+        background-position: 480px;
+    }
+    #aya {
+        background-position: 600px;
+    }
+    #tewi {
+        background-position: 720px;
+    }
+    #mystia {
+        background-position: 840px;
+    }
+    #lunasa {
+        background-position: 960px;
+    }
+    #merlin {
+        background-position: 1080px;
+    }
+    #lyrica {
+        background-position: 1200px;
+    }
+    #cirno {
+        background-position: 1320px;
+    }
+    #reisen {
+        background-position: 1440px;
+    }
+    #youmu {
+        background-position: 1560px;
+    }
+    #sakuya {
+        background-position: 1680px;
+    }
+    #marisa_pofv {
+        background-position: 1800px;
+    }
+    #reimu_pofv {
+        background-position: 1920px;
     }
 }

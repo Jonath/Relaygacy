@@ -27,7 +27,46 @@
         The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
         to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
       </p>
+      <h3>Gauge</h3>
+      <p>
+        This game showcases a gauge with 4 levels of charge:
+      </p>
+      <ul>
+        <li>Level 1: modified shot (stronger shot). On some characters, releasing the level 1 early and late can change its properties.</li>
+        <li>Level 2: a special attack that depends on the player character.</li>
+        <li>Level 3: a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
+        <li>Level 4: boss attack. In this game, the boss has a dedicated health bar.</li>
+      </ul>
+      <p>
+        One important particularity of this game is that firing an additional level 4 while a boss is already on the opponent's screen leads to a stronger version
+        of the boss called "madness". This effect replenishes the boss HP and makes them more resilient to player shots (meaning they take a bit more time to kill).
+      </p>
+      <p>
+        Additionally, firing a lvl4 while a boss is present on your screen does not cancel it, as opposed to all the other games part of the Phantasmagoria Fest.
+        This means you don't have to wait for your opponent to fire their own lvl4 before firing your own
+      </p>
+      <p>
+        As opposed to the other games, you also won't fire automatically a lvl2/3/4 depending on your combo. That means grazing serves only three purposes:
+      </p>
+      <ul>
+        <li>Filling up your gauge.</li>
+        <li>Sending revenge bullets on the opponent screen</li>
+        <li>Sending ex attacks on the opponent screen</li>
+      </ul>
+      <p>
+        A tetrahedron shaped visual effect appears when your character gains their lvl2/3/4 charge, respectively of green, orange and red color.
+      </p>
+      <img src="/images/kiohgyoku/lvl2on.png" class="tetra">
+      <img src="/images/kiohgyoku/lvl3on.png" class="tetra">
+      <img src="/images/kiohgyoku/lvl4on.png" class="tetra">
+      <p>
+        The gauge level works similarly as other games of the same genre: on the right of the gauge, it is displayed as a number ranging from 1 to 25.
+        This level influences the pattern of lvl2/3/4 you send on the opponent's screen. This number increases by 1, 2 or 3 for each lvl2, lvl3 or lvl4
+        you respectively fire. As usual, a good early game strategy might be to rush high gauge levels faster than your opponent.
+      </p>
+      <img src="/images/kiohgyoku/gauge.png">
       <h3>Shield</h3>
+      <img src="/images/kiohgyoku/shield.png" class="shield">
       <p>
         In this game, instead of a typical point based health score, the player character has a shield which allows them to absorb hits up to a certain point.
         It starts at 100%, and goes down every time the player collides with a bullet/enemy, down to 0%. When this threshold is reached, the shield breaks, leaving
@@ -41,9 +80,16 @@
         spawning them in the first place (one exception being when a boss is on your screen as you may want to destroy them before resuming passivity).
       </p>
       <p>
-        TL;DR: Stream like a crazed madman addicted to graze on high shield values. Suddenly turn into a reformed pacifist on low shield values
-        and break when exposed for the fraud you are.
+        To be more specific, by default, the shield recharge rate is 0, but depending on your current combo rating, this can increase to up to 1% regeneration per second
+        (cap at 255 max combo). Because of that, aggressively grazing the bullets right after you recover from a shield break might be a good strategy as well.
       </p>
+      <p>
+        One thing to note is also that a guard break (when your shile reaches 0%) clears all bullets on screen, and grants you invelnurability frames represented by a
+        white circle decreasing in size depending on its lifetime (same effect used when using a bomb). This can be pretty useful in dire situations where your screen is
+        full of bullets with no apparent way out, as you can strategically use that to reset the field.
+      </p>
+      <img src="/images/kiohgyoku/cancel.gif" class="center">
+      <figcaption>Cancelling a wall of bullets with guard break</figcaption>
       <h2>Characters</h2>
       <table class="kg">
         <tr>
@@ -85,7 +131,7 @@
         <tr>
           <th id="d" class="tier">D</th>
           <td>
-            <span id="yuuka" class="character" title="Yuuka"></span>
+            <span id="yuuka_kg" class="character" title="Yuuka"></span>
           </td>
         </tr>
       </table>

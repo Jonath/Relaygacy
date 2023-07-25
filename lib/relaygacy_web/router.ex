@@ -25,6 +25,8 @@ defmodule RelaygacyWeb.Router do
     get "/discord", PageController, :discord
     get "/games/twinklestar", PageController, :twinklestar
     get "/games/kiohgyoku", PageController, :kiohgyoku
+    get "/games/podd", PageController, :podd
+    get "/games/pofv", PageController, :pofv
   end
 
   # Other scopes may use custom stacks.
