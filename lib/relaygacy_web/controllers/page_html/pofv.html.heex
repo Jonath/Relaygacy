@@ -18,7 +18,7 @@
     <section>
       <h1>Phantasmagoria of Flower View</h1>
       <p>
-        東方花映塚　~ Phantasmagoria of Flower View is the 9th Touhou Project game and came out in 2005. It returns to the same two-player split screen style of danmaku
+        東方花映塚 ~ Phantasmagoria of Flower View is the 9th Touhou Project game and came out in 2005. It returns to the same two-player split screen style of danmaku
         ZUN already worked with in Phantasmagoria of Dim. Dream, and is the first windows game to use this style of gameplay.
       </p>
       <h2>Gameplay Basics</h2>
@@ -28,74 +28,81 @@
         to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
       </p>
       <h3>Characters</h3>
-      <table class="pofv">
-        <tr>
-          <th id="s" class="tier">S</th>
-          <td>
-            <span id="marisa_pofv" class="character" title="Marisa"></span>
-          </td>
-          <td>
-            <span id="reimu_pofv" class="character" title="Reimu"></span>
-          </td>
-          <td>
-            <span id="youmu" class="character" title="Youmu"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="a" class="tier">A</th>
-          <td>
-            <span id="komachi" class="character" title="Komachi"></span>
-          </td>
-          <td>
-            <span id="shikieiki" class="character" title="Shikieiki"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="b" class="tier">B</th>
-          <td>
-            <span id="lyrica" class="character" title="Lyrica"></span>
-          </td>
-          <td>
-            <span id="medicine" class="character" title="Medicine"></span>
-          </td>
-          <td>
-            <span id="reisen" class="character" title="Reisen"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="c" class="tier">C</th>
-          <td>
-            <span id="merlin" class="character" title="Merlin"></span>
-          </td>
-          <td>
-            <span id="lunasa" class="character" title="Lunasa"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="d" class="tier">D</th>
-          <td>
-            <span id="yuuka_pofv" class="character" title="Merlin"></span>
-          </td>
-          <td>
-            <span id="sakuya" class="character" title="Sakuya"></span>
-          </td>
-          <td>
-            <span id="aya" class="character" title="Aya"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="e" class="tier">E</th>
-          <td>
-            <span id="tewi" class="character" title="Tewi"></span>
-          </td>
-          <td>
-            <span id="mystia" class="character" title="Mystia"></span>
-          </td>
-          <td>
-            <span id="cirno" class="character" title="Cirno"></span>
-          </td>
-        </tr>
-      </table>
+      <div class="tierlist" x-data="{ open: false }"> 
+        <table class="pofv">
+          <tr>
+            <th id="s" class="tier">S</th>
+            <td>
+              <span id="marisa_pofv" class="character" title="Marisa" @click="open=true"></span>
+            </td>
+            <td>
+              <span id="reimu_pofv" class="character" title="Reimu"></span>
+            </td>
+            <td>
+              <span id="youmu" class="character" title="Youmu"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="a" class="tier">A</th>
+            <td>
+              <span id="komachi" class="character" title="Komachi"></span>
+            </td>
+            <td>
+              <span id="shikieiki" class="character" title="Shikieiki"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="b" class="tier">B</th>
+            <td>
+              <span id="lyrica" class="character" title="Lyrica"></span>
+            </td>
+            <td>
+              <span id="medicine" class="character" title="Medicine"></span>
+            </td>
+            <td>
+              <span id="reisen" class="character" title="Reisen"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="c" class="tier">C</th>
+            <td>
+              <span id="merlin" class="character" title="Merlin"></span>
+            </td>
+            <td>
+              <span id="lunasa" class="character" title="Lunasa"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="d" class="tier">D</th>
+            <td>
+              <span id="yuuka_pofv" class="character" title="Merlin"></span>
+            </td>
+            <td>
+              <span id="sakuya" class="character" title="Sakuya"></span>
+            </td>
+            <td>
+              <span id="aya" class="character" title="Aya"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="e" class="tier">E</th>
+            <td>
+              <span id="tewi" class="character" title="Tewi"></span>
+            </td>
+            <td>
+              <span id="mystia" class="character" title="Mystia"></span>
+            </td>
+            <td>
+              <span id="cirno" class="character" title="Cirno"></span>
+            </td>
+          </tr>
+        </table>
+        <div class="modal" x-show="open" @click.outside="open=false">
+          <div>
+            This is a modal window
+          </div>
+        </div>
+      </div>
       <h3>References</h3>
       <ul>
         <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Flower_View/Gameplay">Touhou Wiki - PoFV Gameplay</a></li>
