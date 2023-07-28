@@ -28,15 +28,15 @@
         to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
       </p>
       <h3>Characters</h3>
-      <div class="tierlist" x-data="{ open: false }"> 
+      <div class="tierlist" x-data="{ openMarisa: false, openReimu: false }"> 
         <table class="pofv">
           <tr>
             <th id="s" class="tier">S</th>
             <td>
-              <span id="marisa_pofv" class="character" title="Marisa" @click="open=true"></span>
+              <span id="marisa_pofv" class="character" title="Marisa" @click="openMarisa=true"></span>
             </td>
             <td>
-              <span id="reimu_pofv" class="character" title="Reimu"></span>
+              <span id="reimu_pofv" class="character" title="Reimu" @click="openReimu=true"></span>
             </td>
             <td>
               <span id="youmu" class="character" title="Youmu"></span>
@@ -97,9 +97,184 @@
             </td>
           </tr>
         </table>
-        <div class="modal" x-show="open" @click.outside="open=false">
-          <div>
-            This is a modal window
+
+        <div class="modal" x-show="openMarisa">
+          <div class="modal-content" @click.outside="openMarisa=false">
+            <div class="modal-header">
+              <h2>Marisa Kirisame</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/marisa.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="56" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          101 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          36 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Gauge fills faster
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Marisa's charge attack destroys spirts, but also causes them to explode as if they had been activated. This allows her to easily
+                set off chain reactions in any situation without relying on her slow scope. It also allows her to easily destroy Lily White and
+                boss attacks, which also means easier access to the special items they drop.
+              </p>
+              <p>
+                Her special ability allows her to cast spells more often, and recover more gauge which allows her to chain level 2 attacks back to back
+                in intense situations (thus keeping her screen mostly safe). This is also very useful during spell wars that often occur in the late
+                game because her opponent will likely be drained before she is.
+              </p>
+              <p>
+                Her high unfocused speed is great for macrododging and synergizes well with her laser, which can be swept across the screen. This also
+                works well with level 1 invincibility frames, allowing her even better survivability.
+              </p>
+              <p>
+                Her ex attacks, vertical lazers that spawn after being signalized for a few frames, can easily box the opponent towards one side of the screen,
+                which means they'll have a harder time clearing more bullets with their own spells. They are also rather oppressive.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openReimu">
+          <div class="modal-content" @click.outside="openReimu=false">
+            <div class="modal-header">
+              <h2>Reimu Hakurei</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/reimu.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="82" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          20 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          41 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Small hitbox
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Her level 2 spell is her main strength, because it limits the opponents movement and has a lengthy spawn time,
+                which means it cannot be cleared with a single spell. Combined to her very high charge speed, this makes it
+                very spammable.
+              </p>
+              <p>
+                She has a smaller hitbox when compared to other characters in the game, and also boosts a rather decent ex
+                attack (the yin-yang orb) which might wall you and bounces off walls in a somewhat hard to predict way (altough
+                its hitbox is smaller than its appearance).
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Because of how strong her level 2 is, an opponent will likely always reflect it, so she's likely to also
+                face extremely fast paced patterns reflected to her screen.
+              </p>
+              <p>
+                Her scope and focus speed are somewhat slow, and her charge attack isn't very useful.
+              </p>
+            </div>
           </div>
         </div>
       </div>
