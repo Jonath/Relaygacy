@@ -28,7 +28,11 @@
         to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
       </p>
       <h3>Characters</h3>
-      <div class="tierlist" x-data="{ openMarisa: false, openReimu: false }"> 
+      <div class="tierlist"
+        x-data="{ openMarisa: false, openReimu: false, openYoumu: false, openKomachi: false,
+                  openEiki: false, openLyrica: false, openMedicine: false, openReisen: false,
+                  openMerlin: false, openLunasa: false, openYuuka: false, openSakuya: false,
+                  openAya: false, openTewi: false, openMystia: false, openCirno: false }"> 
         <table class="pofv">
           <tr>
             <th id="s" class="tier">S</th>
@@ -39,61 +43,61 @@
               <span id="reimu_pofv" class="character" title="Reimu" @click="openReimu=true"></span>
             </td>
             <td>
-              <span id="youmu" class="character" title="Youmu"></span>
+              <span id="youmu" class="character" title="Youmu" @click="openYoumu=true"></span>
             </td>
           </tr>
           <tr>
             <th id="a" class="tier">A</th>
             <td>
-              <span id="komachi" class="character" title="Komachi"></span>
+              <span id="komachi" class="character" title="Komachi" @click="openKomachi=true"></span>
             </td>
             <td>
-              <span id="shikieiki" class="character" title="Shikieiki"></span>
+              <span id="eiki" class="character" title="Eiki" @click="openEiki=true"></span>
             </td>
           </tr>
           <tr>
             <th id="b" class="tier">B</th>
             <td>
-              <span id="lyrica" class="character" title="Lyrica"></span>
+              <span id="lyrica" class="character" title="Lyrica" @click="openLyrica=true"></span>
             </td>
             <td>
-              <span id="medicine" class="character" title="Medicine"></span>
+              <span id="medicine" class="character" title="Medicine" @click="openMedicine=true"></span>
             </td>
             <td>
-              <span id="reisen" class="character" title="Reisen"></span>
+              <span id="reisen" class="character" title="Reisen" @click="openReisen=true"></span>
             </td>
           </tr>
           <tr>
             <th id="c" class="tier">C</th>
             <td>
-              <span id="merlin" class="character" title="Merlin"></span>
+              <span id="merlin" class="character" title="Merlin" @click="openMerlin=true"></span>
             </td>
             <td>
-              <span id="lunasa" class="character" title="Lunasa"></span>
+              <span id="lunasa" class="character" title="Lunasa" @click="openLunasa=true"></span>
             </td>
           </tr>
           <tr>
             <th id="d" class="tier">D</th>
             <td>
-              <span id="yuuka_pofv" class="character" title="Merlin"></span>
+              <span id="yuuka_pofv" class="character" title="Merlin" @click="openYuuka=true"></span>
             </td>
             <td>
-              <span id="sakuya" class="character" title="Sakuya"></span>
+              <span id="sakuya" class="character" title="Sakuya" @click="openSakuya=true"></span>
             </td>
             <td>
-              <span id="aya" class="character" title="Aya"></span>
+              <span id="aya" class="character" title="Aya" @click="openAya=true"></span>
             </td>
           </tr>
           <tr>
             <th id="e" class="tier">E</th>
             <td>
-              <span id="tewi" class="character" title="Tewi"></span>
+              <span id="tewi" class="character" title="Tewi" @click="openTewi=true"></span>
             </td>
             <td>
-              <span id="mystia" class="character" title="Mystia"></span>
+              <span id="mystia" class="character" title="Mystia" @click="openMystia=true"></span>
             </td>
             <td>
-              <span id="cirno" class="character" title="Cirno"></span>
+              <span id="cirno" class="character" title="Cirno" @click="openCirno=true"></span>
             </td>
           </tr>
         </table>
@@ -181,8 +185,8 @@
                 works well with level 1 invincibility frames, allowing her even better survivability.
               </p>
               <p>
-                Her ex attacks, vertical lazers that spawn after being signalized for a few frames, can easily box the opponent towards one side of the screen,
-                which means they'll have a harder time clearing more bullets with their own spells. They are also rather oppressive.
+                Her ex attacks, vertical lasers that spawn after being signalized for a few frames, can easily box the opponent towards one side of the screen,
+                which means they'll have a harder time clearing more bullets with their own spells. They are also rather oppressive as they cannot be cleared.
               </p>
             </div>
           </div>
@@ -277,6 +281,1056 @@
             </div>
           </div>
         </div>
+
+        <div class="modal" x-show="openYoumu">
+          <div class="modal-content" @click.outside="openYoumu=false">
+            <div class="modal-header">
+              <h2>Youmu Konpaku</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/youmu.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.1" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          182 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          23 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Bullet cancelling sword
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Youmu has a level 1 that makes her slash right in front of her, cancelling most bullets, including ex attacks.
+                Its recovery is good, meaning it can be used repeatedly despite the slow charge speed.
+              </p>
+              <p>
+                Her movement speed allows for either very slow or very fast dodges at will, which means she's good at both
+                micro and macrododging depending on circumstances.
+              </p>
+              <p>
+                Her ex attacks can easily suffocate enemies, although they can be cleared away by spells. She also has a long
+                lasting level 2 attack, which means it cannot be fully cleared by a single opponent spell attack.
+              </p>
+              <p>
+                Finally, her boss attack only fires movement restricting patterns that are completely devoid of pellets.
+                This means it does not feed the opponent with cancellable patterns.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Youmu's main downside is that she has the worst charge speed in the game, but that isn't too much of a detriment
+                in a game where only level 2 have some use. It is also partially countered by her really good level 1. However, that
+                means she's a bit susceptible to spell wars.
+              </p>
+              <p>
+                She also has the slowest scope speed in the game, which means she might have trouble activating spirits, and is
+                in turn a bit more susceptible to getting hit by them than most characters. After all, she is afraid of ghosts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openKomachi">
+          <div class="modal-content" @click.outside="openKomachi=false">
+            <div class="modal-header">
+              <h2>Komachi Onozuka</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/komachi.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.1" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.2" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31.25" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          20 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Full screen scope
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Komachi's awesome scope and auto-targeting level 1 attack combine together to make her very efficient at starting combos
+                at will, from anywhere on the screen. Because she doesn't have to chase fairies and spirits around to feed her gauge, she
+                can concentrate more on dodging.
+              </p>
+              <p>
+                Her ex attacks are very good at creating chaos on the opponent's screen, and actually make for harder patterns on their own
+                than her level 2/3 spell attacks. They push the enemy down which means their own spell attacks are less efficient, and are also
+                pretty good against players and characters that like to macrododge, because they are evenly distributed across the screen.
+              </p>
+              <p>
+                Her boss attack is better than her spell attacks, and complement her ex attacks really well. All of her patterns use coin bullets that are non reflectable,
+                which makes her already great defensive perks even better, because her opponents will gain back less gauge from using their own spell attacks to clear
+                their player field.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openEiki">
+          <div class="modal-content" @click.outside="openEiki=false">
+            <div class="modal-header">
+              <h2>Eiki Shiki, Yamaxanadu</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/eiki.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openLyrica">
+          <div class="modal-content" @click.outside="openLyrica=false">
+            <div class="modal-header">
+              <h2>Lyrica Prismriver</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/lyrica.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openMedicine">
+          <div class="modal-content" @click.outside="openMedicine=false">
+            <div class="modal-header">
+              <h2>Medicine Melancholy</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/medicine.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openReisen">
+          <div class="modal-content" @click.outside="openReisen=false">
+            <div class="modal-header">
+              <h2>Reisen Udongein Inaba</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/reisen.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openMerlin">
+          <div class="modal-content" @click.outside="openMerlin=false">
+            <div class="modal-header">
+              <h2>Merlin Prismriver</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/merlin.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openLunasa">
+          <div class="modal-content" @click.outside="openLunasa=false">
+            <div class="modal-header">
+              <h2>Lunasa Prismriver</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/lunasa.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openYuuka">
+          <div class="modal-content" @click.outside="openYuuka=false">
+            <div class="modal-header">
+              <h2>Yuuka Kazami</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/yuuka.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openSakuya">
+          <div class="modal-content" @click.outside="openSakuya=false">
+            <div class="modal-header">
+              <h2>Sakuya Izayoi</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/sakuya.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openAya">
+          <div class="modal-content" @click.outside="openAya=false">
+            <div class="modal-header">
+              <h2>Aya Shameimaru</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/aya.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openTewi">
+          <div class="modal-content" @click.outside="openTewi=false">
+            <div class="modal-header">
+              <h2>Tewi Inaba</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/tewi.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openMystia">
+          <div class="modal-content" @click.outside="openMystia=false">
+            <div class="modal-header">
+              <h2>Mystia Lorelei</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/mystia.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openCirno">
+          <div class="modal-content" @click.outside="openCirno=false">
+            <div class="modal-header">
+              <h2>Cirno</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/pofv/cirno.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Normal Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Focus Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2.4" max="5.5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="31" max="82"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Scope Speed
+                        </td>
+                        <td class="value">
+                          5 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Delay
+                        </td>
+                        <td class="value">
+                          51 frames
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Special Ability
+                        </td>
+                        <td class="value">
+                          Activated spirits only fire one bullet
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
       </div>
       <h3>References</h3>
       <ul>
