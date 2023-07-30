@@ -29,81 +29,78 @@
       </p>
       <h3>Characters</h3>
       <div class="tierlist"
-        x-data="{ openMarisa: false, openReimu: false, openYoumu: false, openKomachi: false,
-                  openEiki: false, openLyrica: false, openMedicine: false, openReisen: false,
-                  openMerlin: false, openLunasa: false, openYuuka: false, openSakuya: false,
-                  openAya: false, openTewi: false, openMystia: false, openCirno: false }"> 
+        x-data="{ openModal: '' }"> 
         <table class="pofv">
           <tr>
             <th id="s" class="tier">S</th>
             <td>
-              <span id="marisa_pofv" class="character" title="Marisa" @click="openMarisa=true"></span>
+              <span id="marisa_pofv" class="character" title="Marisa" @click="openModal='marisa'"></span>
             </td>
             <td>
-              <span id="reimu_pofv" class="character" title="Reimu" @click="openReimu=true"></span>
+              <span id="reimu_pofv" class="character" title="Reimu" @click="openModal='reimu'"></span>
             </td>
             <td>
-              <span id="youmu" class="character" title="Youmu" @click="openYoumu=true"></span>
+              <span id="youmu" class="character" title="Youmu" @click="openModal='youmu'"></span>
             </td>
           </tr>
           <tr>
             <th id="a" class="tier">A</th>
             <td>
-              <span id="komachi" class="character" title="Komachi" @click="openKomachi=true"></span>
+              <span id="komachi" class="character" title="Komachi" @click="openModal='komachi'"></span>
             </td>
             <td>
-              <span id="eiki" class="character" title="Eiki" @click="openEiki=true"></span>
+              <span id="eiki" class="character" title="Eiki" @click="openModal='eiki'"></span>
             </td>
           </tr>
           <tr>
             <th id="b" class="tier">B</th>
             <td>
-              <span id="lyrica" class="character" title="Lyrica" @click="openLyrica=true"></span>
+              <span id="lyrica" class="character" title="Lyrica" @click="openModal='lyrica'"></span>
             </td>
             <td>
-              <span id="medicine" class="character" title="Medicine" @click="openMedicine=true"></span>
+              <span id="medicine" class="character" title="Medicine" @click="openModal='medicine'"></span>
             </td>
             <td>
-              <span id="reisen" class="character" title="Reisen" @click="openReisen=true"></span>
+              <span id="reisen" class="character" title="Reisen" @click="openModal='reisen'"></span>
             </td>
           </tr>
           <tr>
             <th id="c" class="tier">C</th>
             <td>
-              <span id="merlin" class="character" title="Merlin" @click="openMerlin=true"></span>
+              <span id="merlin" class="character" title="Merlin" @click="openModal='merlin'"></span>
             </td>
             <td>
-              <span id="lunasa" class="character" title="Lunasa" @click="openLunasa=true"></span>
+              <span id="lunasa" class="character" title="Lunasa" @click="openModal='lunasa'"></span>
             </td>
           </tr>
           <tr>
             <th id="d" class="tier">D</th>
             <td>
-              <span id="yuuka_pofv" class="character" title="Merlin" @click="openYuuka=true"></span>
+              <span id="yuuka_pofv" class="character" title="Merlin" @click="openModal='yuuka'"></span>
             </td>
             <td>
-              <span id="sakuya" class="character" title="Sakuya" @click="openSakuya=true"></span>
+              <span id="sakuya" class="character" title="Sakuya" @click="openModal='sakuya'"></span>
             </td>
             <td>
-              <span id="aya" class="character" title="Aya" @click="openAya=true"></span>
+              <span id="aya" class="character" title="Aya" @click="openModal='aya'"></span>
             </td>
           </tr>
           <tr>
             <th id="e" class="tier">E</th>
             <td>
-              <span id="tewi" class="character" title="Tewi" @click="openTewi=true"></span>
+              <span id="tewi" class="character" title="Tewi" @click="openModal='tewi'"></span>
             </td>
             <td>
-              <span id="mystia" class="character" title="Mystia" @click="openMystia=true"></span>
+              <span id="mystia" class="character" title="Mystia" @click="openModal='mystia'"></span>
             </td>
             <td>
-              <span id="cirno" class="character" title="Cirno" @click="openCirno=true"></span>
+              <span id="cirno" class="character" title="Cirno" @click="openModal='cirno'"></span>
             </td>
           </tr>
         </table>
 
-        <div class="modal" x-show="openMarisa">
-          <div class="modal-content" @click.outside="openMarisa=false">
+        <div class="modal" x-show="openModal=='marisa'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Marisa Kirisame</h2>
             </div>
@@ -192,8 +189,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openReimu">
-          <div class="modal-content" @click.outside="openReimu=false">
+        <div class="modal" x-show="openModal=='reimu'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Reimu Hakurei</h2>
             </div>
@@ -282,8 +279,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openYoumu">
-          <div class="modal-content" @click.outside="openYoumu=false">
+        <div class="modal" x-show="openModal=='youmu'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Youmu Konpaku</h2>
             </div>
@@ -380,8 +377,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openKomachi">
-          <div class="modal-content" @click.outside="openKomachi=false">
+        <div class="modal" x-show="openModal=='komachi'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Komachi Onozuka</h2>
             </div>
@@ -467,8 +464,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openEiki">
-          <div class="modal-content" @click.outside="openEiki=false">
+        <div class="modal" x-show="openModal=='eiki'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Eiki Shiki, Yamaxanadu</h2>
             </div>
@@ -535,12 +532,38 @@
                 </tr>
               </table>
               <h3>Upsides:</h3>
+              <p>
+                Eiki's main strength is her ex attack: it clones existing bullets on the opponent's screen by firing a rod with faster speed
+                in the same trajectory. Because the rod speed is determined by the original bullet, this is more effective against characters
+                whose spell attacks use faster bullets.
+              </p>
+              <p>
+                She also boosts good movement, charge and scope speeds. These help her with macrododging, spell wars and starting combo chains
+                respectively, which are all import parts of the game, making her rather balanced. She also has a pretty good boss attack,
+                which splits the screen in half with a purple laser.
+              </p>
+              <p>
+                She has really good level 1 attack, which fires straight above her and can start combos without deleting all the chain. Because it
+                lasts for a while, Eiki can fire normal shots during her level 1. That makes dealing damage and thus killing boss on her screen somewhat
+                achievable, so she can turn them into special items.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Eiki's glaring pitfall is her level 2/3 spell attacks which are both really weak, and also send on the opponent's screen cancellable
+                pellets, some of which are stacked on top of each other. What this mainly achieve is feed the opponent gauge energy, which means her
+                screen is bound to get chaotic very quickly as you use these spell attacks.
+              </p>
+              <p>
+                This key weakness is on its own what makes her fall short of top tier, and someone playing her may want to avoid spell wars for as long
+                as possible, and resort to fairy chains bullet cancelling pellets instead, to avoid their screen becoming too difficult to deal with
+                too early on. This also means Eiki is somewhat susceptible to end game spell wars.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="modal" x-show="openLyrica">
-          <div class="modal-content" @click.outside="openLyrica=false">
+        <div class="modal" x-show="openModal=='lyrica'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Lyrica Prismriver</h2>
             </div>
@@ -611,8 +634,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openMedicine">
-          <div class="modal-content" @click.outside="openMedicine=false">
+        <div class="modal" x-show="openModal=='medicine'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Medicine Melancholy</h2>
             </div>
@@ -683,8 +706,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openReisen">
-          <div class="modal-content" @click.outside="openReisen=false">
+        <div class="modal" x-show="openModal=='reisen'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Reisen Udongein Inaba</h2>
             </div>
@@ -755,8 +778,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openMerlin">
-          <div class="modal-content" @click.outside="openMerlin=false">
+        <div class="modal" x-show="openModal=='merlin'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Merlin Prismriver</h2>
             </div>
@@ -827,8 +850,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openLunasa">
-          <div class="modal-content" @click.outside="openLunasa=false">
+        <div class="modal" x-show="openModal=='lunasa'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Lunasa Prismriver</h2>
             </div>
@@ -899,8 +922,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openYuuka">
-          <div class="modal-content" @click.outside="openYuuka=false">
+        <div class="modal" x-show="openModal=='yuuka'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Yuuka Kazami</h2>
             </div>
@@ -971,8 +994,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openSakuya">
-          <div class="modal-content" @click.outside="openSakuya=false">
+        <div class="modal" x-show="openModal=='sakuya'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Sakuya Izayoi</h2>
             </div>
@@ -1043,8 +1066,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openAya">
-          <div class="modal-content" @click.outside="openAya=false">
+        <div class="modal" x-show="openModal=='aya'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Aya Shameimaru</h2>
             </div>
@@ -1115,8 +1138,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openTewi">
-          <div class="modal-content" @click.outside="openTewi=false">
+        <div class="modal" x-show="openModal=='tewi'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Tewi Inaba</h2>
             </div>
@@ -1187,8 +1210,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openMystia">
-          <div class="modal-content" @click.outside="openMystia=false">
+        <div class="modal" x-show="openModal=='mystia'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Mystia Lorelei</h2>
             </div>
@@ -1259,8 +1282,8 @@
           </div>
         </div>
 
-        <div class="modal" x-show="openCirno">
-          <div class="modal-content" @click.outside="openCirno=false">
+        <div class="modal" x-show="openModal=='cirno'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
               <h2>Cirno</h2>
             </div>
