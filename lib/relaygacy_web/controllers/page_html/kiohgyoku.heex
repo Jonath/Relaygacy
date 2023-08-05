@@ -91,50 +91,269 @@
       <img src="/images/kiohgyoku/cancel.gif" class="center">
       <figcaption>Cancelling a wall of bullets with guard break</figcaption>
       <h2>Characters</h2>
-      <table class="kg">
-        <tr>
-          <th id="s" class="tier">S</th>
-          <td>
-            <span id="muse" class="character" title="Muse"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="a" class="tier">A</th>
-          <td>
-            <span id="vivit" class="character" title="Vivit"></span>
-          </td>
-          <td>
-            <span id="maimei" class="character" title="MaiMei"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="b" class="tier">B</th>
-          <td>
-            <span id="gates" class="character" title="Gates"></span>
-          </td>
-          <td>
-            <span id="elrich" class="character" title="Elrich"></span>
-          </td>
-          <td>
-            <span id="morgan" class="character" title="Morgan"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="c" class="tier">C</th>
-          <td>
-            <span id="milia" class="character" title="Milia"></span>
-          </td>
-          <td>
-            <span id="marie" class="character" title="Marie"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="d" class="tier">D</th>
-          <td>
-            <span id="yuuka_kg" class="character" title="Yuuka"></span>
-          </td>
-        </tr>
-      </table>
+      <div class="tierlist" x-data="{ openModal: '' }">
+        <table class="kg">
+          <tr>
+            <th id="s" class="tier">S</th>
+            <td>
+              <span id="muse" class="character" title="Muse" @click="openModal='muse'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="a" class="tier">A</th>
+            <td>
+              <span id="vivit" class="character" title="Vivit" @click="openModal='vivit'"></span>
+            </td>
+            <td>
+              <span id="meimai" class="character" title="MeiMai" @click="openModal='meimai'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="b" class="tier">B</th>
+            <td>
+              <span id="gates" class="character" title="Gates" @click="openModal='gates'"></span>
+            </td>
+            <td>
+              <span id="erich" class="character" title="Erich" @click="openModal='erich'"></span>
+            </td>
+            <td>
+              <span id="morgan" class="character" title="Morgan" @click="openModal='morgan'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="c" class="tier">C</th>
+            <td>
+              <span id="milia" class="character" title="Milia" @click="openModal='milia'"></span>
+            </td>
+            <td>
+              <span id="marie" class="character" title="Marie" @click="openModal='marie'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="d" class="tier">D</th>
+            <td>
+              <span id="yuuka_kg" class="character" title="Yuuka" @click="openModal='yuuka'"></span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="modal" x-show="openModal=='muse'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Muse</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/muse.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='vivit'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Muse</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/vivit.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='meimai'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Mei & Mai</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/meimai.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='gates'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Gates</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/gates.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='erich'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Erich</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/erich.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='morgan'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Morgan</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/morgan.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='milia'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Milia</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/milia.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='marie'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Marie</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/marie.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='yuuka'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yuuka</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/kiohgyoku/yuuka.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 </body>
