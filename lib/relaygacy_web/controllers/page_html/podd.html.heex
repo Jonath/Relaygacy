@@ -82,10 +82,10 @@
         This game showcases a gauge with 4 levels of charge:
       </p>
       <ul>
-        <li>Level 1: modified shot (stronger shot). Lvl2/3/4 also fire this special shot.</li>
-        <li>Level 2: a special attack that depends on the player character.</li>
-        <li>Level 3: a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
-        <li>Level 4: boss attack. In this game, the boss has a dedicated health bar.</li>
+        <li>Level 1 (L1): modified shot (stronger shot). L2/3/4 also fire this special shot.</li>
+        <li>Level 2 (L2): a special attack that depends on the player character.</li>
+        <li>Level 3 (L3): a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
+        <li>Level 4 (L4): boss attack. In this game, the boss has a dedicated health bar.</li>
       </ul>
       <img src="/images/podd/gauge.png">
       <p>
@@ -107,12 +107,14 @@
         by the counter at the top-left corner of a player's field, beneath the hit combo display. At certain spell point values, special attacks are launched at your opponent: 
       </p>
       <ul>
-        <li> 51200: Boss Attack</li>
-        <li>300000: Boss Panic (Level 3 Spell Attack)</li>
+        <li>51200: Boss Attack</li>
+        <li>300000: Boss Panic (L3 Spell Attack)</li>
       </ul>
       <p>
-        After a brief duration of inactivity (no additional spell points are being collected), the counter will reset to 0.
-        When this occurs, the spell points are added directly to your score.
+        After a brief duration of inactivity (no additional spell points are being collected), the counter will reset to 0. When this occurs,
+        the spell points are added directly to your score. The boss panic can only be triggered once per combo chain, so because of that, it might
+        be advised to drop scoring after triggering it. It is also important to note that if by any chance both thresholds are reached at the same time,
+        the boss attack takes priority over the boss panic.
       </p>
       <p>
         Around the gauge, you can find two different numbers:
@@ -178,7 +180,7 @@
         <div class="modal" x-show="openModal=='yumemi'">
           <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
-              <h2>Yumemi</h2>
+              <h2>Yumemi Okazaki</h2>
             </div>
             <div class="modal-body">
               <table class="noborders">
@@ -219,7 +221,7 @@
                           Boss HP
                         </td>
                         <td class="value">
-                          <progress value="30" max="40"/>
+                          130
                         </td>
                       </tr>
                     </table>
@@ -293,7 +295,7 @@
                           Boss HP
                         </td>
                         <td class="value">
-                          <progress value="10" max="40"/>
+                          110
                         </td>
                       </tr>
                     </table>
@@ -324,10 +326,84 @@
           </div>
         </div>
 
+        <div class="modal" x-show="openModal=='mima'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Mima</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/mima.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          110
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Mima has good movement and shot speed, which help her macrododge and chase enemies aggressively to chain them. Her L1 is also pretty decent especially
+                at point blank offensively, and at destroying chains of enemies / packs of ghosts defensively.
+              </p>
+              <p>
+                Her ex attack is very good: it stays on the screen for extended times up to 3 bounces (green, yellow, red colors indicate respectively 3, 2, 1 remaining bounces).
+                Its direction is rather unpredictable despite the "bouncing behavior" and it blocks hits. However, it can be swung outside of the field with a L1
+                (ignoring remaining bounces).
+              </p>
+              <p>
+                Her L2/L3 patterns come sideways and are a bit tricky to dodge. Her boss is pretty great, as it fires ex attacks that are partially used (yellow / red),
+                that stay less on the screen than the typical ex attack but resists bombs.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Mima's L2 is actually a pretty good target for reversals due to how packed it is: this means using it might be punishable if the opponent has a chain
+                of enemies properly placed to take advantage of it. Aside from that, her only real weakness is a below average charge speed.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div class="modal" x-show="openModal=='chiyuri'">
           <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
-              <h2>Chiyuri</h2>
+              <h2>Chiyuri Kitashirakawa</h2>
             </div>
             <div class="modal-body">
               <table class="noborders">
@@ -368,7 +444,7 @@
                           Boss HP
                         </td>
                         <td class="value">
-                          <progress value="40" max="40"/>
+                          140
                         </td>
                       </tr>
                     </table>
@@ -376,9 +452,417 @@
                 </tr>
               </table>
               <h3>Upsides:</h3>
+              <p>
+                Chiyuri has the highest HP boss in the game, and that makes it pretty resilient to bombing, meaning it won't instantly dispawn even as the players
+                fires basic shots during the bomb. It also has pretty rough patterns and can go down in the middle of the screen.
+              </p>
+              <p>
+                She has good speed and charge speed, and a pretty great L1 that can be used to damage boss attacks (4 of them can actually kill a boss). Said L1
+                can start chains decently well, and be used as a defensive tool since it follows her for an extended time.
+              </p>
+              <p>
+                Her ex attack is alright because it can wall off the opponent, in particular when the boss spawns because it sends over a lot of them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Chiyuri's L2/L3 are easy to stream, and cancel in the case of her L2, making them a non-issue unless you manage to corner the opponent with them.
+                Her L4 also spawns a lot of pellets, which is detrimental and makes it weak to boss reversal as the enemy gets to score more by cancelling them.
+              </p>
+              <p>
+                Her L1 also has a fatal flaw: she cannot charge up her gauge, bomb or trigger her hyper while it happens, meaning using it too much can actually be
+                dangerous, in particular if the screen is dense with non-cancellable bullets.
+              </p>
+              <p>
+                Despite her ex attack being decent, the fact it takes a while to spawn also makes it usually easy to dodge.
+              </p>
             </div>
           </div>
         </div>
+
+        <div class="modal" x-show="openModal=='ellen'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Ellen</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/ellen.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3.25" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          100
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Ellen's main strength is her ex attack, which spawns two spheres at a given location that will slowly orbit towards the edge of the screen.
+                Their movement is at times a bit difficult to understand, but an enemy getting on the side of the field can bait them into spawning closer
+                to the edge than usual, which makes them dispawn faster.
+              </p>
+              <p>
+                Her L2/L3 are alright, the first wave is easy to dodge but the second one has smaller gaps and can surprise an opponent. They can also be hit
+                by something else occupying the gap they try to go through. Her L1 homes in on the closest enemies which is bad for combo chains but can actually
+                be used somewhat decently as a defensive setup, since it lasts for quite a bit.
+              </p>
+              <p>
+                Her boss attack is also pretty good despite low HP because it can spawn a circle of ex attacks that curve with a steeper arc, and if she gets
+                to spawn them before the opponent fires their bomb off, they won't be cancelled by it, and get to stay for a time that lasts longer than the
+                invincibility frames it grants.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Ellen has arguably the worst base stats in the game, with the slowest movement and charge speed of the game. That hurts her ability to dodge
+                fast moving patterns or aggressively chase down enemy chains, and her ability to actually use her gauge in any capacity (while charging it, she
+                will have to keep dodging enemy formations and patterns for extended times on her screen without being able to shoot at them).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='reimu'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Reimu Hakurei</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/reimu.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.0" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          110
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Reimu has the fastest charge speed in the game, and it combines well with her deadly L2/L3 spell attacks.
+                She also has a very good boss attack that fires yin yang orbs (big and small) in a way that corners the opponent.
+              </p>
+              <p>
+                Her ex attack is pretty great: they are  yin yang orbs that bounce on the side of the screen and they it can easily wall someone
+                in a corner where they'll be finished off by something else.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Reimu has a terrible base shot speed, which can get covered by her defensive L1 during spell wars. However, said L1 is itself
+                really bad offensively speaking because it cannot trigger combo chains by itself, instead deleting most ennemies on the field.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='rikako'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Rikako Asakura</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/rikako.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.5" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          110
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Her L1 is mainly useful defensively, but she can fire basic shots as it goes up the screen, allowing her to chain in two times at once and
+                prolong active chains. The fact it is slow is a bit detrimental to chains however, as it will keep hitting enemies, destroying them before any
+                explosion does.
+              </p>
+              <p>
+                The version of this L1 she uses during her hyper is however much better, because she can instead just move slightly towards a pack of enemies
+                and hit one of them with the tip to trigger an explosion chain. Said hyper actually has a glitch with a rare usecase: if Rikako's hyper is active
+                as she wins a round, she will keep her L1 gravitating around her for the next round (until she triggers the hyper again and it ends). While this
+                disables her gauge fully, it is still worth it due to how good it can be at chaining things.
+              </p>
+              <p>
+                She has a pretty strong boss attack because it can fire non cancellable flurry of bullets in oblique directions,
+                making them hard to dodge in a game without focus (you need to get around them and gap is small).
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Rikakos's ex attack isn't very dangerous: it is made up of some kind of chainsaw that slides down the screen, and can target an opponent if they get
+                too close. However, it is relatively small, and because this game has a maximum number of simultaneous ex attacks of 8, it is rarely an issue.
+              </p>
+              <p>
+                Her super slow charge speed hinder her, and her goot basic attack shot speed doesn't really make all that much for it because it has a small hitbox,
+                meaning it is still somewhat hard to reliably deal damage with it.
+              </p>
+              <p>
+                The pattern of her boss attack mentioned as an upside also actually only spawns non cancellable bullets if it has been upgraded enough, meaning
+                it is initially pretty weak to boss reversals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='marisa'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Marisa Kirisame</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/marisa.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.0" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          110
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Marisa's main strength is her ex attack which takes time to spawn, but walls a bit in corridors, forcing vertical movmement.
+                It can also actually spawn in numbers above the usual maximum 8 ex attacks limit (because the ex attack itself is the blue
+                circle spawning the laser, which disappears after firing said laser).
+              </p>
+              <p>
+                Similarly to Chyuri, Marisa's L1 is pretty decent at chaining enemies and killing the boss, but where it really shines is at
+                sliding across the screen to defensively delete enemies. In particular, it is very great at dealing with packs of ghosts sent her way.
+              </p>
+              <p>
+                Her L2/L3 are OK, they spawn cross corridors that go around the opponent, making it harder to move too much. They combine well with the lasers
+                into an offense that mainly plans to restrict the enemy's options. 
+              </p>
+              <p>
+                Finally, she also has decent stats: good movement and attack speed, above average charge speed.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Marisa's biggest issue is that she has a bad boss attack. Its patterns aren't great, but its main issue is that it waits for a long while inbetween
+                different patterns, and when it spawns, meaning it lets quite a long time for the opponent to score and reverse it, or plan how they will kill
+                enemies in order to cancel the pellets it sends over. Because of that, her offense suffers tremendously, explaining her low tier spot on this list.
+              </p>
+              <p>
+                Her L1 also suffers from the same issue as Chiyuri's: she cannot shoot, bomb or activate her hyper during it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='kana'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Kana Anaberal</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/kana.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3.5" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          100
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Kana's main upside is her charge speed which combines well with her L1, which is great at dealing point blank damage and can actually be used
+                decently well to kill boss attacks. It can also be used at bigger distances to start chains from two sides of the screen for a few enemy formations.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                She has a terrible ex attack, L2/L3 and boss attack, which all together taken combine into the worst offense of the game. Sadly, this is likely one of
+                the most important part of a character in a Phantasmagoria game, thus explaining on its own why she sits at the bottom of this tier list.
+              </p>
+              <p>
+                The ex attack works a bit like Mystia's in PoFV (a bird that spawns bullets). It at least cannot be cancelled but it spawns bullets with a big gap
+                inbetween them, making them rather useless, unless stacked up.
+              </p>
+              <p>
+                Her L2/L3 leave are static and leave big gaps in the center of the field: they can thus easily be dodged. Finally, her boss attack has a few patterns
+                spawning lines of noncancellable bullets in a circle, that only divide the screen a bit, but are also trivial to dodge. It also has low HP.
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <h3>References</h3>
