@@ -132,51 +132,260 @@
         to reflect a boss and/or use your Charge Max ability when left on no bombs)
       </p>
       <h3>Characters</h3>
-      <table class="podd">
-        <tr>
-          <th id="s" class="tier">S</th>
-          <td>
-            <span id="yumemi" class="character" title="Yumemi"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="a" class="tier">A</th>
-          <td>
-            <span id="chiyuri" class="character" title="Chiyuri"></span>
-          </td>
-          <td>
-            <span id="mima" class="character" title="Mima"></span>
-          </td>
-          <td>
-            <span id="marisa_podd" class="character" title="Marisa"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="b" class="tier">B</th>
-          <td>
-            <span id="rikako" class="character" title="Rikako"></span>
-          </td>
-          <td>
-            <span id="reimu_podd" class="character" title="Reimu"></span>
-          </td>
-          <td>
-            <span id="kotohime" class="character" title="Kotohime"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="c" class="tier">C</th>
-          <td>
-            <span id="kana" class="character" title="Kana"></span>
-          </td>
-          <td>
-            <span id="ellen" class="character" title="Ellen"></span>
-          </td>
-        </tr>
-      </table>
+      <div class="tierlist" x-data="{ openModal: '' }">
+        <table class="podd">
+          <tr>
+            <th id="s" class="tier">S</th>
+            <td>
+              <span id="yumemi" class="character" title="Yumemi" @click="openModal='yumemi'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="a" class="tier">A</th>
+            <td>
+              <span id="kotohime" class="character" title="Kotohime" @click="openModal='kotohime'"></span>
+            </td>
+            <td>
+              <span id="mima" class="character" title="Mima" @click="openModal='mima'"></span>
+            </td>
+            <td>
+              <span id="chiyuri" class="character" title="Chiyuri" @click="openModal='chiyuri'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="b" class="tier">B</th>
+            <td>
+              <span id="ellen" class="character" title="Ellen" @click="openModal='ellen'"></span>
+            </td>
+            <td>
+              <span id="reimu_podd" class="character" title="Reimu" @click="openModal='reimu'"></span>
+            </td>
+            <td>
+              <span id="rikako" class="character" title="Rikako" @click="openModal='rikako'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="c" class="tier">C</th>
+            <td>
+              <span id="marisa_podd" class="character" title="Marisa" @click="openModal='marisa'"></span>
+            </td>
+            <td>
+              <span id="kana" class="character" title="Kana" @click="openModal='kana'"></span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="modal" x-show="openModal=='yumemi'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yumemi</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/yumemi.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          <progress value="30" max="40"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Yumemi has the best movement speed and attack speed possible, which allow her to properly chain enemies with ease (because she can move towards enemies
+                and destroy them as efficiently as possible). Her L1 even complements this because it has the potential to automatically chain enemies, making her a rather
+                beginner friendly character for people that haven't yet mastered the art of enemy formations.
+              </p>
+              <p>
+                Her boss is a monster: it has an aiming pattern and one that spawns tons of cross. It also has rather large HP (130) making it hard to fully cancel with a bomb
+                and basic shots (it would persist for a bit).
+              </p>
+              <p>
+                Said cross ex attacks are pretty good as well because of how they persist on the screen, preventing movement. They take a lot of space and can corner opponents,
+                stack together and they spawn relatively fast which gives the enemy only a short notice to get out of the way.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Yumemi really only has one big downside and it his her L2/L3 patterns which are really easy to dodge, even at higher levels. Because of that, I'd say it is advised
+                to instead keep gauge energy to reflect a boss attack with her own, or for her gauge hyper.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='kotohime'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Kotohime</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/kotohime.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4.25" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          <progress value="10" max="40"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Her ex attack is very good because it can tank hits, and spawns non-cancellable projectiles in a circle in a way that lets them accumulate well with her other
+                patterns. Using her L2 is a bit dangerous because its pellets can easily be reflected, sending a boss attack your way, but that can be a way to start a spell war
+                if you get to destroy the pack of ghosts sent alongside. Her L3 however is super strong because of how tight it is.
+              </p>
+              <p>
+                Her L4 boss attack is also pretty decent, as it sends a lot of ex attacks that accumulate, as well as using a lot of non-cancellable bullets meaning it isn't weak
+                to being reflected. The mines also cannot be cancelled by bombs as they fall down before their detonation. She even has a glitch that allows her to chain a L2 with a
+                L3 together (by sending the second one right before the first one detonates, it will spawn both patterns) and get back a free mine.
+              </p>
+              <p>
+                Kotohime also has good movement and charge speed, allowing her to aggressively chain enemies and macrododge. Her L1 is also pretty great at reflecting packs
+                of ghosts, and is good in particular if used at point blank.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                While not that important for pro players, Kotohime's low attack speed make it particularly difficult for her to kill enemies, hindering her combo abilities quite
+                a bit. That is however her only real weakness, making her likely deserving the top tier spot instead of Yumemi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='chiyuri'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Chiyuri</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/podd/chiyuri.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5.0" max="5.0"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Attack Speed
+                        </td>
+                        <td class="value">
+                          <progress value="2" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="5"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          <progress value="40" max="40"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h3>References</h3>
       <ul>
         <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Dim.Dream/Gameplay">Touhou Wiki - PoDD Gameplay</a></li>
-        <li><a href="https://www.youtube.com/watch?v=Znv0mVp0PLE">Multiplayer matches by Terminian Hero</a></li>
+        <li><a href="https://en.touhouwiki.net/wiki/User:KirbyComment/Phantasmagoria_of_Dimensional_Dream_Info">Informative Scoring Guide by KirbyComment</a></li>
+        <li><a href="https://www.youtube.com/watch?v=SyxatZtzw70">Enemy Formations Guide by Christian Azinn</a></li>
       </ul>
     </section>
   </main>
