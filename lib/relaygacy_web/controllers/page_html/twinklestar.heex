@@ -56,7 +56,7 @@
       </div>
       <p>
         Colliding into normal enemies makes you lose one heart, you will also get stunned for a noticeable time. You can be hit again during this stun, however, after recovering
-        from being hit a second time, you get some invincibility frames (as lonk as your character sprite blinks). The game encourages you to recover faster from a stun by mashing
+        from being hit a 2nd time, you get some invincibility frames (as lonk as your character sprite blinks). The game encourages you to recover faster from a stun by mashing
         buttons and wiggling the directional controls. After recovering from such a stun, your character will be considerably slowed down, and their shot will be weaker, for around
         5 seconds, before returning to normal. You cannot die from running into normal enemies, only go down to half a heart.
       </p>
@@ -127,68 +127,1134 @@
       <p>Note that the color of the coin symbol as you collect it doesn't matter.</p>
       <h2>Characters</h2>
       <p>This tier-list is, as all tier lists, potentially inaccurate. However, it is also in good part based on the opinions of the TSS competitive community.</p>
-      <table class="tss">
-        <tr>
-          <th id="s" class="tier">S</th>
-          <td>
-            <span id="meirin" class="character" title="Meirin"></span>
-          </td>
-          <td>
-            <span id="mevious"class="character" title="Mevious"></span>
-          </td>
-          <td>
-            <span id="memory" class="character" title="Memory"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="a" class="tier">A</th>
-          <td>
-            <span id="nanja" class="character" title="Nanja Manja"></span>
-          </td>
-          <td>
-            <span id="sprites"class="character" title="Sprites"></span>
-          </td>
-          <td>
-            <span id="tinker" class="character" title="TinkerLinker"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="b" class="tier">B</th>
-          <td>
-            <span id="loadran" class="character" title="Load Ran"></span>
-          </td>
-          <td>
-            <span id="darkran"class="character" title="Dark Ran"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="c" class="tier">C</th>
-          <td>
-            <span id="macky" class="character" title="MackyPentell"></span>
-          </td>
-          <td>
-            <span id="yan"class="character" title="Yan Yanyung"></span>
-          </td>
-          <td>
-            <span id="till"class="character" title="Realy Till"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="d" class="tier">D</th>
-          <td>
-            <span id="kim" class="character" title="Kim"></span>
-          </td>
-          <td>
-            <span id="schmitt"class="character" title="Arthur Schmitt"></span>
-          </td>
-        </tr>
-        <tr>
-          <th id="e" class="tier">E</th>
-          <td>
-            <span id="griffon" class="character" title="Griffon"></span>
-          </td>
-        </tr>
-      </table>
+      <div class="tierlist" x-data="{ openModal: '' }">
+        <table class="tss">
+          <tr>
+            <th id="s" class="tier">S</th>
+            <td>
+              <span id="meirin" class="character" title="Meirin" @click="openModal='meirin'"></span>
+            </td>
+            <td>
+              <span id="mevious"class="character" title="Mevious" @click="openModal='mevious'"></span>
+            </td>
+            <td>
+              <span id="memory" class="character" title="Memory" @click="openModal='memory'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="a" class="tier">A</th>
+            <td>
+              <span id="nanja" class="character" title="Nanja Manja" @click="openModal='nanja'"></span>
+            </td>
+            <td>
+              <span id="sprites"class="character" title="Sprites" @click="openModal='sprites'"></span>
+            </td>
+            <td>
+              <span id="tinker" class="character" title="TinkerLinker" @click="openModal='tinker'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="b" class="tier">B</th>
+            <td>
+              <span id="loadran" class="character" title="Load Ran" @click="openModal='loadran'"></span>
+            </td>
+            <td>
+              <span id="darkran"class="character" title="Dark Ran" @click="openModal='darkran'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="c" class="tier">C</th>
+            <td>
+              <span id="macky" class="character" title="MackyPentell" @click="openModal='macky'"></span>
+            </td>
+            <td>
+              <span id="yan"class="character" title="Yan Yanyung" @click="openModal='yan'"></span>
+            </td>
+            <td>
+              <span id="till"class="character" title="Realy Till" @click="openModal='till'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="d" class="tier">D</th>
+            <td>
+              <span id="kim" class="character" title="Kim" @click="openModal='kim'"></span>
+            </td>
+            <td>
+              <span id="schmitt"class="character" title="Arthur Schmitt" @click="openModal='schmitt'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="e" class="tier">E</th>
+            <td>
+              <span id="griffon" class="character" title="Griffon" @click="openModal='griffon'"></span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="modal" x-show="openModal=='meirin'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Meirin</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='mevious'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Mevious</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/mevious.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="8" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="41" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="16" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          22
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Mevious has a very great base shot and shot speed, which when combined with his very good movement speed allows him to clear enemy chains really well.
+                Taken together, this means he has the best base shot in the game.
+              </p>
+              <p>
+                His ex attack is really annoying. The bats last on the screen for a long time, and wander around in seemingly random directions while hovering
+                next to the opponent. Although the bats are short, they are really wide, which is great as there isn't less room to maneuver horizontally than vertically.
+                This combo of hard to evade and long lasting makes this ex attack and the related L2 one of the best in the game.
+              </p>
+              <p>
+                The boss attack is also pretty good: it is a gigantic dark blue bat with 3 attacks. One of these attacks in particular is great because it spawns
+                4 ex attacks at once at the top of the screen, that head towards the opponent before flying upwards and escaping. Combined with a L2 spell attack,
+                dodging gets harder as both patterns can be confused for one another.
+              </p>
+              <p>
+                Finally, he has a decent charge attack in the shape of 3 bats fired in a tri-shot pattern. At point blank, it deals 9 damage, which is good for taking
+                out bosses. It can also hit fireballs that come at an angle due to the two shots fired themselves at an angle around the vertical one.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Mevious' charge shot biggest weakness is how each shot only does a pitiful 3 damage. That isn't even enough to take down some of the bigger 
+                popcorn enemies and fireballs. It can also sometimes hit fireballs you may not want to hit due to its spread covering a wide area. Because of all
+                that, it should only be used contextually (as stated above to damage bosses or packs of diagonal fireballs)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='memory'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Memory</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/memory.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="9" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="0" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="14" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          22
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Memory is the 2nd fastest character in the game, and she also has a great shot that is made up of a set of 4 multi-colored
+                rings that resemble the shape of a tornado. She also has the 2nd fastest shot speed in the game, tied with Nanja Manja.
+              </p>
+              <p>
+                Her L1 charged shot is also really great: when using it she fires 4 large blue orbs that bounce all over the screen. It is almost like
+                a free bomb, because it covers the full screen and kills every single enemy and fireball. If fired as a boss appears, it can even kill it
+                in around a second. And, you can even charge it up while the orbs are still on the screen, negating part of its downtime!
+              </p>
+              <p>
+                Her ex attack is also really good. It works like Sprites' but with different graphics and varying hitbox size. It forces the opponent to
+                move, as it homes in on them in an accelerating fashion. Depending on the way the enemy moves, it might even spawn on them, and it can surround
+                them from many directions when several are sent at once (such as from Memory's L2)
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Memory's main downside, even though it doesn't hurt her too much, is that she has the slowest charge speed in the game, which makes charging
+                L1/L2/L3 somewhat of a risky move (as she won't be able to fire at enemy formations and fireballs as she's busy doing it).
+              </p>
+              <p>
+                This is partially negated by the fact her L3 boss isn't really great, so it is better advised to spam L2 with her instead. She can also fire a L1
+                charge attack which will clear up the screen before starting to charge up her gauge, giving her a bit of leeway.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='nanja'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Nanja Manja</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/nanja.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="48" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="14" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          18
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Nanja Manja has a great shot: it's fast and easy to spam. They also have the fastest charge speed in the game which allows them to charge up
+                their great L1 attack. This one deals eaither 3, 6 or 9 damage depending on whether it pierces through something or not (it going through an enemy
+                makes it lose 3 damage each time). It can be directed by tapping left or right as you let go of the fire button.
+              </p>
+              <p>
+                They also have really good ex attackd: they are huge furrballs that last for an extended time on the opponent's field. They also block their shots,
+                which screws up their chain combos, namely perfects. Finally, they can even trap them as they track their position a bit horizontally. That forces any
+                opponent trying to stay alive to stream the massive furballs, which is complicated amidst the chaos of battle.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                King Nanja, which is Nanja Manja's boss attack, isn't great. It has the lowest HP in the game, and bounces 4 times before attacking, which makes
+                it easier for an opponent to kill it before it can actually fire any pattern. One of its pattern is great: the lightning, because it is difficult
+                to dodge and almost instant. The other attacks, however, are really weak, because they are slow / telegraphed (spikes and body slam). Using meter
+                for L2 is a better usage of gauge as a result.
+              </p>
+              <p>
+                Another minor weakness is that Nanja Manja have only an average movement speed. In this game, that is detrimental because macrododges happen very
+                often due to the speed of fireballs and ex attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='sprites'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Sprites</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/sprites.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="32" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="12" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          23
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Sprites has a pretty good shot that can be fired faster than average (tied for the 4th fastest base shot speed with other characters).
+                She shines with her great L1 charge shot: a large, blue comet that is surrounded by two intersecting yellow smaller comets on its sides.
+                The main comet can hit 4 or 5 times, dealing 3 damage each time, while the side comets each deal 3 damage. Combined, a direct full hit of
+                this L1 can add up to 18 damage (or even 21 if it is moving upwards).
+              </p>
+              <p>
+                Their ex attack is pretty great: it is similar to Memory's but has a fixed size hitbox which is tall but skinny. The speed of each of these
+                rabbicats can vary a lot, and they aim in on the opponent. If several are sent over at once, they can surround them, making it relatively hard
+                to dodge fully.
+              </p>
+              <p>
+                The boss attack has decent HP, and a pretty good attack that fires 3 thin streaks of lightning covering the full field height, cutting a lot
+                of free space for dodges.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Using the L2 instead of the L3 is still advised because the boss only has one really great attack pattern, and even it can fail to pressure the
+                opponent enough as the 3 lightning strikes may stack together. It has 4 other possible attack patterns that also do not make up for it.
+              </p>
+              <p>
+                Sprites also has an average movement speed, which is, once again, not good enough in a game where macrododges and moving to kill enemy chains in time
+                is so important.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='tinker'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Tinker & Linker</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/tinker.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="36" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="6" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          19
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Their main strength is their ex attacks, which is one of the best in the game. They consist in big purple or yellow fairies
+                ball travelling from Tinker and Linker's field to the opponent's field with varying angles speeds. Depending
+                on said angle, it can even bounce off the floor or outer wall once before exiting the screen, adding an element of surprise.
+              </p>
+              <p>
+                Aside from that, they have a great L1 charge attack. It is a crystal that can be fired in any direction hold up as the player
+                lets go of the fire button. It charges quickly and can be fired in all eight directions, making it really flexible. That allows
+                it to be used as a greatly efficient tool to achieve perfect chains, reflect a cluster of fireballs or even hit enemies behind them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Tinker and Linker's shot is slightly slower than average and has a normal width, which makes it below average. Their L1 also has a small
+                weakness in that it lacks damage. Both of these attributes mean that this character will face a bit of trouble when dealing with boss
+                attacks, which in turns means they have bad matchups against characters with a good boss.
+              </p>
+              <p>
+                Their boss takes a while to attack, and has low life, making it easy to destroy especially if it uses its starfall attack. It is nonetheless
+                average because its other 2 attacks take a decent space on the field, and combine well with their ex attacks
+              </p>
+              <p>
+                Again, an average movement speed is a bit detrimental. All in all, they have a poor defense.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='loadran'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Load Ran</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/loadran.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="29" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="6" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          22
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Load Ran is this game's protagonist. She has a pretty decent charge attack that deals 2 damage per hit, and 8 damage on a direct hit.
+                It has a pretty wide hitbox and is thus pretty good at killing bosses, especially if they travel upwards (2 hits will connect deal a total
+                of 10 damage).
+              </p>
+              <p>
+                Her ex attack is also pretty good: it is a rabbicat that comes out from behind Ran and flies over to the opponent's side before exploding.
+                A L2 attack fires 3 of them. They always fly towards the opponent in an arc, aiming at them, which forces movement. Sometimes, they fly in
+                so quickly that the enemy will have trouble reacting in time. Their explosion also lingers for around half a second, which prevents the opponent
+                from directly moving back to their initial position.
+              </p>
+              <p>
+                Finally, she has a fairly good boss. It has average life, but decent attacks:
+              </p>
+              <ul>
+                <li>Body ram attack: the boss lounges at its opponent. As it flies before the dive, it cannot be damaged. This attack takes a lot of space.</li>
+                <li>Star spread: the boss fires a five-way shot centered on the opponent's position. It cuts off a good amount of space.</li>
+                <li>Carrot barrage: the boss moves from one wall to the other, firing six carrots that block shots. Also a good amount of pressure.</li>
+                <li>Dual bunny bombs: the boss fires two rabbicats towards the opponent's position. Combines well with other ex attacks.</li>
+              </ul>
+              <h3>Downsides:</h3>
+              <p>
+                She has only average movement and shot speed. Her charged shot also takes time fire since her charge speed is rather slow, and it needs to connect on
+                its center for it to do a significant amount of damage. Because of all that, she can have trouble with intense barrages.
+              </p>
+              <p>
+                While great, Ran's ex attacks are predictable because they always move in an arc aimed at the opponent's position. This means they can move towards the
+                opposite wall to bait an early explosion, rendering them mostly useless in low pressure situations. Because of that, it also doesn't cut off dodging
+                options from multiple angles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='darkran'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Dark Ran</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/darkran.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="29" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="7" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          22
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Dark Ran is a doppleganger so she works the same as Ran. She has a pretty decent charge attack that deals 2 damage per hit, and 8 damage on a direct hit.
+                It has a pretty wide hitbox and is thus pretty good at killing bosses, especially if they travel upwards (2 hits will connect deal a total
+                of 10 damage).
+              </p>
+              <p>
+                Her ex attack is also pretty good: it is a rabbicat that comes out from behind Ran and flies over to the opponent's side before exploding.
+                A L2 attack fires 3 of them. They always fly towards the opponent in an arc, aiming at them, which forces movement. Sometimes, they fly in
+                so quickly that the enemy will have trouble reacting in time. Their explosion also lingers for around half a second, which prevents the opponent
+                from directly moving back to their initial position.
+              </p>
+              <p>
+                Finally, she has a fairly good boss. It has average life, but decent attacks:
+              </p>
+              <ul>
+                <li>Body ram attack: the boss lounges at its opponent. As it flies before the dive, it cannot be damaged. This attack takes a lot of space.</li>
+                <li>Star spread: the boss fires a five-way shot centered on the opponent's position. It cuts off a good amount of space.</li>
+                <li>Carrot barrage: the boss moves from one wall to the other, firing six carrots that block shots. Also a good amount of pressure.</li>
+                <li>Dual bunny bombs: the boss fires two rabbicats towards the opponent's position. Combines well with other ex attacks.</li>
+              </ul>
+              <h3>Downsides:</h3>
+              <p>
+                She has only average movement and shot speed. Her charged shot also takes time fire since her charge speed is rather slow, and it needs to connect on
+                its center for it to do a significant amount of damage. Because of all that, she can have trouble with intense barrages.
+              </p>
+              <p>
+                While great, Ran's ex attacks are predictable because they always move in an arc aimed at the opponent's position. This means they can move towards the
+                opposite wall to bait an early explosion, rendering them mostly useless in low pressure situations. Because of that, it also doesn't cut off dodging
+                options from multiple angles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='macky'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Macky & Pentell</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/macky.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="7" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="12" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          20
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Macky and Pentell have a pretty good and fast shot, made up of two large colored pencils. Their L1 charge attack is interesting
+                because it can be manually detonated by pressing the fire button again after it has been fired, which is good to attack a pack of
+                fireballs while they move out of the way before the manual explosion is triggered. The detonation hitbox is also really big.
+              </p>
+              <p>
+                They shine mostly because of their ex attack: a little monster that travels from their field to the opponent's, before pausing for a second
+                and heading towards the enemy. It is incredible because it is fast, lasts for a long time, has a fairly large hitbox and forces the enemy to
+                move as it aims during its last phase. The L2 fires 3 of them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Sadly, the L1 isn't that great because Macky and Pentell have a bad charge speed (2nd longest in the game). It also doesn't deal a lot of damage,
+                which is odd considering how long it takes to fire. This bad charge speed is also detrimental for the usual reasons (forces focusing on dodging for
+                extended period of times during which they can't destroy enemy formations, boss and fireballs).
+              </p>
+              <p>
+                They also have a terrible boss attack, likely the worst in the game, because it spins a lot without firing anything, making it easily destroyable.
+                Its charges, punches and pencils are also slow and easy to dodge. It even has below average HP.
+              </p>
+              <p>
+                In the sega saturn port, Pentell gravitates around Macky on a cloud. This is only confusing and makes visibility with them even worse.
+                Pretty weird decision considering they're already relatively weak.
+              </p>
+              <p>
+                Their last and worst weakness is their terrible movement speed. They are the 2nd slowest character in the game, and it makes dodging with them
+                or aggressively chase enemy formations challenging.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='yan'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yan Yanyung</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/yan.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="1" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="53" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          22
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Yan has the fastest charge speed in the game. This combines well with her decent L1 that takes a lot of space on the screen,
+                making her very good at destroying packs of fireballs, making it a great defensive option.
+              </p>
+              <p>
+                She also has great ex attacks: these pigbirds fly in a curve towards the opponent. They have a decent size, homes in on the enemy,
+                forcing them to move, and is also really fast. A cluster of them can be really hard to dodge, making the L2 that spawns 3 of
+                them a good offensive option.
+              </p>
+              <p>
+                Finally, her boss, a giant pigbird, is pretty decent! It has 3 attacks:
+              </p>
+              <ul>
+                <li>
+                  Small waves: after moving in 1/4 circle, the boss fires six small
+                  waves that can be dodged by staying near the bottom of the screen, left or right.
+                </li>
+                <li>
+                  Star spread: after moving in 1/2 circle, the boss goes into an exaggerated sneezing animation,
+                  firing a big wave. Easy to dodge but takes a lot of space.
+                </li>
+                <li>
+                  Bullet spray: after moving in full circle, the boss fires 11 bullets in a spray
+                  before zigzaging out of the screen, which is annoying to dodge.
+                </li>
+              </ul>
+              <h3>Downsides:</h3>
+              <p>
+                Yan is the slowest character in the game, which really hurts her ability to dodge. This, combined with a pretty poor shot speed, 
+                also hurt her ability to chain enemy formations well, so it also hurts her offense a lot.
+              </p>
+              <p>
+                Her L1 is also not that great because it deals only 4 damage, meaning it won't kill the biggest fireballs that have 5 HP in one go.
+                The fact it is so large can also be detrimental since it will hit everything at once, including fever fireballs you may not want
+                to return to the opponent screen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='till'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Realy Till</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/till.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="7" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="24" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="7" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          21
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Realy Till has pretty good movement speed, and a bit below average shot and charge speed. These are pretty balanced stats overall,
+                meaning her defensive and offensive abilities are pretty balanced.
+              </p>
+              <p>
+                She has a decent ex attack too: a large, fat dragon that flies downwards from the top of the opponent's screen, then turn left or
+                right at random heights. It takes up a lot of space due to its rather big hitbox, and has a slight trapping effect.
+              </p>
+              <p>
+                While not great overall, her L1 charge attack is great at popping off enemy bubbles. This means Till doesn't have to necessarily chase
+                off the coin that pops it up, and time its collection.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Her L1 charge attack is made up of 13 separate short-range flames that each deal 1 damage. It bad range and damage makes it one of the worst
+                in the game, although it might be useful in dealing with small fries due to its spread. It also cannot pierce through ex attacks that block
+                hits, meaning she's especially weak in such matchups.
+              </p>
+              <p>
+                The other big weakness Realy Till has is her terrible L3 boss: its flame spray and bullet spray made up of 6 bullets are pretty easy to dodge.
+                The body ram attack is telegraphed, even though it is relatively fast.
+              </p>
+              <p>
+                Finally, even if her ex attack is alright, it is sadly rather predictable, and doesn't make a threat on its own. They also break for around half
+                a second before turning, which means the opponent has a bit of time to react to the direction they take afterwards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='kim'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Kim / Do Kesubei</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/kim.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="8" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="36" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="3" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          19
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Kim has pretty good movement speed, tied with Mevious for the 3rd fastest character. As usual you know the gist, this is
+                pretty good for defense (macrododges) and offense (aggressively pursuing enemy formations).
+              </p>
+              <p>
+                His charge attack is really great, first of all because it is spammable thanks to a good charge speed, but also because of
+                its precision and damage: it deals 6 damages 3 times (once per punch). The last punch also has a greater hitbox, helping
+                it deal with smaller enemies. Because of the damage, it's also a great boss killer (2 of these kill any boss if they reach it).
+              </p>
+              <p>
+                Finally, Kim has a very strong boss, which, even though it has low life, features 4 strong attacks:
+              </p>
+              <ul>
+                <li>
+                  Bouncy Ball: after moving around a bit, the boss turns into a ball and falls down
+                  towards the opponent, before bouncing 4 times.
+                </li>
+                <li>
+                  Bullet spread: after moving around a bit, the boss quivers and then fires almost instantly
+                  a quick 6-way spread shot. Because this attack is so fast, point blanking this boss can be challening.
+                </li>
+                <li>
+                  Bouncing triangles: after moving around a bit, the boss fires 2 triangles that cross each other out and
+                  bounce off the inner and outer walls.
+                </li>
+                <li>
+                  Lasers: after after moving around a bit, going slightly upwards and pausing, the boss then fires two
+                  full screen lasers out of its eyes while moving left or right (depending on where it started from)
+                </li>
+              </ul>
+              <h3>Downsides:</h3>
+              <p>
+                Sadly, despite great upsides, Kim still falls off and goes into low tier because of crippling issues. His worst one is likely
+                his ex-attack which is by far the worst one in the game: it is a rocker fist that slowly flies down the opponent's field before
+                exploding. It is terrible due to its slowness, predictable movement and narrow hitbox. Half of the time they don't even make
+                it fully to the bottom of the field, meaning they explode prematurely. Said explosion hitbox is also rather small.
+              </p>
+              <p>
+                Another big weakness is that they have the 2nd slowest shot in the game, and that said shot also has a rather bad hitbox.
+                Because of that, starting chains instead requires using the charge attack, which, while very strong, also has a rather small range,
+                meaning you essentially need to point blank everything, which can become very dangerous very fast.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='schmitt'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Arthur Schmitt</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/schmitt.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="10" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="14" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="0" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          17
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Arthur is the fastest character in the game, which is really useful as it allows him to dodge and aggressively chase enemies really
+                well. It works well with his L1 charge attack, a laser that he can slide on the screen, which is very good at destroying packs of enemies
+                or fireballs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='griffon'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Griffon</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/twinklestar/griffon.gif">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="6" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="19" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="4" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          25
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 </body>
