@@ -201,6 +201,10 @@ th {
   background-image: url(/images/pofv/characters.png);
 }
 
+.udoalg .character {
+  background-image: url(/images/udoalg/characters.png);
+}
+
 .modal {
   position: fixed;
   z-index: 1;
@@ -276,6 +280,10 @@ th {
 
   section {
     max-width: 75%;
+  }
+
+  #ss {
+    background:radial-gradient(#552586,#804fb3,#b589d6)
   }
 
   #s {
@@ -492,5 +500,81 @@ th {
 
   #reimu_pofv {
     background-position: 1920px;
+  }
+
+  #zanmu {
+    background-position: 120px;
+  }
+
+  #hisami {
+    background-position: 240px;
+  }
+
+  #chiyari {
+    background-position: 360px;
+  }
+
+  #enoko {
+    background-position: 480px;
+  }
+
+  #biten {
+    background-position: 600px;
+  }
+
+  #suika {
+    background-position: 720px;
+  }
+
+  #yuuma {
+    background-position: 840px;
+  }
+
+  #saki {
+    background-position: 960px;
+  }
+
+  #yachie {
+    background-position: 1080px;
+  }
+
+  #mamizou {
+    background-position: 1200px;
+  }
+
+  #tsukasa {
+    background-position: 1320px;
+  }
+
+  #rin {
+    background-position: 1440px;
+  }
+
+  #seiran {
+    background-position: 1560px;
+  }
+
+  #nazrin {
+    background-position: 1680px;
+  }
+
+  #aunn {
+    background-position: 1800px;
+  }
+
+  #ran {
+    background-position: 1920px;
+  }
+
+  #sanae {
+    background-position: 2040px;
+  }
+
+  #marisa_udoalg {
+    background-position: 2160px;
+  }
+
+  #reimu_udoalg {
+    background-position: 2280px;
   }
 }

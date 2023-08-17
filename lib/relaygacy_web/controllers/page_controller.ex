@@ -36,4 +36,8 @@ defmodule RelaygacyWeb.PageController do
   def pofv(conn, _params) do
     render(conn, "pofv.html")
   end
+
+  def udoalg(conn, _params) do
+    render(conn, "udoalg.html")
+  end
 end

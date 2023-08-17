@@ -21,6 +21,736 @@
         Unfinished Dream of All Living Ghost is the latest versus shooting game in the Touhou series, that came out this year (2023 at the moment of writing).
         It works pretty much the same as PoFV and PoDD, but has a few of its own peculiarities.
       </p>
+      <div class="tierlist" x-data="{ openModal: '' }">
+        <table class="udoalg">
+          <tr>
+            <th id="ss" class="tier">SS</th>
+            <td>
+              <span id="chiyari" class="character" title="Chiyari" @click="openModal='chiyari'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="s" class="tier">S</th>
+            <td>
+              <span id="reimu_udoalg" class="character" title="Reimu" @click="openModal='reimu'"></span>
+            </td>
+            <td>
+              <span id="marisa_udoalg" class="character" title="Marisa" @click="openModal='marisa'"></span>
+            </td>
+            <td>
+              <span id="seiran" class="character" title="Seiran" @click="openModal='seiran'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="a" class="tier">A</th>
+            <td>
+              <span id="zanmu" class="character" title="Zanmu" @click="openModal='zanmu'"></span>
+            </td>
+            <td>
+              <span id="rin" class="character" title="Rin" @click="openModal='rin'"></span>
+            </td>
+            <td>
+              <span id="enoko" class="character" title="Enoko" @click="openModal='enoko'"></span>
+            </td>
+            <td>
+              <span id="yuuma" class="character" title="Yuuma" @click="openModal='yuuma'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="b" class="tier">B</th>
+            <td>
+              <span id="ran" class="character" title="Ran" @click="openModal='ran'"></span>
+            </td>
+            <td>
+              <span id="suika" class="character" title="Suika" @click="openModal='suika'"></span>
+            </td>
+            <td>
+              <span id="biten" class="character" title="Biten" @click="openModal='biten'"></span>
+            </td>
+            <td>
+              <span id="hisami" class="character" title="Hisami" @click="openModal='hisami'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="c" class="tier">C</th>
+            <td>
+              <span id="mamizou" class="character" title="Mamizou" @click="openModal='mamizou'"></span>
+            </td>
+            <td>
+              <span id="sanae" class="character" title="Sanae" @click="openModal='sanae'"></span>
+            </td>
+            <td>
+              <span id="yachie" class="character" title="Yachie" @click="openModal='yachie'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="d" class="tier">D</th>
+            <td>
+              <span id="saki" class="character" title="Saki" @click="openModal='saki'"></span>
+            </td>
+            <td>
+              <span id="tsukasa" class="character" title="Tsukasa" @click="openModal='tsukasa'"></span>
+            </td>
+            <td>
+              <span id="aunn" class="character" title="Aunn" @click="openModal='aunn'"></span>
+            </td>
+          </tr>
+          <tr>
+            <th id="e" class="tier">E</th>
+            <td>
+              <span id="nazrin" class="character" title="Nazrin " @click="openModal='nazrin'"></span>
+            </td>
+          </tr>
+        </table>
+
+        <div class="modal" x-show="openModal=='chiyari'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Chiyari Tenkajin</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/chiyari.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                She is in her own special tier because of how she breaks the game with her ex attack, and the way it works with her skill.
+                It is a purple non-cancellable, non-grazable purple "bullet" that moves towards the opponent. Chiyari's L2 makes them bigger
+                while her L3 spawns a bunch of them around the enemy: both of these used together can at times cover the full screen, making
+                it essentially undodgeable. They can even spawn directly on top of the opponent.
+              </p>
+              <p>
+                The only thing that can actually be done to somewhat help survive against that ex attack is to use your scope. However, that
+                can only delay things for so long: as the match progresses, unless you get to deal with her beforehand, her ex attacks will
+                eventually overtake the game.
+              </p>
+              <p>
+                On her side of the field, she also has a few good stats helping her: namely, her basic shot deals enough damage on its own to
+                be able to destroy most fairies and spirits. She's even able to deal with boss only using that, when other characters need to
+                rely on their L1/L2 for that (or in the most extreme cases, cannot even deal with it).
+              </p>
+              <p>
+                He boss non-spellcombines decently well with her ex attack as having to stream a pattern while being careful about the purple
+                spirits can be really hard: it divides the screen pretty well, removing even more options for the enemy to escape to.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Her boss nonspell feeds the opponent, because it fires long lines of bullets that can easily be streamed. Aside from that,
+                her boss spellcard is also pretty easy to deal with on its own. Essentially this means playing her in PVP, someone should rather
+                resort to using L3+L2 instead of L4.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='reimu'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Reimu Hakurei</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/reimu.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Reimu's main perk is her really useful L2 skill that allows her to cancel most bullets in the game. Because of the way bullet cancelling works
+                in this game, she gets back most of the energy she spent to trigger it. It lasts for a while, and protects from bullets during the whole animation.
+                It can even be used to destroy anything, from fairies to animal spirits, Rin's ex attacks and bosses, if used at point blank. Essentially you could
+                delete a boss spell / nonspell by going right below it as it triggers, and using L2.
+              </p>
+              <p>
+                Reimu also has other great things in her toolkit: her L1, used on its own, stops right above her a little bit before moving again. Because of that, it
+                can deal a lot of damage in that space where it stops, and can also be used to destroy hard to kill enemies (enraged animal spirits, bosses). Her L2
+                skill, like most in the game, also triggers the L1, meaning it gets to deal an even more absurd amount of damage in the right circumstances.
+              </p>
+              <p>
+                Her ex attack is a small ying yang orb that bounces on the side of the screen, and her L3 sends more bigger yin yang orbs that also bounce on the screen.
+                If upgraded, said L3 can have its time extended for a while, making it a menace on its own due to the weird pattern. Finally, her L4 boss is also pretty great,
+                the spellcard in particular sends over a lot of small yin yang orb that are hard to dodge and can stack up if the opponent uses their scope to deal with them
+                more easily. They also come from all sides, as they bounce on the wall, circling the enemy.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Reimu has a pretty bad scope, it is almost instant but also very small, which means she can't really use it to slow down bullets unless they're already pretty much
+                in her face. For that reason, she also can't really use it very well to douse animal spirits or farm patterns.
+              </p>
+              <p>
+                Her unfocused shot, homing amulets, deal very weak amounts of damage, forcing her to focus in order to deal damage a lot of the time, which hurts a bit her mobility.
+              </p>
+              <p>
+                She doesn't have a super strong nonspell (not really a weakness, it is just average): she fires a bunch of amulets that stop after a while before homing on the
+                opponent. These force them to move around in a way that redirects them (often towards the side of the screen), but can be streamed easily with scope, making it
+                a pattern that feeds the opponent energy.
+              </p>
+              <p>
+                Finally, her L2 skill has some bloom effect applied to it, which hurts visibility quite a lot, making dodging non cancellable ex attacks a bit challenging in some
+                matchups (these include Zanmu, Enoko, Aunn, Chiyari among others). As a result, she may want to step back a bit after firing it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='marisa'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Marisa Kirisame</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/marisa.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Marisa's main perk is likely her great L1 charge attack. While stationary in this game, it deals a lot of damage and can be used to start combo chains
+                on enemies, or destroy bosses. Once fired, and after a short delay, she can even use her base shot, or charge up another L1 to fire for a short while
+                alongside it. Because of how good it is at killing bosses, it can even be used to clear the screen (since dealing with a spell clears the screen).
+              </p>
+              <p>
+                Alongside that, she has really great offense. Her ex attack is a laser that spawns on the bottom of the opponent's field at random, indicated by a blue
+                circle. Combined with her L2 and L3, the lasers can sometimes stack together in a way that makes the pattern undodgeable, forcing a hit on the enemy.
+              </p>
+              <p>
+                She has a really nice scope that is almost instant and takes up the entire vertical part of her field, including behind her. This can be used to farm
+                gauge items on any pattern directly situated right in front of her, and because it doesn't take a lot of lateral space, can be used to strategically
+                activate beast spirits.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Marisa's game plan actually suffers a bit from questionable patterns. Her L4 boss non-spell fires easily dodged lasers and packs of 6 pellets in a circle
+                that can easily be farmed with scope. Her spell is also a bit slow: it is made up of lasers that spawn after a noticeable time stars on the side of the screen
+                they touch. This makes said spell vulnerable to characters that specialize in killing bosses, such as Seiran or Marisa herself.
+              </p>
+              <p>
+                Her L2 attack actually isn't that great at pressuring the opponent because it spawns lasers that converge towards a point at the bottom of the screen, making
+                it pretty situational. If the other player hugs the bottom of the screen, they will likely dodge it without much of an issue. However, if the opponent is high
+                up on the screen, it can still punish them decently well (for instance pretty great against Yuuma mains using her spoon to start chains).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='seiran'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Seiran</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/seiran.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Seiran has a lot of good perks. Her L1 is able to delete bosses even faster than Marisa's lasers. Her L3 sends over a lot of ex attacks arranged
+                in a big ring on the opponent's screen. Her scope is a circle located a bit above her, and it allows her to farm patterns for a lot of gauge energy.
+              </p>
+              <p>
+                Generally speaking, her ex attack (and the related L3) is pretty good because it fires a lot of bullets on the opponent's screen that are slow and
+                end up taking a lot of space, eventually covering most of the screen.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Her first and likely biggest downside is her L2: it locks her ability to charge up her gauge (which also means she can't use her scope)
+                and fire normal shots during her entire duration. Usually I would advise against using it. This makes firing of her L2 akin to a built in nerf:
+                if you make a timing error, you're likely to be unable to use some of her vital skills for a bit.
+              </p>
+              <p>
+                Seiran also doesn't have a great boss L4 attack: both the non-spell and spell fire triangles made out of bullets that can really easily be scoped for
+                gauge points, and streamed. Essentially, as a lot of spell attacks in this game, it is only really viable when supported by an additional L3.
+              </p>
+              <p>
+                Finally, her great ex attack and L3 completely fall appart in some matchups, in particular characters that have access to bullet cancel mechanics (such
+                as Reimu, Yachie, Yuuma, Enoko) can completely counter it, making her otherwise wonderful offense unremarkable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='zanmu'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Zanmu Nippaku</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/zanmu.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Zanmu is likely the best chainer in the game because of her L2 attack that can convert all enemies on the screen into normal divine spirits, that can
+                then be fired at for a big chain explosion. This allows her to easily cancel pellets coming her way, but also, and most importantly, to send free L3 and
+                L4 to her opponents. It is also really good at dealing with spirit based ex attacks, making her a great counterpick in some matchups (obviously Yachie,
+                Saki and Yuuma, but also Rin). Finally, it can deal damage to bosses.
+              </p>
+              <p>
+                Her base shot is quite spread out while unfocused, and can be also supported by her L1 charge attack that has an even wider range, making popping off spirits
+                after conversion easy from anywhere on the screen. These qualities can also be used to easily fire at multiple fairies from the middle of the screen, making
+                chaining easier by itself.
+              </p>
+              <p>
+                She has a pretty good ex attack and related L3 because it is a non-cancellable needle that takes up a lot of space on the screen and stays for a while before
+                disappearing once stuck in the floor. This counters a bit characters relying a bit too much on their ability to cancel patterns, and forces the opponent into
+                tiny spaces at the bottom of the screen. Some of them spawn around the walls, making moving too close to them pretty dangerous (especially as an L3 attack
+                is fired) because a hit can register as these needles spawn.
+              </p>
+              <p>
+                Her L4 is pretty great: both the nonspell and the spell fire orbs and fireballs arranged in loose chunks that force the opponent to move specific ways while
+                still being undefined enough to score the occasional hit on them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Zanmu suffers overall from a pretty bad basic shot in the realm of damage, meaning she might need to rely on cards that boost it to be able to deal more easily
+                with enemies when her L2 is not available, or bosses. This makes her a bit vulnerable to characters with a very strong boss attack.
+              </p>
+              <p>
+                Another tiny downside is that her L2 skill doesn't fire her L1 alongside it, as with most other characters. This is somewhat important because this means,
+                as opposed to Rin, she needs to fire again something at the converted spirits to be able to pop them off. After firing her L2, there is also a pretty noticeable
+                amount of time during which she won't be able to shoot at all, making said explosion delayed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='rin'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Rin Kaenbyou</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/rin.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+              <p>
+                Rin's strength relies mainly in her ex attack and the related L3: they are red evil spirits that are very tanky and fire bullets once in a while (in Lunatic).
+                Dodging them properly, especially when they are packed together, is a bit challenging due to the way they interact with scope, and the fact that most characters
+                cannot reliably destroy them. They also tank shots, making it a great protection for her boss attack.
+              </p>
+              <p>
+                Her scope is pretty great because she gets to scan a good portion of the screen somewhat above her with it, dousing spirits encountered around the way for a
+                quick follow up with her L1 charge attack that destroys them right afterwards. Said charge attack is also great
+              </p>
+              <p>
+                Additionally, Rin is likely the best chainer in the game with Zanmu due to her very similar L2 skill that transforms fairies and yin yang wheels on her screen
+                into divine spirits. Combined with the L1 cart that is fired alongside, this usually results in an instant explosion chain, and the potential free related L3 and
+                L4 attacks (and the related chaos that ensues). It also automatically douses other spirits it encounters (instead of turning them into divine spirits).
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                Rin's L4 boss isn't that great. The nonspell fires pellets and arrowheads arranged in a diagonal checkered pattern. The boss summons zombie fairies, that 
+                fire more arrowheads. Some characters easily kill them, and, even if they revive after a while, that neutralizes the pattern for a while. This means L3
+                support is mandatory so that the fairies stay alive and get to fire their shots at the opponent.
+              </p>
+              <p>
+                She also boosts a pretty terrible base shot, meaning she needs to mostly rely on her L2 and L1 charge attack to be able to destroy most enemies in a
+                timely manner. That makes her a bit struggle with farming, especially in situations where she doesn't want to or can't use her gauge energy for L2.
+                In turn, this makes firing several L3 back to back (her main offense) challenging unless she's gaining tons of gauge energy from a boss fight on her field.
+              </p>
+              <p>
+                Apparently, in some circumstances, Orin's charge attacks can kill her. At this point, is wasn't exactly confirmed why, but it seems to be related to her L2
+                skill spawning a divine spirit on top of her if fired inside the upper half of the field, or her own wheelbarrow hurting her on L3.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='enoko'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Enoko Mitsugashira</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/enoko.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='yuuma'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yuuma Toutetsu</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/yuuma.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='yuuma'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yuuma Toutetsu</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/yuuma.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='ran'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Ran Yakumo</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/ran.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='suika'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Suika Ibuki</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/suika.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='biten'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Biten Son</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/biten.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='hisami'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Hisami Yomotsu</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/hisami.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='mamizou'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Mamizou Futatsuiwa</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/mamizou.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='sanae'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Sanae Kochiya</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/sanae.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='yachie'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Yachie Kicchou</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/yachie.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='saki'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Saki Kurokoma</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/saki.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='tsukasa'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Tsukasa Kudamaki</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/tsukasa.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal" x-show="openModal=='aunn'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Auun Komano</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/aunn.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" x-show="openModal=='nazrin'">
+          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+            <div class="modal-header">
+              <h2>Nazrin</h2>
+            </div>
+            <div class="modal-body">
+              <table class="noborders">
+                <tr>
+                  <td>
+                    <div class="portrait">
+                      <img src="/images/udoalg/nazrin.png">
+                    </div>
+                  </td>
+                  <td>
+                    <table class="stats noborders">
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <h3>Upsides:</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 </body>

@@ -201,15 +201,82 @@
                 <tr>
                   <td>
                     <div class="portrait">
+                      <img src="/images/twinklestar/meirin.png">
                     </div>
                   </td>
                   <td>
                     <table class="stats noborders">
+                      <tr>
+                        <td>
+                          Movement Speed
+                        </td>
+                        <td class="value">
+                          <progress value="7" max="10"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Charge Speed
+                        </td>
+                        <td class="value">
+                          <progress value="29" max="53"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Shot Speed
+                        </td>
+                        <td class="value">
+                          <progress value="5" max="16"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Boss HP
+                        </td>
+                        <td class="value">
+                          20
+                        </td>
+                      </tr>
                     </table>
                   </td>
                 </tr>
               </table>
               <h3>Upsides:</h3>
+              <p>
+                Meirin has one of the most toxic ex attacks in the game: it is a giant, wide panda, that climbs a wall of the opponent's field before body
+                slaming down at them. While doing this "jump", the panda will also adjust its direction so that to follow the enemy. The fact that its movement
+                has annoying tracking, coupled with its very wide hitbox and fast speed likely makes it the best ex attack in the game. Finally, it blocks shots!
+              </p>
+              <p>
+                Aside from that, she has a decent boss, which chooses between three patterns:
+              </p>
+              <ul>
+                <li>
+                  Spin attack: after jumping around a bit, the Principal spins around in a clockwise or anticlockwise pattern, describing
+                  a circle around the field. This is annoying as it forces the opponent to move around with it, and it takes a lot of space.
+                </li>
+                <li>
+                  Panda summon: after wandering, the Principal summons 4 smaller pandas that gravitate around it, blocking hits.
+                  Likely the least annoying of attacks as he doesn't move down too much after summoning these.
+                </li>
+                <li>
+                  Slam trap: the Principal summons two boxes on each wall surrounding the opponent's field, then suddenly smashes
+                  them against one another in the center of the screen, at the enemy's height. Can be dodged vertically once it is fired.
+                </li>
+              </ul>
+              <h3>Downsides:</h3>
+              <p>
+                Her L1 charged attack isn't very great: it spawns 4 bells that explode in a big radius when they hit an enemy, so their main
+                use is defensive only, but you need to anticipate it a bit due to her slow charge speed.
+              </p>
+              <p>
+                Her bossfight doesn't move around a lot and has big hitbox, meaning it is easier to deal it damage than most of the other
+                boss attacks. 
+              </p>
+              <p>
+                Her shot also speed isn't very great, meaning it is a bit tricky at times to deal damage to big enemies or fireballs.
+              </p>
             </div>
           </div>
         </div>
@@ -1191,8 +1258,36 @@
               <h3>Upsides:</h3>
               <p>
                 Arthur is the fastest character in the game, which is really useful as it allows him to dodge and aggressively chase enemies really
-                well. It works well with his L1 charge attack, a laser that he can slide on the screen, which is very good at destroying packs of enemies
-                or fireballs.
+                well. It works well with his L1 charge attack, a laser that covers the full height of his field that he can slide around, which is
+                decent at destroying packs of enemies or fireballs. Said attack lasts for 38 frames, and deals multi-hit damage (13 ticks of 1 damage).
+              </p>
+              <p>
+                He has ex attacks that are pretty gimmicky: they are rockets that fly from the bottom of the opponent's field, creating a trapping
+                effect if there are a lot of fireballs flying down the other direction. It also has a pretty tall hitbox, because the rocket's flame
+                is actually part of it. It can even spawn on top of an enemy staying too much at the bottom of their field. His L2 actually sends 4 of
+                them, which is pretty good at creating clusters of them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                However, said ex attacks have a very narrow hitbox - its side guns cannot hit the opponent - making the attack pretty easy to dodge.
+                A good way to counter them is to stay higher up on the screen than you would typically do in other matchups, to have the time to
+                react to the rockets and dodge them laterally.
+              </p>
+              <p>
+                Schmitt's L1 charge attack is also in fact not too great because it deals measly damage, meanings he needs to stay stationary to deal
+                enough damage to the biggest enemies and fireballs. It also stuns bosses, which puts them in a state in which they do not receive anymore
+                damage for a while, making it a pretty weak option against them.
+              </p>
+              <p>
+                Additionally, he has the slowest shot in the game: three light blue mini lasers, with a pretty narrow hitbox. Combined with his L1, that
+                makes him really bad at dealing with enemy formations, making achieving perfects somewhat difficult, as well as making his offensive even
+                worse during times he would need it in a clutch, especially since his pretty bad charge speed makes it difficult to fire his L1 without preparation.
+              </p>
+              <p>
+                Finally, Arthur has a pretty bad boss attack as well. First of all, it has a measly 17 HP, the lowest in the game. It also only has one decent attack out
+                of 3: dual lasers with 4 slow bullets it fires after placing itself in the center of the screen and moving upwards. The issue is that even this really
+                great pattern, that would otherwise contend for best boss attack in the game, is actually neutered because of how vulnerable the low HP boss is before
+                actually firing its lasers (it takes around 2s for it to position), meaning most of the time, it will get destroyed before firing anything.
               </p>
             </div>
           </div>
@@ -1201,7 +1296,7 @@
         <div class="modal" x-show="openModal=='griffon'">
           <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
             <div class="modal-header">
-              <h2>Griffon</h2>
+              <h2>Griffon, Evin & Burn</h2>
             </div>
             <div class="modal-body">
               <table class="noborders">
@@ -1250,6 +1345,51 @@
                 </tr>
               </table>
               <h3>Upsides:</h3>
+              <p>
+                Griffon, Evin and Burn have a bit above average movement speed, and a pretty decent L1 charge attack: it is a multi hit double saw that goes up
+                diagonally before returning to them. Each blade deals 1 point of damage every 8 frames. It is pretty good at dealing extra damage against
+                a boss as they can fire normal shots while the saws are moving, and it can destroy ennemies and fireballs at angles not achievable by any other
+                character in the game.
+              </p>
+              <p>
+                The other main upside they have going for them is a pretty good boss attack, boosting the highest health in the game at 25 hit points and
+                four attacks, three of which are rather good:
+              </p>
+              <ul>
+                <li>
+                  Body ram: if this attack is selected and at any point the opponent gets under the griffon while it wanders around,
+                  it will dive straight down to the bottom of the field. Otherwise, the griffon will dive from one of three places
+                  randomingly instead. Then, it wanders around for 2/3 seconds before leaving the screen.
+                </li>
+                <li>
+                  Cutter blades: after moving 3/4th of a circle, it goes to a fix position at the top center of the screen and
+                  sends out 4 saw blades that move towards the bottom center of the screen, before going boomerang back upwards.
+                  This attack can be dodged by moving to the sides of the screen, then going back to the center.
+                </li>
+                <li>
+                  Bullet spray: after moving in a full circle, the griffon heads back to the opposite wall while spraying 6
+                  bullets out of its mouth, then it leaves the screen immediately.
+                </li>
+                <li>
+                  Swords: after moving a full circle, the griffon heads back to the opposite wall while summoning 4 swords out
+                  of its back. Once they are all summoned, they head towards the opponent. This is likely the easiest attack
+                  to dodge, and the boss is vulnerable while summoning said swords.
+                </li>
+              </ul>
+              <p>
+                Finally, their ex attack can be somewhat decent if a few rare situations: they are rather wide, because the griffons spread their wings,
+                taking some lateral space. As a result, a group of them in the right spots can cut off a lot of space. Their L2 also fires 4 of them.
+              </p>
+              <h3>Downsides:</h3>
+              <p>
+                They have a bad extra attack because it travels in a predictable straight line from the top to the bottom of the opponent's field
+                at a constant, slow speed. They also rarely pack together.
+              </p>
+              <p>
+                Additionally, they are tied with Yan for the slowest base shot in the game. And their L1 doesn't really make up for it because it also has two big
+                things going against it. Firstly, its damage isn't good enough to take out big fireballs, as they'll most likely pass through the blades. Secondly,
+                Griffon has a very slow charge speed generally speaking, and that also hurts their ability to fire their L3 boss attack.
+              </p>
             </div>
           </div>
         </div>
