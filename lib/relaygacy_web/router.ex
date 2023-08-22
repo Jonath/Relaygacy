@@ -20,6 +20,7 @@ defmodule RelaygacyWeb.Router do
     get "/", PageController, :home
     get "/events", PageController, :events
     get "/resources", PageController, :resources
+    get "/tools", PageController, :tools
     get "/partners", PageController, :partners
     get "/credits", PageController, :credits
     get "/discord", PageController, :discord

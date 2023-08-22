@@ -8,138 +8,134 @@
     <header>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
     <div class="separator"></div>
     <section>
-      <h1>Resources</h1>
-      <h2>Overview</h2>
-      <p>You can use this archive for the purpose of training with other players before the tournament.</p>
-      <p>For your convenience, we also added utilities to ease playing on Parsec with multiple input setups:</p>
-      <ul>
-        <li class="item">
-          KeyboardSplitter contains an executable (under KeyboardSplitter/KeyboardSplitter/bin/Release) that allows you to map a keyboard
-          to a virtual XBox 360 controller. You will need to use this if you want to play keyboard vs keyboard with Parsec
-          (because it emulates local play and modern Windows only allows one keyboard at a time locally!)
-        </li>
-        <li class="item">
-          JoyToKey contains an executable (directly in the JoyToKey folder) that allows you to map a joystick / pad to the keyboard.
-          This is needed if you want to play a Touhou 3 joystick vs joystick match as this game does not offer this option
-          (only split keyboard vs keyboard or joystick vs keyboard configurations are supported)
-        </li>
-      </ul>
-      <p>To connect to other players, you will also need to download Parsec and setup an account.</p>
-      <hr>
-      <h2>How to play</h2>
-      <p>
-        To launch Twinkle Star Sprites, you can use the Bizhawk emulator provided with the archive,
-        then go to File &rarr; Open ROM and open the .cue file in the Twinkle Star Sprite folder.
-      </p>
-      <img src="/images/bizhawk1.png" class="center">
-      <figcaption>How to load Twinkle Star Sprites</figcaption>
-      <p>
-        After booting up the game, the emulator also allows you to rebind controls for both keyboard and joystick / pad if necessary,
-        under the menu Config &rarr; Controllers (there are two pages, one for each player).
-      </p>
-      <img src="/images/bizhawk2.png" class="center">
-      <figcaption>Bizhawk - Controllers Screen</figcaption>
-      <p>
-        Seihou 2: Kioh Gyoku is an executable but the game was first published in 2001 so you might run into some compatibility issues.
-        If your graphic card is an NVIDIA, we recommend you open the control pannel and change your "Adjust Desktop Size and Position" Scaling setup
-        to "Integer Scaling". This way, the fullscreen application will not be stretched with your screen aspect ratio
-        (which nowadays likely isn't 4:3 but 16:9 or something even more exotic).
-      </p>
-      <img src="/images/nvidia.png" class="center">
-      <figcaption>NVIDIA control pannel</figcaption>
-      <p>
-        The inputs are a bit hard to remap. You want to go to the Control button, then the 3rd option with two characters, and finally the 2P setting.
-        Here you can map the controls for a keyboard. Note you can use the mouse to help setup the menus here, which can be useful if you need to correct a
-        mistake in the mappings.
-      </p>
-      <img src="/images/kiohgyoku1.png" class="center">
-      <figcaption>Seihou: Kioh Gyoku - Keyboard Controls</figcaption>
-      <p>
-        For a joystick / pad you want to go to the setting right below 2P.
-        Use the mouse if you need to remap both players here (in particular, you can't select player 2 controls otherwise).
-        You won't need to bind the axis here, only the buttons. Then, to play a match, use the 2P Start option.
-        Then, the first option is keyboard vs keyboard (but it should also work for joystick vs joystick!), the second one is joystick vs keyboard
-        and the third one keyboard vs joystick.
-      </p>
-      <img src="/images/kiohgyoku2.png" class="center">
-      <figcaption>Seihou: Kioh Gyoku - Joystick Controls</figcaption>
-      <p>
-        To play Touhou 3: Phantasmagoria of Dim. Dream as will be setup in the tournament you need to use the DOSBOX-X emulator which is provided in the archive.
-        Simply launch the executable dosbox-x.exe in the DOSBOX-X folder, and enter the following commands:
-      </p>
-      <pre>
-        IMGMOUNT D C:\PHANTASMAGORIABOX\PODD\TH03.HDI  // to mount the Touhou 3 Hard Drive Image to the D virtual disk (note: \ should appear as the yen symbol ¥)
-        D:                                             // to go to the mounted virtual disk
-        GAME                                           // to launch the game!
-      </pre>
-      <p>
-        Note that the path given works if you placed your PhantasmagoriaBox directly at the root of the C disk
-        (otherwise just update the path to reflect the one on your computer!).
-      </p>
-      <p>You also want to setup manually the following options everytime you boot up this emulator:</p>
-      <ul>
-        <li>CPU &rarr; Emulate CPU Speed &rarr; 486DX4 100MHz (~33445 cycles) as the original PC98 ran around 30K cycles per second</li>
-        <li>Video &rarr; Fit to aspect ratio</li>
-      </ul>
-      <img src="/images/dosbox.png" class="center">
-      <figcaption>Touhou 3: PoDD - Game ready setup in DOSBOX-X</figcaption>
-      <p>
-        You should always select keyboard vs joystick or joystick vs keyboard in the options (to avoid a split keyboard).
-        Depending on the inputs player use you want to remap a keyboard to a joystick using KeyboardSplitter (or the opposite using JoyToKey). That is because the keybinds
-        for PoDD are not remappable, and the default controls you are stuck with may be annoying (on joystick, shot and bomb keys are swapped compared to other Touhou games).
-      </p>
-      <img src="/images/podd.png" class="center">
-      <figcaption>Touhou 3: PoDD - Options screen</figcaption>
-      <p>
-        To play Touhou 9 and Touhou 19, just use the executable in the related folder (either PoFV or UDoALG). Don't use adonis.exe for PoFV, as you play through Parsec already.
-        Both games support remapping of inputs in the options, the only corner case should be if both players use a keyboard (once again, in that case, use KeyboardSplitter),
-        although games are also known to be somewhat unstable and may crash. Usually when booting up, if that happens to you, relaunching the exe should hopefully fix it.
-        Restart your computer if the issue persists, and if it still happens feel free to ping our team on discord.
-      </p>
-      <hr>
-      <h2>Tools Configuration</h2>
-      <p>
-        KeyboardSplitter works with profiles. We already prepared a set of profiles you can use for each game
-        (the most noticeable one is PoDD because for joysticks it has shot and bomb swapped when compared to the other Touhou and Seihou games).
-        If they are not directly usable, you will want to reimport the presets with the menu option Presets &rarr; Import.
-        The file you want to import is splitter_presets.xml (which is located at the same level as the executable, KeyboardSplitter/KeyboardSplitter/Release/bin)
-      </p>
-      <p>
-        You also want to double-check the keyboard which is mapped to Slot#1 is yours, click the two dots button (..) on the right of the "Choose Keyboard" dropdown
-        and enter any key to have it be automatically detected and assign. If the application crashed, you may also want to deactive Slot#2 as well as any mouse mapping.
-      </p>
-      <img src="/images/keyboardsplitter.png" class="center">
-      <figcaption>KeyboardSplitter with one keyboard mapped and PoFV profile selected</figcaption>
-      <p>
-        You can test the configuration works for you by clicking the "Start" button, then going to Controllers &rarr; Test Xinput Controllers
-        (this will only work if you clicked Start first, otherwise the binding is not effective!).
-      </p>
-      <p>
-        Once you are sure the configuration works for the game of your choice, if you want to connect through Parsec, you will want to reactivate it only once connected.
-        Thus, you need to click the "Stop" button, wait 5 seconds,  then connect to Parsec, get accepted in by the host and only then click the "Start" button again, 
-        and finally, press any mapped key. This way, your keyboard should be detected as a controller by the Parsec host
-        (on a modern Windows you should hear a noise indicating the connection of an external device).
-      </p>
-      <p>JoyToKey, on the other hand, can be used directly by the Parsec host, you will just need to remap the following buttons for it to work:</p>
-      <ul>
-        <li>POV: up</li>
-        <li>POV: right</li>
-        <li>POV: down</li>
-        <li>POV: left</li>
-        <li>Button 1</li>
-        <li>Button 2</li>
-        <li>Button 3 (for UDoALG)</li>
-      </ul>
-      <img src="/images/joytokey.png" class="center">
-      <figcaption>JoyToKey with a profile setup for PoDD (notice Z and X are swapped)</figcaption>
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="subtext">
+          <h1>Resources</h1>
+          <h2>Overview</h2>
+          <p>
+            You can use <a href="https://www.mediafire.com/file/0cc1uyrovf1e821/PhantasmagoriaBox.zip/file">this archive</a> for the purpose
+            of training with other players before the tournament.
+          </p>
+          <p>For your convenience, we also added utilities to ease playing on Parsec with multiple input setups:</p>
+          <ul>
+            <li class="item">
+              KeyboardSplitter contains an executable (under KeyboardSplitter/KeyboardSplitter/bin/Release) that allows you to map a keyboard
+              to a virtual XBox 360 controller. You will need to use this if you want to play keyboard vs keyboard with Parsec
+              (because it emulates local play and modern Windows only allows one keyboard at a time locally!)
+            </li>
+            <li class="item">
+              JoyToKey contains an executable (directly in the JoyToKey folder) that allows you to map a joystick / pad to the keyboard.
+              This is needed if you want to play a Touhou 3 joystick vs joystick match as this game does not offer this option
+              (only split keyboard vs keyboard or joystick vs keyboard configurations are supported)
+            </li>
+          </ul>
+          <p>To connect to other players, you will also need to download Parsec and setup an account.</p>
+          <p>You can find a detailed guide on how to set all of these tools <a href="/tools">here</a>.</p>
+          <hr>
+          <h2>How to play</h2>
+          <p>
+            To launch Twinkle Star Sprites, you can use the Bizhawk emulator provided with the archive,
+            then go to File &rarr; Open ROM and open the .cue file in the Twinkle Star Sprite folder.
+          </p>
+          <img src="/images/bizhawk1.png" class="imgcenter">
+          <figcaption>How to load Twinkle Star Sprites</figcaption>
+          <p>
+            After booting up the game, the emulator also allows you to rebind controls for both keyboard and joystick / pad if necessary,
+            under the menu Config &rarr; Controllers (there are two pages, one for each player).
+          </p>
+          <img src="/images/bizhawk2.png" class="imgcenter">
+          <figcaption>Bizhawk - Controllers Screen</figcaption>
+          <p>
+            Seihou 2: Kioh Gyoku is an executable but the game was first published in 2001 so you might run into some compatibility issues.
+            If your graphic card is an NVIDIA, we recommend you open the control pannel and change your "Adjust Desktop Size and Position" Scaling setup
+            to "Integer Scaling". This way, the fullscreen application will not be stretched with your screen aspect ratio
+            (which nowadays likely isn't 4:3 but 16:9 or something even more exotic).
+          </p>
+          <img src="/images/nvidia.png" class="imgcenter">
+          <figcaption>NVIDIA control pannel</figcaption>
+          <p>
+            The inputs are a bit hard to remap. You want to go to the Control button, then the 3rd option with two characters, and finally the 2P setting.
+            Here you can map the controls for a keyboard. Note you can use the mouse to help setup the menus here, which can be useful if you need to correct a
+            mistake in the mappings.
+          </p>
+          <img src="/images/kiohgyoku1.png" class="imgcenter">
+          <figcaption>Seihou: Kioh Gyoku - Keyboard Controls</figcaption>
+          <p>
+            For a joystick / pad you want to go to the setting right below 2P.
+            Use the mouse if you need to remap both players here (in particular, you can't select player 2 controls otherwise).
+            You won't need to bind the axis here, only the buttons. Then, to play a match, use the 2P Start option.
+            Then, the first option is keyboard vs keyboard (but it should also work for joystick vs joystick!), the second one is joystick vs keyboard
+            and the third one keyboard vs joystick.
+          </p>
+          <img src="/images/kiohgyoku2.png" class="imgcenter">
+          <figcaption>Seihou: Kioh Gyoku - Joystick Controls</figcaption>
+          <p>
+            To play Touhou 3: Phantasmagoria of Dim. Dream as will be setup in the tournament you need to use the DOSBOX-X emulator which is provided in the archive.
+            Simply launch the executable dosbox-x.exe in the DOSBOX-X folder, and enter the following commands:
+          </p>
+          <pre>
+            IMGMOUNT D C:\PHANTASMAGORIABOX\PODD\TH03.HDI  // to mount the Touhou 3 Hard Drive Image to the D virtual disk
+            D:                                             // to go to the mounted virtual disk
+            GAME                                           // to launch the game!
+          </pre>
+          <p>
+            Note that the path given works if you placed your PhantasmagoriaBox directly at the root of the C disk
+            (otherwise just update the path to reflect the one on your computer!).
+          </p>
+          <p>You also want to setup manually the following options everytime you boot up this emulator:</p>
+          <ul>
+            <li>CPU &rarr; Emulate CPU Speed &rarr; 486DX4 100MHz (~33445 cycles) as the original PC98 ran around 30K cycles per second</li>
+            <li>Video &rarr; Fit to aspect ratio</li>
+          </ul>
+          <img src="/images/dosbox.png" class="imgcenter">
+          <figcaption>Touhou 3: PoDD - Game ready setup in DOSBOX-X</figcaption>
+          <p>
+            You should always select keyboard vs joystick or joystick vs keyboard in the options (to avoid a split keyboard).
+            Depending on the inputs player use you want to remap a keyboard to a joystick using KeyboardSplitter (or the opposite using JoyToKey). That is because the keybinds
+            for PoDD are not remappable, and the default controls you are stuck with may be annoying (on joystick, shot and bomb keys are swapped compared to other Touhou games).
+          </p>
+          <img src="/images/podd.png" class="imgcenter">
+          <figcaption>Touhou 3: PoDD - Options screen</figcaption>
+          <p>
+            To play Touhou 9 and Touhou 19, just use the executable in the related folder (either PoFV or UDoALG). Don't use adonis.exe for PoFV, as you play through Parsec already.
+            Both games support remapping of inputs in the options, the only corner case should be if both players use a keyboard (once again, in that case, use KeyboardSplitter),
+            although games are also known to be somewhat unstable and may crash. Usually when booting up, if that happens to you, relaunching the exe should hopefully fix it.
+            Restart your computer if the issue persists, and if it still happens feel free to ping our team on discord.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 </body>

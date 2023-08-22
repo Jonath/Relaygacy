@@ -8,912 +8,939 @@
     <header>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
     <div class="separator"></div>
     <section>
-      <h1>Kioh Gyoku</h1>
-      <p>
-        Kioh Gyoku is a vertical-scrolling competitive danmaku game, that came out in 2001. As opposed to other games of the genre in the list here, its main
-        emphasis is on grazing streaming bullets. The way health works is also a bit different.
-      </p>
-      <h2>Gameplay Basics</h2>
-      <h3>Player field</h3>
-      <p>
-        The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
-        to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
-      </p>
-      <h3>Gauge</h3>
-      <p>
-        This game showcases a gauge with 4 levels of charge:
-      </p>
-      <ul>
-        <li>Level 1: modified shot (stronger shot). On some characters, releasing the level 1 early and late can change its properties.</li>
-        <li>Level 2: a special attack that depends on the player character.</li>
-        <li>Level 3: a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
-        <li>Level 4: boss attack. In this game, the boss has a dedicated health bar.</li>
-      </ul>
-      <p>
-        One important particularity of this game is that firing an additional level 4 while a boss is already on the opponent's screen leads to a stronger version
-        of the boss called "madness". This effect replenishes the boss HP and makes them more resilient to player shots (meaning they take a bit more time to kill).
-      </p>
-      <p>
-        Additionally, firing a lvl4 while a boss is present on your screen does not cancel it, as opposed to all the other games part of the Phantasmagoria Fest.
-        This means you don't have to wait for your opponent to fire their own lvl4 before firing your own
-      </p>
-      <p>
-        As opposed to the other games, you also won't fire automatically a lvl2/3/4 depending on your combo. That means grazing serves only three purposes:
-      </p>
-      <ul>
-        <li>Filling up your gauge.</li>
-        <li>Sending revenge bullets on the opponent screen</li>
-        <li>Sending ex attacks on the opponent screen</li>
-      </ul>
-      <p>
-        A tetrahedron shaped visual effect appears when your character gains their lvl2/3/4 charge, respectively of green, orange and red color.
-      </p>
-      <img src="/images/kiohgyoku/lvl2on.png" class="tetra">
-      <img src="/images/kiohgyoku/lvl3on.png" class="tetra">
-      <img src="/images/kiohgyoku/lvl4on.png" class="tetra">
-      <p>
-        The gauge level works similarly as other games of the same genre: on the right of the gauge, it is displayed as a number ranging from 1 to 25.
-        This level influences the pattern of lvl2/3/4 you send on the opponent's screen. This number increases by 1, 2 or 3 for each lvl2, lvl3 or lvl4
-        you respectively fire. As usual, a good early game strategy might be to rush high gauge levels faster than your opponent.
-      </p>
-      <img src="/images/kiohgyoku/gauge.png">
-      <h3>Shield</h3>
-      <img src="/images/kiohgyoku/shield.png" class="shield">
-      <p>
-        In this game, instead of a typical point based health score, the player character has a shield which allows them to absorb hits up to a certain point.
-        It starts at 100%, and goes down every time the player collides with a bullet/enemy, down to 0%. When this threshold is reached, the shield breaks, leaving
-        the character vulnerable: the next hit they take leads to a round loss. The main twist here is that the shield slowly recharges, even when broken, as long as
-        one does not get hit for a given time period.
-      </p>
-      <p>
-        This means a common strategy in this game might be to play very aggressively until the moment you get a shield break, then play passively until it comes back up.
-        Because a shield break also clears the screen, it can also be very useful in situations in which you have no bombs left, as a way to reset the player field.
-        Most enemies in this game only spawn suicide bullets, so when exposed after a shield break and before it comes back up, you should simply stop shooting to avoid
-        spawning them in the first place (one exception being when a boss is on your screen as you may want to destroy them before resuming passivity).
-      </p>
-      <p>
-        To be more specific, by default, the shield recharge rate is 0, but depending on your current combo rating, this can increase to up to 1% regeneration per second
-        (cap at 255 max combo). Because of that, aggressively grazing the bullets right after you recover from a shield break might be a good strategy as well.
-      </p>
-      <p>
-        One thing to note is also that a guard break (when your shile reaches 0%) clears all bullets on screen, and grants you invelnurability frames represented by a
-        white circle decreasing in size depending on its lifetime (same effect used when using a bomb). This can be pretty useful in dire situations where your screen is
-        full of bullets with no apparent way out, as you can strategically use that to reset the field.
-      </p>
-      <img src="/images/kiohgyoku/cancel.gif" class="center">
-      <figcaption>Cancelling a wall of bullets with guard break</figcaption>
-      <h2>Characters</h2>
-      <div class="tierlist" x-data="{ openModal: '' }">
-        <table class="kg">
-          <tr>
-            <th id="s" class="tier">S</th>
-            <td>
-              <span id="muse" class="character" title="Muse" @click="openModal='muse'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="a" class="tier">A</th>
-            <td>
-              <span id="vivit" class="character" title="Vivit" @click="openModal='vivit'"></span>
-            </td>
-            <td>
-              <span id="meimai" class="character" title="MeiMai" @click="openModal='meimai'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="b" class="tier">B</th>
-            <td>
-              <span id="gates" class="character" title="Gates" @click="openModal='gates'"></span>
-            </td>
-            <td>
-              <span id="erich" class="character" title="Erich" @click="openModal='erich'"></span>
-            </td>
-            <td>
-              <span id="morgan" class="character" title="Morgan" @click="openModal='morgan'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="c" class="tier">C</th>
-            <td>
-              <span id="milia" class="character" title="Milia" @click="openModal='milia'"></span>
-            </td>
-            <td>
-              <span id="marie" class="character" title="Marie" @click="openModal='marie'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="d" class="tier">D</th>
-            <td>
-              <span id="yuuka_kg" class="character" title="Yuuka" @click="openModal='yuuka'"></span>
-            </td>
-          </tr>
-        </table>
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="subtext">
+          <h1>Kioh Gyoku</h1>
+          <p>
+            Kioh Gyoku is a vertical-scrolling competitive danmaku game, that came out in 2001. As opposed to other games of the genre in the list here, its main
+            emphasis is on grazing streaming bullets. The way health works is also a bit different.
+          </p>
+          <h2>Gameplay Basics</h2>
+          <h3>Player field</h3>
+          <p>
+            The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
+            to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
+          </p>
+          <h3>Gauge</h3>
+          <p>
+            This game showcases a gauge with 4 levels of charge:
+          </p>
+          <ul>
+            <li>Level 1: modified shot (stronger shot). On some characters, releasing the level 1 early and late can change its properties.</li>
+            <li>Level 2: a special attack that depends on the player character.</li>
+            <li>Level 3: a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
+            <li>Level 4: boss attack. In this game, the boss has a dedicated health bar.</li>
+          </ul>
+          <p>
+            One important particularity of this game is that firing an additional level 4 while a boss is already on the opponent's screen leads to a stronger version
+            of the boss called "madness". This effect replenishes the boss HP and makes them more resilient to player shots (meaning they take a bit more time to kill).
+          </p>
+          <p>
+            Additionally, firing a lvl4 while a boss is present on your screen does not cancel it, as opposed to all the other games part of the Phantasmagoria Fest.
+            This means you don't have to wait for your opponent to fire their own lvl4 before firing your own
+          </p>
+          <p>
+            As opposed to the other games, you also won't fire automatically a lvl2/3/4 depending on your combo. That means grazing serves only three purposes:
+          </p>
+          <ul>
+            <li>Filling up your gauge.</li>
+            <li>Sending revenge bullets on the opponent screen</li>
+            <li>Sending ex attacks on the opponent screen</li>
+          </ul>
+          <p>
+            A tetrahedron shaped visual effect appears when your character gains their lvl2/3/4 charge, respectively of green, orange and red color.
+          </p>
+          <img src="/images/kiohgyoku/lvl2on.png" class="tetra">
+          <img src="/images/kiohgyoku/lvl3on.png" class="tetra">
+          <img src="/images/kiohgyoku/lvl4on.png" class="tetra">
+          <p>
+            The gauge level works similarly as other games of the same genre: on the right of the gauge, it is displayed as a number ranging from 1 to 25.
+            This level influences the pattern of lvl2/3/4 you send on the opponent's screen. This number increases by 1, 2 or 3 for each lvl2, lvl3 or lvl4
+            you respectively fire. As usual, a good early game strategy might be to rush high gauge levels faster than your opponent.
+          </p>
+          <img src="/images/kiohgyoku/gauge.png">
+          <h3>Shield</h3>
+          <img src="/images/kiohgyoku/shield.png" class="shield">
+          <p>
+            In this game, instead of a typical point based health score, the player character has a shield which allows them to absorb hits up to a certain point.
+            It starts at 100%, and goes down every time the player collides with a bullet/enemy, down to 0%. When this threshold is reached, the shield breaks, leaving
+            the character vulnerable: the next hit they take leads to a round loss. The main twist here is that the shield slowly recharges, even when broken, as long as
+            one does not get hit for a given time period.
+          </p>
+          <p>
+            This means a common strategy in this game might be to play very aggressively until the moment you get a shield break, then play passively until it comes back up.
+            Because a shield break also clears the screen, it can also be very useful in situations in which you have no bombs left, as a way to reset the player field.
+            Most enemies in this game only spawn suicide bullets, so when exposed after a shield break and before it comes back up, you should simply stop shooting to avoid
+            spawning them in the first place (one exception being when a boss is on your screen as you may want to destroy them before resuming passivity).
+          </p>
+          <p>
+            To be more specific, by default, the shield recharge rate is 0, but depending on your current combo rating, this can increase to up to 1% regeneration per second
+            (cap at 255 max combo). Because of that, aggressively grazing the bullets right after you recover from a shield break might be a good strategy as well.
+          </p>
+          <p>
+            One thing to note is also that a guard break (when your shile reaches 0%) clears all bullets on screen, and grants you invelnurability frames represented by a
+            white circle decreasing in size depending on its lifetime (same effect used when using a bomb). This can be pretty useful in dire situations where your screen is
+            full of bullets with no apparent way out, as you can strategically use that to reset the field.
+          </p>
+          <img src="/images/kiohgyoku/cancel.gif" class="imgcenter">
+          <figcaption>Cancelling a wall of bullets with guard break</figcaption>
+          <h2>Characters</h2>
+          <div class="tierlist" x-data="{ openModal: '' }">
+            <table class="kg">
+              <tr>
+                <th id="s" class="tier">S</th>
+                <td>
+                  <span id="muse" class="character" title="Muse" @click="openModal='muse'"></span>
+                </td>
+              </tr>
+              <tr>
+                <th id="a" class="tier">A</th>
+                <td>
+                  <span id="vivit" class="character" title="Vivit" @click="openModal='vivit'"></span>
+                </td>
+                <td>
+                  <span id="meimai" class="character" title="MeiMai" @click="openModal='meimai'"></span>
+                </td>
+              </tr>
+              <tr>
+                <th id="b" class="tier">B</th>
+                <td>
+                  <span id="gates" class="character" title="Gates" @click="openModal='gates'"></span>
+                </td>
+                <td>
+                  <span id="erich" class="character" title="Erich" @click="openModal='erich'"></span>
+                </td>
+                <td>
+                  <span id="morgan" class="character" title="Morgan" @click="openModal='morgan'"></span>
+                </td>
+              </tr>
+              <tr>
+                <th id="c" class="tier">C</th>
+                <td>
+                  <span id="milia" class="character" title="Milia" @click="openModal='milia'"></span>
+                </td>
+                <td>
+                  <span id="marie" class="character" title="Marie" @click="openModal='marie'"></span>
+                </td>
+              </tr>
+              <tr>
+                <th id="d" class="tier">D</th>
+                <td>
+                  <span id="yuuka_kg" class="character" title="Yuuka" @click="openModal='yuuka'"></span>
+                </td>
+              </tr>
+            </table>
 
-        <div class="modal" x-show="openModal=='muse'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Muse</h2>
+            <div class="modal" x-show="openModal=='muse'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Muse</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/muse.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="39" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="79" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="95" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="92" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="27" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Not only does Muse have the smallest hitbox in the game, which makes her very resilient to hits, but she also owns the highest defense
+                    score, allowing her to tank more hits than any other character in the game. This makes her defense very good, but is also great for offense
+                    since Kioh Gyoku's main scoring mechanic is graze combo chains.  She also has a decent level 1 that can be partially aimed.
+                  </p>
+                  <p>
+                    All of Muse's attack are also great. Her ex attack is pretty great, as it cannot be grazed, forces the opponent out of a sizeable area and hits with a set
+                    of three cross that fall randomly within a circle, making it hard to predict entirerly. Her level 2 spell attack consists in a flurry of these ex attacks.
+                    She can use it while the opponent is dodging a level 3 to force them to use a bomb or take hits. Finally, her level 4 boss attack is pretty great once upgraded,
+                    due to the stationary pattern that forces the opponent to stream a long corridor, making them vulnerable to her level 2 and ex attacks.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Muse has the slowest charge speed in the game. It isn't such a bad thing in this game because most bullets are spawned on enemy kill, meaning there shouldn't be
+                    many things to dodge on the screen. However, this leaves her vulnerable to boss attacks for a while, and also makes keeping a graze combo harder (due to there
+                    being no bullets to graze).
+                  </p>
+                  <p>
+                    She also has a pretty low movement speed which makes macro dodges pretty hard for her. Although in this game you will mostly stream patterns, there are rare
+                    occasions where higher movement speed is welcome. This also means she has a few tougher matchups with a few characters with fast spell attacks (namely VIVIT's
+                    boss attack might surprise a Muse player).
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/muse.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="39" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="79" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="95" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="92" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="27" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Not only does Muse have the smallest hitbox in the game, which makes her very resilient to hits, but she also owns the highest defense
-                score, allowing her to tank more hits than any other character in the game. This makes her defense very good, but is also great for offense
-                since Kioh Gyoku's main scoring mechanic is graze combo chains.  She also has a decent level 1 that can be partially aimed.
-              </p>
-              <p>
-                All of Muse's attack are also great. Her ex attack is pretty great, as it cannot be grazed, forces the opponent out of a sizeable area and hits with a set
-                of three cross that fall randomly within a circle, making it hard to predict entirerly. Her level 2 spell attack consists in a flurry of these ex attacks.
-                She can use it while the opponent is dodging a level 3 to force them to use a bomb or take hits. Finally, her level 4 boss attack is pretty great once upgraded,
-                due to the stationary pattern that forces the opponent to stream a long corridor, making them vulnerable to her level 2 and ex attacks.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Muse has the slowest charge speed in the game. It isn't such a bad thing in this game because most bullets are spawned on enemy kill, meaning there shouldn't be
-                many things to dodge on the screen. However, this leaves her vulnerable to boss attacks for a while, and also makes keeping a graze combo harder (due to there
-                being no bullets to graze).
-              </p>
-              <p>
-                She also has a pretty low movement speed which makes macro dodges pretty hard for her. Although in this game you will mostly stream patterns, there are rare
-                occasions where higher movement speed is welcome. This also means she has a few tougher matchups with a few characters with fast spell attacks (namely VIVIT's
-                boss attack might surprise a Muse player).
-              </p>
+
+            <div class="modal" x-show="openModal=='vivit'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>VIVIT</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/vivit.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="62" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="75" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="75" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="29" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    VIVIT is an overall pretty strong character. She has a decent speed, a speedy ex attack that bounces on the side of the enemy field, making it unpredictable,
+                    and overall decent spell attacks. Her boss attack is likely the strongest in the game because it moves a lot, making it very resilient to the opponent's attack.
+                    Its fast patterns can be pretty hard to avoid amidst the chaos, especially for slow characters.
+                  </p>
+                  <p>
+                    She also has a special level 1 charge attack, that can be let go early to fire a single big star, or charged for a longer time to fire three big stars that can
+                    deal a lot of damage (especially fired while moving backwards, since movement can change the angle between two stars).
+                  </p>
+                  <p>
+                    Other strengths include her good hitbox size and a decent defense score, both helping with her resilience.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Similarly to Muse, and while not a critical flaw, VIVIT has a pretty slow charge speed, which can be detrimental because it means using the gauge
+                    is synonym with dropping your graze combo. It can also make it a bit harder to pull off attacks in a timely manner, and makes spamming spell attacks impossible.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='meimai'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Mei & Mai</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/meimai.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="83" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="75" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="30" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="50" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Mai and Mei have pretty good evasion due to their good hitbox size and speed. They have a great level 1 charge attack that consists in two lasers that persist
+                    on the field for a while, allowing them to annihilate enemies in straigth lines, spawning easy to graze patterns. All of this, combined with their decent charge
+                    speed, allow her to offensively graze patterns, fill up their gauge and send a lot of attacks on the opponent's screen.
+                  </p>
+                  <p>
+                    Their boss attack is decent, because it moves a lot and spawns fast patterns that can be somewhat erratic at times. As their ship comes down on the screen, it can hit
+                    the opponent for massive damage, similarly to their level 2 and level 3 spell attacks which might be at times surprising.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Their game plan is a bit flawed: the idea behind this character seems to be to push down the opponent with level 2/3 spell attacks that are virtually indistinguishable
+                    and hit them with ex attacks that come from behind, at an angle. The problem with this game plan is that the enemy still has enough space at the bottom of the screen
+                    to properly dodge said ex attacks,   you only need to go up or down a little bit to evade them at said angle.
+                  </p>
+                  <p>
+                    They also have a rather small defensive score, meaning that when the sisters do get hit, they hurt a lot. The boss attack is also vulnerable inbetween patterns for
+                    some time as their ships reposition before firing the next one: it can be easily attacked during that window of opportunity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='gates'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Gates</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/gates.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="50" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="30" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="100" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="70" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="39" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Gate's main upside is likely his offense: his ex attacks and level 2 attack are lasers that can instantaneously delete the opponent's shield. However,
+                    this is pretty risky (see downsides) so it is better advised to use his level 3 attack that traps the opponent and deals around 25% shield damage per hit.
+                    Another alternative is his boss that also features a lot of lasers, and even his flamethrower in one pattern.
+                  </p>
+                  <p>
+                    Speaking of flamethrower, he has one of the best level 1 charge attacks in the game, which, like most charge attacks in Kioh Gyoku, can be somewhat controlled
+                    depending on the movement of the player. If fired while moving backwards, it shoots in a straight line towards the other side of the screen, dealing tremendous
+                    damage in its path. It can be used to spawn favorable graze patterns, but more importantly, to delete the opponent's boss off your field.
+                  </p>
+                  <p>
+                    He also boosts average speed and a decent defensive score.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Gate's ex and level 2 attacks are actually double edged swords because they feed the opponent a lot of gauge enermy if grazed. That means any character can
+                    have much more aggressive plays than usual against him. While you can't avoid sending ex attacks, I suggest avoiding relying on the level 2 attack unless the
+                    enemy already is in a tight spot, and even then, that is the roll of a dice: if grazed, it also spawns a lot of bullets in your field.
+                  </p>
+                  <p>
+                    He has a somewhat slow charge speed and a pretty big hitbox.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='erich'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Erich</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/erich.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="50" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="85" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="35" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Erich's ex attack is one of the few in this game that cannot be grazed. It is very fast, and can sometimes be fired at pretty odd angles, meaning it can catch
+                    by surprise someone high in their field trying to graze slow bullets inbetween patterns. It is very punishing because it deals a lot of damage and can guard
+                    break someone easily. The fact it is aimed at the opponent also means that they can't just milk easy to graze corridors (for example on stage 2) because they can
+                    be caught by an ex attack while doing so. This means this ex attack is offensive, but also defensive!
+                  </p>
+                  <p>
+                    He has a decent boss attack that fires aimed lasers and ex attacks. His level 2 is also pretty good as it is made up of several ex attacks with a distinct color
+                    (orange instead of light blue), that serves the same purposes but covers the screen a bit longer. It's thus even better at catching an opponent streaming a
+                    corridor, and you can fire it when you see they are in such a tight situation.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Erich's level 1 charge attack is likely the worst in the game because it locks on enemies in a very small area situated at a distance in front of Erich. This
+                    means he has to move up to be able to use it to begin with, making it terrible at dealing with boss attacks. It also only locks on an area, not an enemy, meaning
+                    that when they move, the targeted projectiles actually miss them.
+                  </p>
+                  <p>
+                    He also has a level 3 that works similarly to Gate's ex and level 2 attack and can feed off the opponent gauge energy if dodged properly: it should thus never be
+                    used unless the opponent is also facing a pretty sizeable barrage of bullets spawned from graze. His bomb has a really short active window to cancel bullets,
+                    meaning it only clears bullets already on the screen as triggered, not what is spawned after. 
+                  </p>
+                  <p>
+                    Finally, Erich has a pretty poor hitbox, defense score and charge speed, which all hurt his defense quite a lot.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='morgan'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Morgan</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/morgan.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="100" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="70" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="50" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="35" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Morgan has the highest speed in the game, and that allows her to macrododge patterns when necessary, which in this game is a rather rare ability. It
+                    also isn't too detrimental because her focus speed is good enough that it allows for precision dodges too.
+                  </p>
+                  <p>
+                    Her main offensive abilities rely on her ex attack and L2 which spawn green ring around the opponent, trapping them within. The main way
+                    to get around these is to dodge them as they spawn, to avoid being trapped there and susceptible to another ring.
+                  </p>
+                  <p>
+                    She also has a pretty interesting bomb that damages enemies and cancel bullets in two waves: one at the start of the bomb, and the other towards the end
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Sadly, even if it might be a great tool to taunt an enemy, Morgan's L1 isn't great. While charging up her gauge, she spawns mines on the floor that explode once
+                    the charge button is released. This means she has to predict where enemies will be to spawn grazable patterns, or only resort to the meek basic attack.
+                  </p>
+                  <p>
+                    Morgan's L3 and L4 also aren't very great because they are gimmicky. The L3 spawn mines that explode when hit by the opponent, spawning faster and bigger projectiles,
+                    but they can circumvent it and only have to dodge the much smaller projectiles by simply stopping firing at them. The L4 has a lot of patterns that fire cancellable
+                    ring bullets at the opponent: they can simply use their own L1 to cut through it, freeing a path.
+                  </p>
+                  <p>
+                    She also has a rather weak hitbox, an average defense score and a poor charge speed, making her defense relatively low.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='milia'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Milia</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/milia.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="66" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="35" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="80" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="40" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="100" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Milia's biggest quality is that she has the fastest charge speed in the game, which gives her the potential for very aggressive plays.
+                    This couple well with her L1 and allows her to spam it. It also allows her to increase her spell levels really fast by spamming a couple
+                    of L2. This can be useful because her L3 is pretty great: it splits the screen with ungrazable lazers, and turns from a box into a pentacle
+                    once upgraded enough.
+                  </p>
+                  <p>
+                    She has a pretty good speed which allows her to macrododge and take advantage of enemy / boss movement pauses to go point blank them with her L1.
+                    Her bomb is pretty lengthy, and you can also charge your gauge during it, which makes using it to spam L1 to delete a boss possible (this is pretty
+                    rare as most characters have a bomb that makes it impossible to charge gauge).
+                  </p>
+                  <p>
+                    The size of her basic attack shot is pretty big, which means she hits her targets with it a bit more consistently.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Milia has a pretty weak ex attack, that spawns an horizontal lazer that tracks the opponent's height on the screen as it spawns. It can be easily grazed
+                    with vertical movement, granting free energy to the enemy. Her L2 is also pretty mediocre, as it tends to spawn a flurry of bullets around the opponent,
+                    which only serves in restricting their movement, similarly to her L3.
+                  </p>
+                  <p>
+                    Her hitbox size and defensive score are also pretty poor, making her really vulnerable to hits. This is pretty bad because her L1 makes point blanking
+                    enemies ideal, but to do that, you need to get close to them, and thus spawning bullet patterns. Essentially this turns Milia into a "high risk, low
+                    reward" kind of character, since her offense is not great enough to warrant such an aggressive playstyle.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='marie'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Marie</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/marie.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="33" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="10" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="80" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="85" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="33" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Marie should likely be much higher on this tier list because she has a lot of good strengths. First of all, she shares with Erich a similar ex attack
+                    and L2, in the form of missiles aimed towards the enemy, restricting their movement and graze options, while also being very fast and damaging. Her version
+                    of it is a bit worse that Erich's because it doesn't spawn with an arc, so its movement is more predictable, but it's still deadly.
+                  </p>
+                  <p>
+                    Her L1 is also very good, as it can be spammed due to its length, deleting boss and enemies in the process. Because of the space it covers on the screen,
+                    it is pretty useful to spawn easy to graze patterns, allowing her to fill her gauge with energy pretty well.
+                  </p>
+                  <p>
+                    Her L4 is pretty good: it spawns lasers that block the enemy from moving away, and fires missiles at them in all directions (that can be cancelled however with
+                    player shots). It can also send small triangular bullets in many directions in a semi random pattern.
+                  </p>
+                  <p>
+                    Finally, she has a great basic shot speed and defensive score.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Maries has a few big downsides: namely her terrible speed, which makes playing with her unfocused most of the time mandatory, and makes it very hard for her
+                    to macrododge patterns. This, combined with her terrible hitbox, makes it difficult for her to survive patterns that other characters would otherwise be 
+                    able to dodge.
+                  </p>
+                  <p>
+                    Her charge speed also isn't very good, meaning it can be hard to be aggressive enough with her, and making spamming her L2 not doable. She also doesn't have
+                    a terrible L3, as it spawns lasers that form corridors that can be easily grazed for energy: it tends to feed the enemy because of that.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" x-show="openModal=='yuuka'">
+              <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+                <div class="modal-header">
+                  <h2>Yuuka</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="noborders">
+                    <tr>
+                      <td>
+                        <div class="portrait">
+                          <img src="/images/kiohgyoku/yuuka.png">
+                        </div>
+                      </td>
+                      <td>
+                        <table class="stats noborders">
+                          <tr>
+                            <td>
+                              Speed
+                            </td>
+                            <td class="value">
+                              <progress value="45" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Size
+                            </td>
+                            <td class="value">
+                              <progress value="38" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Strength
+                            </td>
+                            <td class="value">
+                              <progress value="50" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Defense
+                            </td>
+                            <td class="value">
+                              <progress value="85" max="100"/>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Charge
+                            </td>
+                            <td class="value">
+                              <progress value="31" max="100"/>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Upsides:</h3>
+                  <p>
+                    Yuuka has a good L1 charge attack: it covers the screen and can be used to spawn patterns favorable to graze easily, and can also be used
+                    for point blank damage when dealing with boss attacks.
+                  </p>
+                  <p>
+                    Her L4 has a few patterns that can be deadly, namely her twin spark attack (because it cannot be grazed like other lasers, and its hitbox is
+                    actually bigger than expected, making dodging it inbetween said lasers difficult).
+                  </p>
+                  <p>
+                    She has the highest defensive score in the game, tied with Marie, and an average basic shot speed.
+                  </p>
+                  <h3>Downsides:</h3>
+                  <p>
+                    Yuuka's biggest flow which make her particularly non competitive in PVP is that she's in fact an unfinished character. Her ex attack is really weak,
+                    as it consists of flowers that drop down the opponent's field really slowly. Similarly, her virtually undifferentiable L2 and L3 spawn several of these
+                    in a way that is still trivial to dodge. Even her L4 has a few patterns spawning lines of these flowers. At least they can't be grazed.
+                  </p>
+                  <p>
+                    Additionally, Yuuka has pretty bad stats all around: poor speed, hitbox and charge speed. This combined with her pretty weak offense make her likely
+                    the weakest character in the game.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="modal" x-show="openModal=='vivit'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>VIVIT</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/vivit.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="62" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="75" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="75" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="29" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                VIVIT is an overall pretty strong character. She has a decent speed, a speedy ex attack that bounces on the side of the enemy field, making it unpredictable,
-                and overall decent spell attacks. Her boss attack is likely the strongest in the game because it moves a lot, making it very resilient to the opponent's attack.
-                Its fast patterns can be pretty hard to avoid amidst the chaos, especially for slow characters.
-              </p>
-              <p>
-                She also has a special level 1 charge attack, that can be let go early to fire a single big star, or charged for a longer time to fire three big stars that can
-                deal a lot of damage (especially fired while moving backwards, since movement can change the angle between two stars).
-              </p>
-              <p>
-                Other strengths include her good hitbox size and a decent defense score, both helping with her resilience.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Similarly to Muse, and while not a critical flaw, VIVIT has a pretty slow charge speed, which can be detrimental because it means using the gauge
-                is synonym with dropping your graze combo. It can also make it a bit harder to pull off attacks in a timely manner, and makes spamming spell attacks impossible.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='meimai'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Mei & Mai</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/meimai.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="83" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="75" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="30" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="50" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Mai and Mei have pretty good evasion due to their good hitbox size and speed. They have a great level 1 charge attack that consists in two lasers that persist
-                on the field for a while, allowing them to annihilate enemies in straigth lines, spawning easy to graze patterns. All of this, combined with their decent charge
-                speed, allow her to offensively graze patterns, fill up their gauge and send a lot of attacks on the opponent's screen.
-              </p>
-              <p>
-                Their boss attack is decent, because it moves a lot and spawns fast patterns that can be somewhat erratic at times. As their ship comes down on the screen, it can hit
-                the opponent for massive damage, similarly to their level 2 and level 3 spell attacks which might be at times surprising.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Their game plan is a bit flawed: the idea behind this character seems to be to push down the opponent with level 2/3 spell attacks that are virtually indistinguishable
-                and hit them with ex attacks that come from behind, at an angle. The problem with this game plan is that the enemy still has enough space at the bottom of the screen
-                to properly dodge said ex attacks,   you only need to go up or down a little bit to evade them at said angle.
-              </p>
-              <p>
-                They also have a rather small defensive score, meaning that when the sisters do get hit, they hurt a lot. The boss attack is also vulnerable inbetween patterns for
-                some time as their ships reposition before firing the next one: it can be easily attacked during that window of opportunity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='gates'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Gates</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/gates.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="50" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="30" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="100" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="70" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="39" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Gate's main upside is likely his offense: his ex attacks and level 2 attack are lasers that can instantaneously delete the opponent's shield. However,
-                this is pretty risky (see downsides) so it is better advised to use his level 3 attack that traps the opponent and deals around 25% shield damage per hit.
-                Another alternative is his boss that also features a lot of lasers, and even his flamethrower in one pattern.
-              </p>
-              <p>
-                Speaking of flamethrower, he has one of the best level 1 charge attacks in the game, which, like most charge attacks in Kioh Gyoku, can be somewhat controlled
-                depending on the movement of the player. If fired while moving backwards, it shoots in a straight line towards the other side of the screen, dealing tremendous
-                damage in its path. It can be used to spawn favorable graze patterns, but more importantly, to delete the opponent's boss off your field.
-              </p>
-              <p>
-                He also boosts average speed and a decent defensive score.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Gate's ex and level 2 attacks are actually double edged swords because they feed the opponent a lot of gauge enermy if grazed. That means any character can
-                have much more aggressive plays than usual against him. While you can't avoid sending ex attacks, I suggest avoiding relying on the level 2 attack unless the
-                enemy already is in a tight spot, and even then, that is the roll of a dice: if grazed, it also spawns a lot of bullets in your field.
-              </p>
-              <p>
-                He has a somewhat slow charge speed and a pretty big hitbox.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='erich'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Erich</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/erich.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="50" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="85" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="35" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Erich's ex attack is one of the few in this game that cannot be grazed. It is very fast, and can sometimes be fired at pretty odd angles, meaning it can catch
-                by surprise someone high in their field trying to graze slow bullets inbetween patterns. It is very punishing because it deals a lot of damage and can guard
-                break someone easily. The fact it is aimed at the opponent also means that they can't just milk easy to graze corridors (for example on stage 2) because they can
-                be caught by an ex attack while doing so. This means this ex attack is offensive, but also defensive!
-              </p>
-              <p>
-                He has a decent boss attack that fires aimed lasers and ex attacks. His level 2 is also pretty good as it is made up of several ex attacks with a distinct color
-                (orange instead of light blue), that serves the same purposes but covers the screen a bit longer. It's thus even better at catching an opponent streaming a
-                corridor, and you can fire it when you see they are in such a tight situation.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Erich's level 1 charge attack is likely the worst in the game because it locks on enemies in a very small area situated at a distance in front of Erich. This
-                means he has to move up to be able to use it to begin with, making it terrible at dealing with boss attacks. It also only locks on an area, not an enemy, meaning
-                that when they move, the targeted projectiles actually miss them.
-              </p>
-              <p>
-                He also has a level 3 that works similarly to Gate's ex and level 2 attack and can feed off the opponent gauge energy if dodged properly: it should thus never be
-                used unless the opponent is also facing a pretty sizeable barrage of bullets spawned from graze. His bomb has a really short active window to cancel bullets,
-                meaning it only clears bullets already on the screen as triggered, not what is spawned after. 
-              </p>
-              <p>
-                Finally, Erich has a pretty poor hitbox, defense score and charge speed, which all hurt his defense quite a lot.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='morgan'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Morgan</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/morgan.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="100" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="70" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="50" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="35" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Morgan has the highest speed in the game, and that allows her to macrododge patterns when necessary, which in this game is a rather rare ability. It
-                also isn't too detrimental because her focus speed is good enough that it allows for precision dodges too.
-              </p>
-              <p>
-                Her main offensive abilities rely on her ex attack and L2 which spawn green ring around the opponent, trapping them within. The main way
-                to get around these is to dodge them as they spawn, to avoid being trapped there and susceptible to another ring.
-              </p>
-              <p>
-                She also has a pretty interesting bomb that damages enemies and cancel bullets in two waves: one at the start of the bomb, and the other towards the end
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Sadly, even if it might be a great tool to taunt an enemy, Morgan's L1 isn't great. While charging up her gauge, she spawns mines on the floor that explode once
-                the charge button is released. This means she has to predict where enemies will be to spawn grazable patterns, or only resort to the meek basic attack.
-              </p>
-              <p>
-                Morgan's L3 and L4 also aren't very great because they are gimmicky. The L3 spawn mines that explode when hit by the opponent, spawning faster and bigger projectiles,
-                but they can circumvent it and only have to dodge the much smaller projectiles by simply stopping firing at them. The L4 has a lot of patterns that fire cancellable
-                ring bullets at the opponent: they can simply use their own L1 to cut through it, freeing a path.
-              </p>
-              <p>
-                She also has a rather weak hitbox, an average defense score and a poor charge speed, making her defense relatively low.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='milia'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Milia</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/milia.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="66" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="35" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="80" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="40" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="100" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Milia's biggest quality is that she has the fastest charge speed in the game, which gives her the potential for very aggressive plays.
-                This couple well with her L1 and allows her to spam it. It also allows her to increase her spell levels really fast by spamming a couple
-                of L2. This can be useful because her L3 is pretty great: it splits the screen with ungrazable lazers, and turns from a box into a pentacle
-                once upgraded enough.
-              </p>
-              <p>
-                She has a pretty good speed which allows her to macrododge and take advantage of enemy / boss movement pauses to go point blank them with her L1.
-                Her bomb is pretty lengthy, and you can also charge your gauge during it, which makes using it to spam L1 to delete a boss possible (this is pretty
-                rare as most characters have a bomb that makes it impossible to charge gauge).
-              </p>
-              <p>
-                The size of her basic attack shot is pretty big, which means she hits her targets with it a bit more consistently.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Milia has a pretty weak ex attack, that spawns an horizontal lazer that tracks the opponent's height on the screen as it spawns. It can be easily grazed
-                with vertical movement, granting free energy to the enemy. Her L2 is also pretty mediocre, as it tends to spawn a flurry of bullets around the opponent,
-                which only serves in restricting their movement, similarly to her L3.
-              </p>
-              <p>
-                Her hitbox size and defensive score are also pretty poor, making her really vulnerable to hits. This is pretty bad because her L1 makes point blanking
-                enemies ideal, but to do that, you need to get close to them, and thus spawning bullet patterns. Essentially this turns Milia into a "high risk, low
-                reward" kind of character, since her offense is not great enough to warrant such an aggressive playstyle.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='marie'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Marie</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/marie.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="33" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="10" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="80" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="85" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="33" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Marie should likely be much higher on this tier list because she has a lot of good strengths. First of all, she shares with Erich a similar ex attack
-                and L2, in the form of missiles aimed towards the enemy, restricting their movement and graze options, while also being very fast and damaging. Her version
-                of it is a bit worse that Erich's because it doesn't spawn with an arc, so its movement is more predictable, but it's still deadly.
-              </p>
-              <p>
-                Her L1 is also very good, as it can be spammed due to its length, deleting boss and enemies in the process. Because of the space it covers on the screen,
-                it is pretty useful to spawn easy to graze patterns, allowing her to fill her gauge with energy pretty well.
-              </p>
-              <p>
-                Her L4 is pretty good: it spawns lasers that block the enemy from moving away, and fires missiles at them in all directions (that can be cancelled however with
-                player shots). It can also send small triangular bullets in many directions in a semi random pattern.
-              </p>
-              <p>
-                Finally, she has a great basic shot speed and defensive score.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Maries has a few big downsides: namely her terrible speed, which makes playing with her unfocused most of the time mandatory, and makes it very hard for her
-                to macrododge patterns. This, combined with her terrible hitbox, makes it difficult for her to survive patterns that other characters would otherwise be 
-                able to dodge.
-              </p>
-              <p>
-                Her charge speed also isn't very good, meaning it can be hard to be aggressive enough with her, and making spamming her L2 not doable. She also doesn't have
-                a terrible L3, as it spawns lasers that form corridors that can be easily grazed for energy: it tends to feed the enemy because of that.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='yuuka'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Yuuka</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/kiohgyoku/yuuka.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Speed
-                        </td>
-                        <td class="value">
-                          <progress value="45" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Size
-                        </td>
-                        <td class="value">
-                          <progress value="38" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Strength
-                        </td>
-                        <td class="value">
-                          <progress value="50" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Defense
-                        </td>
-                        <td class="value">
-                          <progress value="85" max="100"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge
-                        </td>
-                        <td class="value">
-                          <progress value="31" max="100"/>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Yuuka has a good L1 charge attack: it covers the screen and can be used to spawn patterns favorable to graze easily, and can also be used
-                for point blank damage when dealing with boss attacks.
-              </p>
-              <p>
-                Her L4 has a few patterns that can be deadly, namely her twin spark attack (because it cannot be grazed like other lasers, and its hitbox is
-                actually bigger than expected, making dodging it inbetween said lasers difficult).
-              </p>
-              <p>
-                She has the highest defensive score in the game, tied with Marie, and an average basic shot speed.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Yuuka's biggest flow which make her particularly non competitive in PVP is that she's in fact an unfinished character. Her ex attack is really weak,
-                as it consists of flowers that drop down the opponent's field really slowly. Similarly, her virtually undifferentiable L2 and L3 spawn several of these
-                in a way that is still trivial to dodge. Even her L4 has a few patterns spawning lines of these flowers. At least they can't be grazed.
-              </p>
-              <p>
-                Additionally, Yuuka has pretty bad stats all around: poor speed, hitbox and charge speed. This combined with her pretty weak offense make her likely
-                the weakest character in the game.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>

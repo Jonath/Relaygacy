@@ -8,1608 +8,1637 @@
     <header>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
     <div class="separator"></div>
     <section>
-      <h1>Phantasmagoria of Flower View</h1>
-      <p>
-        東方花映塚 ~ Phantasmagoria of Flower View is the 9th Touhou Project game and came out in 2005. It returns to the same two-player split screen style of danmaku
-        ZUN already worked with in Phantasmagoria of Dim. Dream, and is the first windows game to use this style of gameplay.
-      </p>
-      <h2>Gameplay Basics</h2>
-      <h3>Player field</h3>
-      <p>
-        The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
-        to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
-      </p>
-      <h3>Characters</h3>
-      <div class="tierlist" x-data="{ openModal: '' }">
-        <table class="pofv">
-          <tr>
-            <th id="s" class="tier">S</th>
-            <td>
-              <span id="marisa_pofv" class="character" title="Marisa" @click="openModal='marisa'"></span>
-            </td>
-            <td>
-              <span id="reimu_pofv" class="character" title="Reimu" @click="openModal='reimu'"></span>
-            </td>
-            <td>
-              <span id="youmu" class="character" title="Youmu" @click="openModal='youmu'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="a" class="tier">A</th>
-            <td>
-              <span id="komachi" class="character" title="Komachi" @click="openModal='komachi'"></span>
-            </td>
-            <td>
-              <span id="eiki" class="character" title="Eiki" @click="openModal='eiki'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="b" class="tier">B</th>
-            <td>
-              <span id="lyrica" class="character" title="Lyrica" @click="openModal='lyrica'"></span>
-            </td>
-            <td>
-              <span id="medicine" class="character" title="Medicine" @click="openModal='medicine'"></span>
-            </td>
-            <td>
-              <span id="reisen" class="character" title="Reisen" @click="openModal='reisen'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="c" class="tier">C</th>
-            <td>
-              <span id="merlin" class="character" title="Merlin" @click="openModal='merlin'"></span>
-            </td>
-            <td>
-              <span id="lunasa" class="character" title="Lunasa" @click="openModal='lunasa'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="d" class="tier">D</th>
-            <td>
-              <span id="yuuka_pofv" class="character" title="Merlin" @click="openModal='yuuka'"></span>
-            </td>
-            <td>
-              <span id="sakuya" class="character" title="Sakuya" @click="openModal='sakuya'"></span>
-            </td>
-            <td>
-              <span id="aya" class="character" title="Aya" @click="openModal='aya'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="e" class="tier">E</th>
-            <td>
-              <span id="tewi" class="character" title="Tewi" @click="openModal='tewi'"></span>
-            </td>
-            <td>
-              <span id="mystia" class="character" title="Mystia" @click="openModal='mystia'"></span>
-            </td>
-            <td>
-              <span id="cirno" class="character" title="Cirno" @click="openModal='cirno'"></span>
-            </td>
-          </tr>
-        </table>
-
-        <div class="modal" x-show="openModal=='marisa'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Marisa Kirisame</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/marisa.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="56" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          101 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          36 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Gauge fills faster
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Marisa's level 1 charge attack destroys spirts, but also causes them to explode as if they had been activated. This allows her to easily
-                set off chain reactions in any situation without relying on her slow scope. It also allows her to easily destroy Lily White and
-                boss attacks, which also means easier access to the special items they drop.
-              </p>
-              <p>
-                Her special ability allows her to cast spells more often, and recover more gauge which allows her to chain level 2 attacks back to back
-                in intense situations (thus keeping her screen mostly safe). This is also very useful during spell wars that often occur in the late
-                game because her opponent will likely be drained before she is.
-              </p>
-              <p>
-                Her high unfocused speed is great for macrododging and synergizes well with her laser, which can be swept across the screen. This also
-                works well with level 1 invincibility frames, allowing her even better survivability.
-              </p>
-              <p>
-                Her ex attacks, vertical lasers that spawn after being signalized for a few frames, can easily box the opponent towards one side of the screen,
-                which means they'll have a harder time clearing more bullets with their own spells. They are also rather oppressive as they cannot be cleared.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='reimu'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Reimu Hakurei</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/reimu.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="82" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          20 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          41 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Small hitbox
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Her level 2 spell is her main strength, because it limits the opponents movement and has a lengthy spawn time,
-                which means it cannot be cleared with a single spell. Combined to her very high charge speed, this makes it
-                very spammable.
-              </p>
-              <p>
-                She has a smaller hitbox when compared to other characters in the game, and also boosts a rather decent ex
-                attack (the yin-yang orb) which might wall you and bounces off walls in a somewhat hard to predict way (altough
-                its hitbox is smaller than its appearance).
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Because of how strong her level 2 is, an opponent will likely always reflect it, so she's likely to also
-                face extremely fast paced patterns reflected to her screen.
-              </p>
-              <p>
-                Her scope and focus speed are somewhat slow, and her level 1 charge attack isn't very useful because it destroys all
-                fairies in a chain, breaking the combo potential while dealing really low damage to Lily White and boss attacks.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='youmu'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Youmu Konpaku</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/youmu.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.1" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="1" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          182 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          23 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Bullet cancelling sword
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Youmu has a level 1 that makes her slash right in front of her, cancelling most bullets, including ex attacks.
-                Its recovery is good, meaning it can be used repeatedly despite the slow charge speed.
-              </p>
-              <p>
-                Her movement speed allows for either very slow or very fast dodges at will, which means she's good at both
-                micro and macrododging depending on circumstances.
-              </p>
-              <p>
-                Her ex attacks can easily suffocate enemies, although they can be cleared away by spells. She also has a long
-                lasting level 2 attack, which means it cannot be fully cleared by a single opponent spell attack.
-              </p>
-              <p>
-                Finally, her boss attack only fires movement restricting patterns that are completely devoid of pellets.
-                This means it does not feed the opponent with cancellable patterns.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Youmu's main downside is that she has the worst charge speed in the game, but that isn't too much of a detriment
-                in a game where only level 2 have some use. It is also partially countered by her really good level 1. However, that
-                means she's a bit susceptible to spell wars.
-              </p>
-              <p>
-                She also has the slowest scope speed in the game, which means she might have trouble activating spirits, and is
-                in turn a bit more susceptible to getting hit by them than most characters. After all, she is afraid of ghosts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='komachi'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Komachi Onozuka</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/komachi.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.1" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.2" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="57" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          20 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Full screen scope
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Komachi's awesome scope and auto-targeting level 1 attack combine together to make her very efficient at starting combos
-                at will, from anywhere on the screen. Because she doesn't have to chase fairies and spirits around to feed her gauge, she
-                can concentrate more on dodging. The level 1 attack can also be decent at killing off boss attacks if used cleverly.
-              </p>
-              <p>
-                Her ex attacks are very good at creating chaos on the opponent's screen, and actually make for harder patterns on their own
-                than her level 2/3 spell attacks. They push the enemy down which means their own spell attacks are less efficient, and are also
-                pretty good against players and characters that like to macrododge, because they are evenly distributed across the screen.
-              </p>
-              <p>
-                Her boss attack is better than her spell attacks, and complement her ex attacks really well. All of her patterns use coin bullets that are non reflectable,
-                which makes her already great defensive perks even better, because her opponents will gain back less gauge from using their own spell attacks to clear
-                their player field.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='eiki'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Eiki Shiki, Yamaxanadu</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/eiki.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.4" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="58" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          5 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Activated spirits only fire one bullet
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Eiki's main strength is her ex attack: it clones existing bullets on the opponent's screen by firing a rod with faster speed
-                in the same trajectory. Because the rod speed is determined by the original bullet, this is more effective against characters
-                whose spell attacks use faster bullets.
-              </p>
-              <p>
-                She also boosts good movement, charge and scope speeds. These help her with macrododging, spell wars and starting combo chains
-                respectively, which are all import parts of the game, making her rather balanced. She also has a pretty good boss attack,
-                which splits the screen in half with a purple laser.
-              </p>
-              <p>
-                She has really good level 1 attack, which fires straight above her and can start combos without deleting all the chain. Because it
-                lasts for a while, Eiki can fire normal shots during her level 1. That makes dealing damage and thus killing boss on her screen somewhat
-                achievable, so she can turn them into special items.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Eiki's glaring pitfall is her level 2/3 spell attacks which are both really weak, and also send on the opponent's screen cancellable
-                pellets, some of which are stacked on top of each other. What this mainly achieve is feed the opponent gauge energy, which means her
-                screen is bound to get chaotic very quickly as you use these spell attacks.
-              </p>
-              <p>
-                This key weakness is on its own what makes her fall short of top tier, and someone playing her may want to avoid spell wars for as long
-                as possible, and resort to fairy chains bullet cancelling pellets instead, to avoid their screen becoming too difficult to deal with
-                too early on. This also means Eiki is somewhat susceptible to end game spell wars.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='lyrica'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Lyrica Prismriver</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/lyrica.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.2" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.2" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="47" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          32 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Also shoots backwards
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Lyrica's main strength is her spell attacks, in particular her level 2, because, similarly to Reimu's and Youmu's, it covers a huge part of the screen
-                and spawns over and extended period of time, meaning it cannot fully be cancelled by an opponent's own spell attack.
-              </p>
-              <p>
-                Her boss attack and ex attack also complement this offensive quality rather well. She tends to fire patterns that curve a lot, which may confuse
-                an opponent and lead her to score an easy hit.
-              </p>
-              <p>
-                She also shoots behind her which also allows her, with her level 1, to start chains in up to three different places at the same time.
-                Additionally, this has the potential benefit of killing fairies and activated spirits that otherwise couldn't be shot at, allowing her
-                to navigate corners better than most other characters.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Lyrica's level 1 is similar to Marisa's, but weaker, because it is stationary and doesn't cause spirits to explode. Because of that,
-                she needs to resort to a rather slow and narrow scope to trigger combo chains.
-              </p>
-              <p>
-                Despite a good offense, her charge speed is also average, so she cannot benefit from it as much as other offensive builds, explaining in good
-                part with her weak combo potential why she falls short off higher tiers.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='medicine'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Medicine Melancholy</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/medicine.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.4" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="47" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          19 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Cannot be hit by spirits
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Medicine's main strength is that she has the strongest ex attack in the game: it cannot be cancelled by anything (be it a spell attack
-                or Youmu's level 1), stays on the screen for extended period of times and cannot be fully avoided due to its sheer size on the screen.
-                It doesn't deal damage however, only slows down her opponent. The catch: these poison clouds can stack on top of each other, eventually
-                leading to her completely freezing any opponent in place, no matter their speed.
-              </p>
-              <p>
-                She also has a nice movement speed and scope aside from that, and an ability that allows her to very aggressively trigger spirits
-                to cancel them for ex attacks, as they cannot damage her. Her level 1 actually pairs rather well with this role, despite how weird it might look:
-                it tends to kill ennemies around her, providing great combo and pellet reflecting potential.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Sadly, other than her ex attack, Medicine's offensive toolkit really suffers: she indeed has boss and spell attacks that fire a lot of
-                pellets at the opponent, effectively feeding them gauge energy they can use when frozen by her clouds. They are also among the least threatening
-                patterns in the game. A medium charge speed also hinder her defense a bit.
-              </p>
-              <p>
-                Her strategy is thus mostly effective against very slow characters (Yuuka) or very fast ones (Marisa, Aya), in the first case because she will further
-                hinder their potential to macrodoge, and in the second case due to the amplitude of speed change that might surprise a careless player. In both cases,
-                it is also vulnerable to the opponent trying to keep away from the clouds in the first place.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='reisen'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Reisen Udongein Inaba</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/reisen.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="67" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          12 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Activated spirits drift upwards faster
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Reisen boosts a great defense. She has great speed, good for macrododges and squeezes. She has a good scope, which spans around her
-                and is fast enough to deploy. She also has a good charge speed which allows her to use her own level 2 quickly enough during spell wars.
-              </p>
-              <p>
-                A pretty good tool she has despite its slow speed is her level 1 attack: it can kill a boss or Lily White relatively well, which allows her
-                to get consistant access to special items they drop. It also stays on the screen for a while, which is good to start chains or as a defensive
-                pellet reflecting screen.
-              </p>
-              <p>
-                Her ex attacks stop relatively high on the screen and might not seem very threatening but they are good at two things: occupying space that
-                the opponent may need to cancel out more pellets by moving upwards, and occupying it for a relatively long time. These last two points can make
-                challenging her during spell wars a bit tricky for some matchups (namely characters with a slow charge speed).
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Relatively fast, she will turn up the intensity of the fight, because her spell and boss attacks send a lot of pellets over to the enemy screen.
-                While this is great for scoring, because more pellets mean more things to reflect and more gauge on both sides of the screen, this isn't usually
-                great in PVP because this advantages characters with a good end game ability (such as Marisa).
-              </p>
-              <p>
-                The fact her patterns are either full of pellets, or not very threatening, also effectively means Reisen has a terrible offense. That means to win
-                with her, a player needs to resort to her defensive perks, and bet on her opponents skill (or lack thereof) at dodging.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='merlin'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Merlin Prismriver</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/merlin.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.8" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="14" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          48 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          31 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Sltanted shots
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Merlin has pretty good offensive skills. Her spell attacks stay on the opponent screen for a long while, splitting the screen in sections, and cannot
-                be cancelled fully by an opponent's own attack. Her ex attacks are great, because they move in rather surprising ways. Her boss attack is also really
-                good, as it also fires patterns that either split the screen or last for a while.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Defensively, she suffers a lot. From slow movement speed to slow charge speed, she cannot react quickly when the situation gets tense. She also has
-                a pretty weird and slow deploying horizontal scope, which activates spirits in a way that makes clearing them only really possible with her level 1,
-                which is tricky to do in time due to the long charge time. Trying to hunt spirits forces her to focus for extended times, hindering her speed even more.
-              </p>
-              <p>
-                Merlin's slanted shots cross in front of her, meaning her full damage potential is only achieved when they cross in front of her, and making it difficult
-                to actually directly fire at spirits coming down the screen, boss and Lily White. It also cannot fire at all on one side if she grazes a wall (due to the
-                spawn location of the shot then being offscreen).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='lunasa'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Lunasa Prismriver</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/lunasa.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="2.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="57" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          16 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Three-way shots
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Lunasa has interesting offensive and defensive capabilities. Defensively speaking, she has great movement speed. her cross shaped scope deploys
-                rather fast and can catch a lot of spirits. Because these drift upwards once activated, she can then decently kill them with her three-way shots
-                or her level 1. Finally, said level 1 can be used to shotgun Lily White, or even a boss on her screen if complemented by a level 2 beforehand.
-              </p>
-              <p>
-                Offensively, most of Lunasa's patterns, from her ex attack, to her spell and boss attacks, start from behind the opponent, making them a bit hard
-                to dodge for inexperienced players. They cover the screen well and last for a pretty long time, slowly creeping towards the enemy. This can be surprising
-                and force the opponent upwards
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Sadly, all of these weird perks actually aren't all that great. First of all, defensively, the cross pattern scope makes spirits hard to trigger on all four corners around her.
-                Having three-way shots instead of two-ways as most characters means she has less direct damage for anything facing her. Her level 1 is very situational,
-                as it otherwise impedes chain combo potential.
-              </p>
-              <p>
-                Her offensive, however, suffers even more. Her attacks are so slow it in fact lets the opponent a lot of time to charge a level 2 attack to cancel them.
-                They can also actually be streamed rather easily (similarly to Aya's). Her boss also suffers from slow patterns, with one attack in particular deploying
-                a lot of slow bullets that converge towards the enemy, allowing them to cancel a lot of things, so they get to recover more gauge energy. Finally, pushing the
-                opponent upwards with patterns coming from behind is a bad thing, because they will gravitate more easily towards the center of the screen, and get to cancel
-                even more patterns with their own spell attacks.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='yuuka'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Yuuka Kazami</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/yuuka.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="1.8" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="79" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          4 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Three-way shots
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Yuuka has respectable offense. Firstly, because of her ex attacks which tend to force her opponent downards, which isn't suitable
-                for spell attack cancels. Secondly, her boss attack has patterns that can be rather difficult to dodge under high pressure (in particular
-                one where she divides the screen with lanes of bullets before making them spin, and one with bullets that cross each other).
-              </p>
-              <p>
-                Her level 1 attack allows her to destroy Lily White and boss attacks easily enough (if supplemented by a level 2), giving her access
-                to special items and minimizing the threat they represent on her screen. It also har very good area of effect that can be effective
-                during tense situations to destroy a lot of fairies and spirits to cancel reflectable bullets.
-              </p>
-              <p>
-                Speaking of spirits, Yuuka also boosts a great scope, which deploys almost instantaneously, allowing her to trigger and destroy them to
-                start combo chains pretty easily. Finally, she has one of the fastest charge speed in the game, allowing her to use level 2 attacks
-                really fast.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Yuuka has the slowest movement speed in the game, which hurts her defense a lot due to how macrododge heavy
-                the game can at times be. This forces someone playing her to mostly move unfocused.
-              </p>
-              <p>
-                Her spell attacks also aren't very threatening, and contain a lot of reflectable pellets, meaning despite her very fast charge speed,
-                she mostly has to use her gauge energy for defensive purposes to avoid feeding the enemy. Eventually, these will push the game towards
-                a spell war.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='sakuya'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Sakuya Izayoi</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/sakuya.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.2" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="70" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          31 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          46 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Activated spirits do not drift upwards
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Sakuya is difficult to master, but has a few perks up her sleeves. Perhaps the most important one is that she can move during time stops
-                triggered by her spell and boss attacks (levels 2/3/4). She is invicible during these frames, so this allows her to reposition into safer places,
-                which is pretty important against characters that tend to wall her. Of note: during a mirror matchup, she can also move during the spell and boss
-                attacks fired by her opponent. This his also supported by her good charge speed.
-              </p>
-              <p>
-                To play her properly, one also needs to master her scope, which is cone shaped and moves in the opposite direction to her movement. This means
-                she needs to move backwards to keep it in front of her, but also that she can "scan" her surroundings by moving in a circle, which should catch
-                most of the spirits around her. She can then use a level 1 to destroy most of them, as it is homed, similarly to Komachi. For similar reasons, this
-                level 1 is somewhat decent at tracking a boss on her screen as it moves, and thus destroying it (although it would target closer enemies first).
-              </p>
-              <p>
-                Finally, Sakuya's knives have a hitbox that is known for being a bit peculiar, because it is actually wider than its displayed graphics.
-                This can surprise an opponent, in particular if they try to graze her pretty good ex attack. Said ex attack itself is decent at controlling
-                the opponent's movement and keeping them away from the center of the screen.
-              </p>
-              <h3>Downsides</h3>
-              <p>
-                Sakuya's uspides are also often her shortcomings. First of all, the time stop she triggers during her spell and boss attacks sadly triggers a bug
-                which stop her bullet cancelling bubble from expanding, meaning a level 2 clears around as much as a level 3, in an area that ends up being actually
-                smaller than a typical level 2.
-              </p>
-              <p>
-                Additionally, the time stop mechanic can cut short if the player casts a level 2 right before an automatic level 3 triggers (caused by reaching
-                500k spell points). It also messes up a few enemy spells, causing them to spawn all their bullets at once (Aya's level 2 for instance can become
-                a blanket that covers all the screen because of this).
-              </p>
-              <p>
-                In tense situations, her scope ends up being also potentially awkards to use, and may trigger unwanted spirits, that do not drift upwards due to her
-                ability, and end up firing deadly red bullets at her if not taken care of. Finally, Sakuya's focused speed is almost the same as her unfocused speed,
-                and around average, which can make precision dodging challenging.
-              </p>
-              <p>
-                Finally, Sakuya's spell attacks are a bit weak, because they can be easily cleared by an opponent's level 2, although they can also be pretty dangerous
-                if they have no more gauge energy left / in a corner. 
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='aya'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Aya Shameimaru</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/aya.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="82" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          50 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Slightly slows down bullets in her field
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Aya has fast movement and charge speeds, which make her pretty good at adapting at various situations defensively. Her spell attacks are decent
-                at forcing the opponent to move laterally, where her really fast ex attacks can surprise them due to how they bounce off the walls. She also
-                has a pretty good boss attack, which forces the opponent towards the bottom of the screen, challenging their control of it. The patterns it spawns
-                are surprisingly fast, and combine really well with her other attacks to catch off by surprise the enemy.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Aya doesn't have access to a slow focus speed, which makes it at times pretty hard for her to dodge patterns with precision, in spite of her ability
-                which only affects her field in a very minor way. Her spell attacks, on their own, are also not very great because they can just be streamed, as most
-                of her arsenal. Because of that, she should only use it offensively during boss attacks, and otherwise resort to using it to complement her rather
-                poor defense.
-              </p>
-              <p>
-                Aya's scope is also pretty slow to deploy, in a camera angle in front of her, letting her somewhat vulnerable to spirits flying directly into her.
-                Because of that, she needs to resort to a relatively unremarkable level 1 attack, which lacks good enough damage to kill Lily White or boss
-                in one shot.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='tewi'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Tewi Inaba</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/tewi.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.5" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="1.9" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="82" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          38 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Auto-bombs when hit at 0.5 orb
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Tewi has an excellent charge speed, and great movement speed choices (as she is fast while unfocused, and slow while focused).
-                Her level 1 charge attack can also destroy Lily White if used point blank. Her charge speed is also great, allowing her easy
-                access to defensive level 2 spell attacks.
-              </p>
-              <p>
-                In a few rare situations, Tewi's ability can actually be useful, as it gives her one more chance at a round if she gets hit on 0.5 orb
-                with more than half a gauge ready. In tense endgame situations, she may be able to chain fairies and cancel pellets well enough to get back
-                enough gauge energy in time to use her level 2 or autobomb one more time.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Sadly, Tewi's offense is pretty bad. She has a decent ex attack, which can surprise an careless opponent, as it bounces off walls, but it is also
-                pretty slow. Her spell attacks and boss attacks are also really sparse and easy to dodge, meaning she should only use her gauge energy defensively.
-                They also fire a lot of pellets feeding the opponent free energy.
-              </p>
-              <p>
-                Her scope is terrible, similar to Merlin, and combines really badly with her slow focused speed because of the time it takes to expand. This means
-                Tewi has trouble hunting for spirits and is thus also pretty vulnerable to getting hit by them.
-              </p>
-              <p>
-                Finally, Tewi's ability can also be a downside if someone playing her loses round 1, as it means they will start round 2 with a completely empty gauge,
-                leaving them quite vulnerable during the early game.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='mystia'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Mystia Lorelei</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/mystia.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="5.0" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.4" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="48" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          10 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Attracts spritis towards her
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Mystia's ability combines very well with her pan shaped scope, allowing her to trigger and pop spirits to start combo chains easily.
-                This also combines decently well with her fast movement speed and decent level 1 attack, which can hit enemies far away or deal more
-                damage up close. All that combines with a decent charge speed into granting her a pretty good defense.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Her offense, however, is among the worst in the game. Her ex, spell and boss attacks all use bird shaped bullets to spawn patterns, which
-                are sadly cancellable by the opponent's own spell attack, or even a Youmu slash. When they are cancelled, the pattern it carries completely
-                stops spawning.
-              </p>
-              <p>
-                Even worse is the speed of said bird shaped bullets is very slow, meaning the patterns take a considerable time to appear,
-                giving the enemy ample time to charge up a level 2 and cancel everything. This is especially apparent during late game spell wars.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='cirno'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Cirno</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/pofv/cirno.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                      <tr>
-                        <td>
-                          Normal Speed
-                        </td>
-                        <td class="value">
-                          <progress value="4.7" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Focus Speed
-                        </td>
-                        <td class="value">
-                          <progress value="3.3" max="5.5"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Speed
-                        </td>
-                        <td class="value">
-                          <progress value="44" max="82"/>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Scope Speed
-                        </td>
-                        <td class="value">
-                          4 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Charge Delay
-                        </td>
-                        <td class="value">
-                          51 frames
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Special Ability
-                        </td>
-                        <td class="value">
-                          Activated spirits take longer to self-destruct
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Cirno is fast, which is a good thing in this game for macrododges, and has a decent scope that deploys almost instantaneously.
-                Her defense is likely among the best in the game, due to the way her spell and boss attacks freeze patterns on both sides of the screen. This gives her
-                additional time to recover after a level 2, and allows her to reposition. It also makes bullets change directions randomingly once they unfreeze, which
-                can "break" patterns that would be otherwise rather difficult to avoid (such as Reimu's level 2 spell attack).
-              </p>
-              <p>
-                Her level 1 isn't very useful but shoots spikes in a circle around her, which can similarly to Medicine destroy all activated spirits around her.
-                It also pairs well with her circular scope and her special ability, meaning Cirno is pretty good at hunting spirits, although the size of her scope is a bit
-                too small for her to really shine at it.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Sadly, this freeze mechanic also affects patterns on the opponent's screen, so any defensive advantage she might have otherwise leveraged from this
-                mechanic is completely nullified: any level 2/3/4 she uses can also save the opponent from what would otherwise be a hit. The freeze mechanic also
-                downgrades a few projectiles into pellets, which also feeds the opponent, as they can now be reflected. Cirno's boss attack is very weak and her ex attacks
-                are average, meaning all in all that Cirno has a terribly bad offense.
-              </p>
-              <p>
-                Essentially, a game involving Cirno becomes an endurance match.
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
       </div>
-      <h3>References</h3>
-      <ul>
-        <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Flower_View/Gameplay">Touhou Wiki - PoFV Gameplay</a></li>
-        <li><a href="https://maribelhearn.com/pofv">PoFV guide by Maribel Hearn</a></li>
-        <li><a href="https://docs.google.com/document/d/1IHtZb8-LbbDEK526JR7u9_HykrwxTcDI/edit">Fundamentals of PoFV Gameplay</a></li>
-        <li><a href="https://cerise.moe/pofv.html">French Guide (cerise.moe)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=NCB3r0zVmF8">STG Weekly Episode</a></li>
-      </ul>
+      <div class="content">
+        <h1>Phantasmagoria of Flower View</h1>
+        <p>
+          東方花映塚 ~ Phantasmagoria of Flower View is the 9th Touhou Project game and came out in 2005. It returns to the same two-player split screen style of danmaku
+          ZUN already worked with in Phantasmagoria of Dim. Dream, and is the first windows game to use this style of gameplay.
+        </p>
+        <h2>Gameplay Basics</h2>
+        <h3>Player field</h3>
+        <p>
+          The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
+          to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
+        </p>
+        <p>
+          Sorry, so far there isn't a detailed game of the game! However, you can find several mentioned in the References section at the bottom of this page.
+        </p>
+        <h3>Characters</h3>
+        <div class="tierlist" x-data="{ openModal: '' }">
+          <table class="pofv">
+            <tr>
+              <th id="s" class="tier">S</th>
+              <td>
+                <span id="marisa_pofv" class="character" title="Marisa" @click="openModal='marisa'"></span>
+              </td>
+              <td>
+                <span id="reimu_pofv" class="character" title="Reimu" @click="openModal='reimu'"></span>
+              </td>
+              <td>
+                <span id="youmu" class="character" title="Youmu" @click="openModal='youmu'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="a" class="tier">A</th>
+              <td>
+                <span id="komachi" class="character" title="Komachi" @click="openModal='komachi'"></span>
+              </td>
+              <td>
+                <span id="eiki" class="character" title="Eiki" @click="openModal='eiki'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="b" class="tier">B</th>
+              <td>
+                <span id="lyrica" class="character" title="Lyrica" @click="openModal='lyrica'"></span>
+              </td>
+              <td>
+                <span id="medicine" class="character" title="Medicine" @click="openModal='medicine'"></span>
+              </td>
+              <td>
+                <span id="reisen" class="character" title="Reisen" @click="openModal='reisen'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="c" class="tier">C</th>
+              <td>
+                <span id="merlin" class="character" title="Merlin" @click="openModal='merlin'"></span>
+              </td>
+              <td>
+                <span id="lunasa" class="character" title="Lunasa" @click="openModal='lunasa'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="d" class="tier">D</th>
+              <td>
+                <span id="yuuka_pofv" class="character" title="Merlin" @click="openModal='yuuka'"></span>
+              </td>
+              <td>
+                <span id="sakuya" class="character" title="Sakuya" @click="openModal='sakuya'"></span>
+              </td>
+              <td>
+                <span id="aya" class="character" title="Aya" @click="openModal='aya'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="e" class="tier">E</th>
+              <td>
+                <span id="tewi" class="character" title="Tewi" @click="openModal='tewi'"></span>
+              </td>
+              <td>
+                <span id="mystia" class="character" title="Mystia" @click="openModal='mystia'"></span>
+              </td>
+              <td>
+                <span id="cirno" class="character" title="Cirno" @click="openModal='cirno'"></span>
+              </td>
+            </tr>
+          </table>
+
+          <div class="modal" x-show="openModal=='marisa'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Marisa Kirisame</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/marisa.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="56" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            101 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            36 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Gauge fills faster
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Marisa's level 1 charge attack destroys spirts, but also causes them to explode as if they had been activated. This allows her to easily
+                  set off chain reactions in any situation without relying on her slow scope. It also allows her to easily destroy Lily White and
+                  boss attacks, which also means easier access to the special items they drop.
+                </p>
+                <p>
+                  Her special ability allows her to cast spells more often, and recover more gauge which allows her to chain level 2 attacks back to back
+                  in intense situations (thus keeping her screen mostly safe). This is also very useful during spell wars that often occur in the late
+                  game because her opponent will likely be drained before she is.
+                </p>
+                <p>
+                  Her high unfocused speed is great for macrododging and synergizes well with her laser, which can be swept across the screen. This also
+                  works well with level 1 invincibility frames, allowing her even better survivability.
+                </p>
+                <p>
+                  Her ex attacks, vertical lasers that spawn after being signalized for a few frames, can easily box the opponent towards one side of the screen,
+                  which means they'll have a harder time clearing more bullets with their own spells. They are also rather oppressive as they cannot be cleared.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='reimu'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Reimu Hakurei</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/reimu.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="82" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            41 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Small hitbox
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Her level 2 spell is her main strength, because it limits the opponents movement and has a lengthy spawn time,
+                  which means it cannot be cleared with a single spell. Combined to her very high charge speed, this makes it
+                  very spammable.
+                </p>
+                <p>
+                  She has a smaller hitbox when compared to other characters in the game, and also boosts a rather decent ex
+                  attack (the yin-yang orb) which might wall you and bounces off walls in a somewhat hard to predict way (altough
+                  its hitbox is smaller than its appearance).
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Because of how strong her level 2 is, an opponent will likely always reflect it, so she's likely to also
+                  face extremely fast paced patterns reflected to her screen.
+                </p>
+                <p>
+                  Her scope and focus speed are somewhat slow, and her level 1 charge attack isn't very useful because it destroys all
+                  fairies in a chain, breaking the combo potential while dealing really low damage to Lily White and boss attacks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='youmu'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Youmu Konpaku</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/youmu.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            182 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            23 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Bullet cancelling sword
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Youmu has a level 1 that makes her slash right in front of her, cancelling most bullets, including ex attacks.
+                  Its recovery is good, meaning it can be used repeatedly despite the slow charge speed.
+                </p>
+                <p>
+                  Her movement speed allows for either very slow or very fast dodges at will, which means she's good at both
+                  micro and macrododging depending on circumstances.
+                </p>
+                <p>
+                  Her ex attacks can easily suffocate enemies, although they can be cleared away by spells. She also has a long
+                  lasting level 2 attack, which means it cannot be fully cleared by a single opponent spell attack.
+                </p>
+                <p>
+                  Finally, her boss attack only fires movement restricting patterns that are completely devoid of pellets.
+                  This means it does not feed the opponent with cancellable patterns.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Youmu's main downside is that she has the worst charge speed in the game, but that isn't too much of a detriment
+                  in a game where only level 2 have some use. It is also partially countered by her really good level 1. However, that
+                  means she's a bit susceptible to spell wars.
+                </p>
+                <p>
+                  She also has the slowest scope speed in the game, which means she might have trouble activating spirits, and is
+                  in turn a bit more susceptible to getting hit by them than most characters. After all, she is afraid of ghosts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='komachi'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Komachi Onozuka</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/komachi.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.1" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.2" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="57" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Full screen scope
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Komachi's awesome scope and auto-targeting level 1 attack combine together to make her very efficient at starting combos
+                  at will, from anywhere on the screen. Because she doesn't have to chase fairies and spirits around to feed her gauge, she
+                  can concentrate more on dodging. The level 1 attack can also be decent at killing off boss attacks if used cleverly.
+                </p>
+                <p>
+                  Her ex attacks are very good at creating chaos on the opponent's screen, and actually make for harder patterns on their own
+                  than her level 2/3 spell attacks. They push the enemy down which means their own spell attacks are less efficient, and are also
+                  pretty good against players and characters that like to macrododge, because they are evenly distributed across the screen.
+                </p>
+                <p>
+                  Her boss attack is better than her spell attacks, and complement her ex attacks really well. All of her patterns use coin bullets that are non reflectable,
+                  which makes her already great defensive perks even better, because her opponents will gain back less gauge from using their own spell attacks to clear
+                  their player field.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='eiki'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Eiki Shiki, Yamaxanadu</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/eiki.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.4" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="58" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            5 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Activated spirits only fire one bullet
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Eiki's main strength is her ex attack: it clones existing bullets on the opponent's screen by firing a rod with faster speed
+                  in the same trajectory. Because the rod speed is determined by the original bullet, this is more effective against characters
+                  whose spell attacks use faster bullets.
+                </p>
+                <p>
+                  She also boosts good movement, charge and scope speeds. These help her with macrododging, spell wars and starting combo chains
+                  respectively, which are all import parts of the game, making her rather balanced. She also has a pretty good boss attack,
+                  which splits the screen in half with a purple laser.
+                </p>
+                <p>
+                  She has really good level 1 attack, which fires straight above her and can start combos without deleting all the chain. Because it
+                  lasts for a while, Eiki can fire normal shots during her level 1. That makes dealing damage and thus killing boss on her screen somewhat
+                  achievable, so she can turn them into special items.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Eiki's glaring pitfall is her level 2/3 spell attacks which are both really weak, and also send on the opponent's screen cancellable
+                  pellets, some of which are stacked on top of each other. What this mainly achieve is feed the opponent gauge energy, which means her
+                  screen is bound to get chaotic very quickly as you use these spell attacks.
+                </p>
+                <p>
+                  This key weakness is on its own what makes her fall short of top tier, and someone playing her may want to avoid spell wars for as long
+                  as possible, and resort to fairy chains bullet cancelling pellets instead, to avoid their screen becoming too difficult to deal with
+                  too early on. This also means Eiki is somewhat susceptible to end game spell wars.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='lyrica'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Lyrica Prismriver</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/lyrica.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.2" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.2" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="47" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            32 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Also shoots backwards
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Lyrica's main strength is her spell attacks, in particular her level 2, because, similarly to Reimu's and Youmu's, it covers a huge part of the screen
+                  and spawns over and extended period of time, meaning it cannot fully be cancelled by an opponent's own spell attack.
+                </p>
+                <p>
+                  Her boss attack and ex attack also complement this offensive quality rather well. She tends to fire patterns that curve a lot, which may confuse
+                  an opponent and lead her to score an easy hit.
+                </p>
+                <p>
+                  She also shoots behind her which also allows her, with her level 1, to start chains in up to three different places at the same time.
+                  Additionally, this has the potential benefit of killing fairies and activated spirits that otherwise couldn't be shot at, allowing her
+                  to navigate corners better than most other characters.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Lyrica's level 1 is similar to Marisa's, but weaker, because it is stationary and doesn't cause spirits to explode. Because of that,
+                  she needs to resort to a rather slow and narrow scope to trigger combo chains.
+                </p>
+                <p>
+                  Despite a good offense, her charge speed is also average, so she cannot benefit from it as much as other offensive builds, explaining in good
+                  part with her weak combo potential why she falls short off higher tiers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='medicine'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Medicine Melancholy</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/medicine.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.4" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="47" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            19 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Cannot be hit by spirits
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Medicine's main strength is that she has the strongest ex attack in the game: it cannot be cancelled by anything (be it a spell attack
+                  or Youmu's level 1), stays on the screen for extended period of times and cannot be fully avoided due to its sheer size on the screen.
+                  It doesn't deal damage however, only slows down her opponent. The catch: these poison clouds can stack on top of each other, eventually
+                  leading to her completely freezing any opponent in place, no matter their speed.
+                </p>
+                <p>
+                  She also has a nice movement speed and scope aside from that, and an ability that allows her to very aggressively trigger spirits
+                  to cancel them for ex attacks, as they cannot damage her. Her level 1 actually pairs rather well with this role, despite how weird it might look:
+                  it tends to kill ennemies around her, providing great combo and pellet reflecting potential.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Sadly, other than her ex attack, Medicine's offensive toolkit really suffers: she indeed has boss and spell attacks that fire a lot of
+                  pellets at the opponent, effectively feeding them gauge energy they can use when frozen by her clouds. They are also among the least threatening
+                  patterns in the game. A medium charge speed also hinder her defense a bit.
+                </p>
+                <p>
+                  Her strategy is thus mostly effective against very slow characters (Yuuka) or very fast ones (Marisa, Aya), in the first case because she will further
+                  hinder their potential to macrodoge, and in the second case due to the amplitude of speed change that might surprise a careless player. In both cases,
+                  it is also vulnerable to the opponent trying to keep away from the clouds in the first place.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='reisen'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Reisen Udongein Inaba</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/reisen.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="67" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            12 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Activated spirits drift upwards faster
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Reisen boosts a great defense. She has great speed, good for macrododges and squeezes. She has a good scope, which spans around her
+                  and is fast enough to deploy. She also has a good charge speed which allows her to use her own level 2 quickly enough during spell wars.
+                </p>
+                <p>
+                  A pretty good tool she has despite its slow speed is her level 1 attack: it can kill a boss or Lily White relatively well, which allows her
+                  to get consistant access to special items they drop. It also stays on the screen for a while, which is good to start chains or as a defensive
+                  pellet reflecting screen.
+                </p>
+                <p>
+                  Her ex attacks stop relatively high on the screen and might not seem very threatening but they are good at two things: occupying space that
+                  the opponent may need to cancel out more pellets by moving upwards, and occupying it for a relatively long time. These last two points can make
+                  challenging her during spell wars a bit tricky for some matchups (namely characters with a slow charge speed).
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Relatively fast, she will turn up the intensity of the fight, because her spell and boss attacks send a lot of pellets over to the enemy screen.
+                  While this is great for scoring, because more pellets mean more things to reflect and more gauge on both sides of the screen, this isn't usually
+                  great in PVP because this advantages characters with a good end game ability (such as Marisa).
+                </p>
+                <p>
+                  The fact her patterns are either full of pellets, or not very threatening, also effectively means Reisen has a terrible offense. That means to win
+                  with her, a player needs to resort to her defensive perks, and bet on her opponents skill (or lack thereof) at dodging.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='merlin'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Merlin Prismriver</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/merlin.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.8" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="14" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            48 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            31 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Sltanted shots
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Merlin has pretty good offensive skills. Her spell attacks stay on the opponent screen for a long while, splitting the screen in sections, and cannot
+                  be cancelled fully by an opponent's own attack. Her ex attacks are great, because they move in rather surprising ways. Her boss attack is also really
+                  good, as it also fires patterns that either split the screen or last for a while.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Defensively, she suffers a lot. From slow movement speed to slow charge speed, she cannot react quickly when the situation gets tense. She also has
+                  a pretty weird and slow deploying horizontal scope, which activates spirits in a way that makes clearing them only really possible with her level 1,
+                  which is tricky to do in time due to the long charge time. Trying to hunt spirits forces her to focus for extended times, hindering her speed even more.
+                </p>
+                <p>
+                  Merlin's slanted shots cross in front of her, meaning her full damage potential is only achieved when they cross in front of her, and making it difficult
+                  to actually directly fire at spirits coming down the screen, boss and Lily White. It also cannot fire at all on one side if she grazes a wall (due to the
+                  spawn location of the shot then being offscreen).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='lunasa'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Lunasa Prismriver</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/lunasa.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="57" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            16 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Three-way shots
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Lunasa has interesting offensive and defensive capabilities. Defensively speaking, she has great movement speed. her cross shaped scope deploys
+                  rather fast and can catch a lot of spirits. Because these drift upwards once activated, she can then decently kill them with her three-way shots
+                  or her level 1. Finally, said level 1 can be used to shotgun Lily White, or even a boss on her screen if complemented by a level 2 beforehand.
+                </p>
+                <p>
+                  Offensively, most of Lunasa's patterns, from her ex attack, to her spell and boss attacks, start from behind the opponent, making them a bit hard
+                  to dodge for inexperienced players. They cover the screen well and last for a pretty long time, slowly creeping towards the enemy. This can be surprising
+                  and force the opponent upwards
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Sadly, all of these weird perks actually aren't all that great. First of all, defensively, the cross pattern scope makes spirits hard to trigger on all four corners around her.
+                  Having three-way shots instead of two-ways as most characters means she has less direct damage for anything facing her. Her level 1 is very situational,
+                  as it otherwise impedes chain combo potential.
+                </p>
+                <p>
+                  Her offensive, however, suffers even more. Her attacks are so slow it in fact lets the opponent a lot of time to charge a level 2 attack to cancel them.
+                  They can also actually be streamed rather easily (similarly to Aya's). Her boss also suffers from slow patterns, with one attack in particular deploying
+                  a lot of slow bullets that converge towards the enemy, allowing them to cancel a lot of things, so they get to recover more gauge energy. Finally, pushing the
+                  opponent upwards with patterns coming from behind is a bad thing, because they will gravitate more easily towards the center of the screen, and get to cancel
+                  even more patterns with their own spell attacks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='yuuka'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Yuuka Kazami</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/yuuka.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.8" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="79" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            4 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Three-way shots
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Yuuka has respectable offense. Firstly, because of her ex attacks which tend to force her opponent downards, which isn't suitable
+                  for spell attack cancels. Secondly, her boss attack has patterns that can be rather difficult to dodge under high pressure (in particular
+                  one where she divides the screen with lanes of bullets before making them spin, and one with bullets that cross each other).
+                </p>
+                <p>
+                  Her level 1 attack allows her to destroy Lily White and boss attacks easily enough (if supplemented by a level 2), giving her access
+                  to special items and minimizing the threat they represent on her screen. It also har very good area of effect that can be effective
+                  during tense situations to destroy a lot of fairies and spirits to cancel reflectable bullets.
+                </p>
+                <p>
+                  Speaking of spirits, Yuuka also boosts a great scope, which deploys almost instantaneously, allowing her to trigger and destroy them to
+                  start combo chains pretty easily. Finally, she has one of the fastest charge speed in the game, allowing her to use level 2 attacks
+                  really fast.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Yuuka has the slowest movement speed in the game, which hurts her defense a lot due to how macrododge heavy
+                  the game can at times be. This forces someone playing her to mostly move unfocused.
+                </p>
+                <p>
+                  Her spell attacks also aren't very threatening, and contain a lot of reflectable pellets, meaning despite her very fast charge speed,
+                  she mostly has to use her gauge energy for defensive purposes to avoid feeding the enemy. Eventually, these will push the game towards
+                  a spell war.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='sakuya'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Sakuya Izayoi</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/sakuya.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.2" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="70" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            31 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            46 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Activated spirits do not drift upwards
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Sakuya is difficult to master, but has a few perks up her sleeves. Perhaps the most important one is that she can move during time stops
+                  triggered by her spell and boss attacks (levels 2/3/4). She is invicible during these frames, so this allows her to reposition into safer places,
+                  which is pretty important against characters that tend to wall her. Of note: during a mirror matchup, she can also move during the spell and boss
+                  attacks fired by her opponent. This his also supported by her good charge speed.
+                </p>
+                <p>
+                  To play her properly, one also needs to master her scope, which is cone shaped and moves in the opposite direction to her movement. This means
+                  she needs to move backwards to keep it in front of her, but also that she can "scan" her surroundings by moving in a circle, which should catch
+                  most of the spirits around her. She can then use a level 1 to destroy most of them, as it is homed, similarly to Komachi. For similar reasons, this
+                  level 1 is somewhat decent at tracking a boss on her screen as it moves, and thus destroying it (although it would target closer enemies first).
+                </p>
+                <p>
+                  Finally, Sakuya's knives have a hitbox that is known for being a bit peculiar, because it is actually wider than its displayed graphics.
+                  This can surprise an opponent, in particular if they try to graze her pretty good ex attack. Said ex attack itself is decent at controlling
+                  the opponent's movement and keeping them away from the center of the screen.
+                </p>
+                <h3>Downsides</h3>
+                <p>
+                  Sakuya's uspides are also often her shortcomings. First of all, the time stop she triggers during her spell and boss attacks sadly triggers a bug
+                  which stop her bullet cancelling bubble from expanding, meaning a level 2 clears around as much as a level 3, in an area that ends up being actually
+                  smaller than a typical level 2.
+                </p>
+                <p>
+                  Additionally, the time stop mechanic can cut short if the player casts a level 2 right before an automatic level 3 triggers (caused by reaching
+                  500k spell points). It also messes up a few enemy spells, causing them to spawn all their bullets at once (Aya's level 2 for instance can become
+                  a blanket that covers all the screen because of this).
+                </p>
+                <p>
+                  In tense situations, her scope ends up being also potentially awkards to use, and may trigger unwanted spirits, that do not drift upwards due to her
+                  ability, and end up firing deadly red bullets at her if not taken care of. Finally, Sakuya's focused speed is almost the same as her unfocused speed,
+                  and around average, which can make precision dodging challenging.
+                </p>
+                <p>
+                  Finally, Sakuya's spell attacks are a bit weak, because they can be easily cleared by an opponent's level 2, although they can also be pretty dangerous
+                  if they have no more gauge energy left / in a corner. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='aya'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Aya Shameimaru</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/aya.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="82" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            50 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Slightly slows down bullets in her field
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Aya has fast movement and charge speeds, which make her pretty good at adapting at various situations defensively. Her spell attacks are decent
+                  at forcing the opponent to move laterally, where her really fast ex attacks can surprise them due to how they bounce off the walls. She also
+                  has a pretty good boss attack, which forces the opponent towards the bottom of the screen, challenging their control of it. The patterns it spawns
+                  are surprisingly fast, and combine really well with her other attacks to catch off by surprise the enemy.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Aya doesn't have access to a slow focus speed, which makes it at times pretty hard for her to dodge patterns with precision, in spite of her ability
+                  which only affects her field in a very minor way. Her spell attacks, on their own, are also not very great because they can just be streamed, as most
+                  of her arsenal. Because of that, she should only use it offensively during boss attacks, and otherwise resort to using it to complement her rather
+                  poor defense.
+                </p>
+                <p>
+                  Aya's scope is also pretty slow to deploy, in a camera angle in front of her, letting her somewhat vulnerable to spirits flying directly into her.
+                  Because of that, she needs to resort to a relatively unremarkable level 1 attack, which lacks good enough damage to kill Lily White or boss
+                  in one shot.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='tewi'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Tewi Inaba</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/tewi.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.5" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.9" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="82" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            38 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Auto-bombs when hit at 0.5 orb
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Tewi has an excellent charge speed, and great movement speed choices (as she is fast while unfocused, and slow while focused).
+                  Her level 1 charge attack can also destroy Lily White if used point blank. Her charge speed is also great, allowing her easy
+                  access to defensive level 2 spell attacks.
+                </p>
+                <p>
+                  In a few rare situations, Tewi's ability can actually be useful, as it gives her one more chance at a round if she gets hit on 0.5 orb
+                  with more than half a gauge ready. In tense endgame situations, she may be able to chain fairies and cancel pellets well enough to get back
+                  enough gauge energy in time to use her level 2 or autobomb one more time.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Sadly, Tewi's offense is pretty bad. She has a decent ex attack, which can surprise an careless opponent, as it bounces off walls, but it is also
+                  pretty slow. Her spell attacks and boss attacks are also really sparse and easy to dodge, meaning she should only use her gauge energy defensively.
+                  They also fire a lot of pellets feeding the opponent free energy.
+                </p>
+                <p>
+                  Her scope is terrible, similar to Merlin, and combines really badly with her slow focused speed because of the time it takes to expand. This means
+                  Tewi has trouble hunting for spirits and is thus also pretty vulnerable to getting hit by them.
+                </p>
+                <p>
+                  Finally, Tewi's ability can also be a downside if someone playing her loses round 1, as it means they will start round 2 with a completely empty gauge,
+                  leaving them quite vulnerable during the early game.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='mystia'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Mystia Lorelei</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/mystia.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.0" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.4" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="48" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Attracts spritis towards her
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Mystia's ability combines very well with her pan shaped scope, allowing her to trigger and pop spirits to start combo chains easily.
+                  This also combines decently well with her fast movement speed and decent level 1 attack, which can hit enemies far away or deal more
+                  damage up close. All that combines with a decent charge speed into granting her a pretty good defense.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Her offense, however, is among the worst in the game. Her ex, spell and boss attacks all use bird shaped bullets to spawn patterns, which
+                  are sadly cancellable by the opponent's own spell attack, or even a Youmu slash. When they are cancelled, the pattern it carries completely
+                  stops spawning.
+                </p>
+                <p>
+                  Even worse is the speed of said bird shaped bullets is very slow, meaning the patterns take a considerable time to appear,
+                  giving the enemy ample time to charge up a level 2 and cancel everything. This is especially apparent during late game spell wars.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='cirno'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Cirno</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/pofv/cirno.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.7" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.3" max="5.5"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Speed
+                          </td>
+                          <td class="value">
+                            <progress value="44" max="82"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            4 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            51 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Special Ability
+                          </td>
+                          <td class="value">
+                            Activated spirits take longer to self-destruct
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <p>
+                  Cirno is fast, which is a good thing in this game for macrododges, and has a decent scope that deploys almost instantaneously.
+                  Her defense is likely among the best in the game, due to the way her spell and boss attacks freeze patterns on both sides of the screen. This gives her
+                  additional time to recover after a level 2, and allows her to reposition. It also makes bullets change directions randomingly once they unfreeze, which
+                  can "break" patterns that would be otherwise rather difficult to avoid (such as Reimu's level 2 spell attack).
+                </p>
+                <p>
+                  Her level 1 isn't very useful but shoots spikes in a circle around her, which can similarly to Medicine destroy all activated spirits around her.
+                  It also pairs well with her circular scope and her special ability, meaning Cirno is pretty good at hunting spirits, although the size of her scope is a bit
+                  too small for her to really shine at it.
+                </p>
+                <h3>Downsides:</h3>
+                <p>
+                  Sadly, this freeze mechanic also affects patterns on the opponent's screen, so any defensive advantage she might have otherwise leveraged from this
+                  mechanic is completely nullified: any level 2/3/4 she uses can also save the opponent from what would otherwise be a hit. The freeze mechanic also
+                  downgrades a few projectiles into pellets, which also feeds the opponent, as they can now be reflected. Cirno's boss attack is very weak and her ex attacks
+                  are average, meaning all in all that Cirno has a terribly bad offense.
+                </p>
+                <p>
+                  Essentially, a game involving Cirno becomes an endurance match.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <h3>References</h3>
+        <ul>
+          <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Flower_View/Gameplay">Touhou Wiki - PoFV Gameplay</a></li>
+          <li><a href="https://maribelhearn.com/pofv">PoFV guide by Maribel Hearn</a></li>
+          <li><a href="https://docs.google.com/document/d/1IHtZb8-LbbDEK526JR7u9_HykrwxTcDI/edit">Fundamentals of PoFV Gameplay</a></li>
+          <li><a href="https://cerise.moe/pofv.html">French Guide (cerise.moe)</a></li>
+          <li><a href="https://www.youtube.com/watch?v=NCB3r0zVmF8">STG Weekly Episode</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 </body>

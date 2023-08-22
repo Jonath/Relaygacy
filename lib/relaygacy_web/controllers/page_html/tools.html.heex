@@ -1,0 +1,149 @@
+<head>
+  <title>Relaygacy</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <ul class="menu">
+        <li><a class="subpage" href="/">Home</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
+        <li><a class="subpage" href="/resources">Resources</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/credits">Credits</a></li>
+      </ul>
+    </header>
+    <div class="separator"></div>
+    <section>
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="subtext">
+          <h1>Tools</h1>
+          <h2>KeyboardSplitter</h2>
+          <p>
+            In order to play through Parsec with two keyboards, you'll want to download djlastnight's KeyboardSplitter
+            <a href="https://github.com/djlastnight/KeyboardSplitterXbox/releases">here</a>, however, if you've already
+            downloaded the Phantasmagoria Box, it comes included already in the archive.
+          </p>
+          <p>
+            KeyboardSplitter works with profiles. We already prepared a set of profiles you can use for each Phantasmagoria game, including Touhou 19.
+            In order to launch the tool, you want to go to the path KeyboardSplitter/KeyboardSplitter/Release/bin and launch KeyboardSplitter.exe.
+            We advise you pin it to your task bar for ease of access in the future.
+          </p>
+          <img src="/images/keyboardsplitter.png" class="bigimg">
+          <figcaption>KeyboardSplitter with one keyboard mapped and Touhou 19 profile selected</figcaption>
+          <p>
+            The first time you start this executable, it may ask you to install some XBox 360 drivers: you need to accept this popup, and then restart
+            your computer once they are properly installed (because Windows needs a restart for the newly installed drivers to be properly loaded in).
+          </p>
+          <p>
+            Once the software is open and ready for use, you want to do the following things, in the right order:
+          </p>
+          <ul>
+            <li>Import the splitter_presets.xml file by opening them with the menu option Presets &rarr; Import</li>
+            <li>Selecting the profile you need by clicking on the "Preset" dropdown, for instance Touhou 19: UDoALG</li>
+            <li>Set the number of slots to 1 in the "Slot counts:" dropdown on the top left of the window</li>
+            <li>Click on the two dots (..) at the right of the "Choose keyboard:" pannel and press a key for your keyboard to be detected properly</li>
+            <li>Set the "Choose mouse:" related dropdown to "None" (so that you can still use your mouse)</li>
+            <li>Click the "Start" button on the top right corner of the window</li>
+            <li>To check everything works well, go to the menu option Controllers &rarr; Test Xinput Controllers</li>
+          </ul>
+          <p>
+            At this this point, the following window should open:
+          </p>
+          <img src="/images/xinput.png" class="smallimg">
+          <p>
+            You can use it to test all of your keyboard inputs are properly remapped to different buttons on the virtual XBox 360 controller. Once this is done,
+            you can close this window, but there is <b>NO NEED</b> to press the "Stop" button. At this point you're set and ready to go. You may notice you can't
+            use your keyboard anymore (to alt+tab or type in Discord), this is actually expected since all of your keys are fed into the virtual controller. Whenever
+            you need your keyboard back, you can however press ctrl+alt+delete to stop the mapping (this might open the security screen, if it does press escape to come
+            back to your session).
+          </p>
+          <p>
+            As you still have control of your mouse if you followed the previous steps properly, you can use it to navigate to the game you want to play. 
+            An important note: if you use this with Parsec, you want to connect to the host before opening up and activating the KeyboardSplitter. This means if you've already
+            started it to test it locally, the next steps look something like this:
+          </p>
+          <ul>
+            <li>Click the "Stop" button to stop mapping your keyboard to the virtual controller</li>
+            <li>Connect to the distant host on parsec, either through their invite link or by joining their computer directly if you added them as friend</li>
+            <li>The host then needs to accept you. By default, you should be allowed to use a Gamepad already, so they shouldn't have to change anything</li>
+            <li>Click "Start" again after connecting through Parsec, and try to press a few keys. The host should here an external device connection sound</li>
+          </ul>
+          <p>
+            Sometimes, the virtual gamepad might not be recognized instantly. That is usually fixed by having the host start the game you want to play with them,
+            and then trying to input a few keys again. An important note is that if the game was already started, they likely want to restart it again <b>AFTER</b>
+            you connect with them through Parsec.
+          </p>
+          <p>
+            If you stop and restart the program too fast you might get an error that looks like this:
+          </p>
+          <img src="/images/error.png" class="mediumimg">
+          <p>
+            If that happens, simply wait 5s and click "Start" again.
+          </p>
+          <h3>Known Bugs</h3>
+          <p>
+            This software has a few known bugs that can be pretty annoying to deal with. 
+          </p>
+          <ul>
+            <li>
+              First and foremost, it can crash. Usually, if that happens, you just need to restart the executable, and follow again
+              the steps described at the start of this document to setup your keyboard mapping again.
+            </li>
+            <li>
+              Secondly, the input lag might be unbearably long in some rare cases, leading to a terrible gaming experience. If that is the
+              case, try to stop the keyboard mapping and plug the keyboard into another USB outlet. From personal experience, you might also need
+              to restart your computer to fix this issue.
+            </li>
+          </ul>
+          <h2>JoyToKey</h2>
+          <p>
+            JoyToKey is a tool that allows remapping of a gamepad to a keyboard. It is mainly used to play PoDD with controls that aren't swapped, as there
+            isn't any way in game or with DOSBox-X to remap the inputs. It can be used directly by the Parsec host, you will just need to remap the following
+            buttons for it to work as expected with a single gamepad.
+          </p>
+          <ul>
+            <li>POV: up</li>
+            <li>POV: right</li>
+            <li>POV: down</li>
+            <li>POV: left</li>
+            <li>Button 1</li>
+            <li>Button 2</li>
+            <li>Button 3 (for UDoALG)</li>
+          </ul>
+          <img src="/images/joytokey.png" class="imgcenter">
+          <figcaption>JoyToKey with a profile setup for PoDD (notice Z and X are swapped)</figcaption>
+          <p>
+            Playing with 2 gamepads hasn't been tested yet, but in that case both players can remap each to their half of the keyboard needed (so that to emulate
+            a split keyboard in game). This session will get updated in the future to add keybindings specific to that special case.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>

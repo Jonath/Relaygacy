@@ -16,20 +16,58 @@ body {
 
 section {
   margin: 0px auto 0px auto;
-  width: 70%;
+  width: 80%;
+}
+
+.content {
+  margin: 0px auto 0px auto;
+  width: 88%;
+  max-width: 100%;
   background-color: #222;
   box-shadow: 4px 4px 4px 2px #888;
   opacity: 0.9;
   padding: 15px;
 }
 
-section a {
+.subtext {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.content a {
 	color: #19f;
 }
 
-h1 {
-  margin-top: 64px;
+.socials {
+  float: right;
+}
+
+.subtext h1 {
   font-size: 40px;
+}
+
+.subtext h2 {
+  margin-top: 40px;
+}
+
+.subtext p {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.subtext ul {
+  font-size: 18px;
+}
+
+.subtext li {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.subtext pre {
+  margin-top: 50px;
+  font-size: 18px;
 }
 
 .separator {
@@ -84,11 +122,74 @@ hr {
   margin-top: 25px;
 }
 
-.center {
+.banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 90%;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+}
+
+.cover {
+  display: block;
+  width: 75%;
+  margin-top: 5%;
+  margin-left: 70%;
+}
+
+.covercap {
+  display: block;
+  width: 72%;
+  margin-left: 70%;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.imgcenter {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   width: 65%;
+}
+
+.bigimg {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.mediumimg {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.smallimg {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.sourceimg {
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 
 figcaption {
@@ -158,8 +259,12 @@ figcaption {
 }
 
 table {
-  margin-left:auto;
-  margin-right:auto
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animal {
+  margin-right: 10px;
 }
 
 .noborder {
@@ -227,7 +332,7 @@ th {
 
 .modal-body {
   padding: 2px 16px;
-  max-height: 85vh;
+  max-height: 95vh;
   overflow-y: auto;
 }
 
@@ -277,10 +382,6 @@ th {
   header ul .subpage {
 		border-left: 1px solid #888;
 	}
-
-  section {
-    max-width: 75%;
-  }
 
   #ss {
     background:radial-gradient(#552586,#804fb3,#b589d6)

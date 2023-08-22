@@ -13,6 +13,10 @@ defmodule RelaygacyWeb.PageController do
     render(conn, "resources.html")
   end
 
+  def tools(conn, _tools) do
+    render(conn, "tools.html")
+  end
+
   def partners(conn, _params) do
     render(conn, "partners.html")
   end

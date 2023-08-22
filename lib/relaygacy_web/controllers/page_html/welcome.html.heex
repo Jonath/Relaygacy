@@ -8,32 +8,73 @@
     <header>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
     <div class="separator"></div>
     <section>
-      <h1>Relaygacy</h1>
-      <h2>Hello and welcome to Relaygacy!</h2>
-      <p>We are an association running video game events every once in a while, please check our Events!</p>
-      <p>We are based in France, however, our events are retransmitted by our Partners to other communities.</p>
-      <h2>Contacts</h2>
-      <div class="socials">
-        <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
-          <img src="/images/discord.svg" class="social">
-        </a>
-        <a href="https://www.twitch.tv/relaygacy" class="twitch">
-          <img src="/images/twitch.svg" class="social">
-        </a>
-        <a href="https://twitter.com/relaygacy" class="twitter">
-          <img src="/images/twitter.svg" class="social">
-        </a>
-        <a href="mailto:relaygacy@gmail.com" class="discord">
-          <img src="/images/gmail.svg" class="social">
-        </a>
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="subtext">
+          <h1 class="textcenter">Phantasmagoria Fest</h1>
+          <img src="/images/beastMasters.jpg" class="banner">
+          <p class="introduction">
+            We are happy to announce for the <time datetime="2023-08-26">26th of August 2023</time> the first edition of the Phantasmagoria Fest,
+            a PVP tournament centered around the versus shmup subgenre. For this edition, the tournament will be centered around Touhou 19:
+            東方獣王園 ~ Unfinished Dream of All Living Ghost that recently came out. You can find a guide that sumarizes the game a bit <a href="/games/udoalg">here</a>.
+          </p>
+          <div class="images">
+            <img src="/images/udoalg/cover.png" class="cover">
+            <img src="/images/udoalg/ban.png" class="cover">
+          </div>
+          <p class="introduction">
+            The format of the tournament will be Bo3 (best of 3), with default rulesets. This means we're going to let everyone choose the card they want from the full pool,
+            each player will have 2 lives and the ability to replenish their shield using level 3 and level 4 charge attacks, and the timer is set to 10 mins. Additionally,
+            the game will be played for all matches in the Lunatic difficulty.
+          </p>
+          <p class="introduction">
+            Additionally, we elected to add one character restriction: because of how crazily strong she is, we elected to ban Chiyari Tenkajin. We based this decision off
+            community feedback, but also the Touhou Station tournament selections. As it turns out, almost half of the participants ended up playing this character in round 1,
+            which is understandable seeing she's likely the only one that can cover up all of the opponent's field with non-cancellable purple wisps.
+          </p>
+          <p class="introduction">
+            Because the default implemented online VS mode is pretty bad, the tournament will be ran through <a href="https://dash.parsec.app/login">Parsec</a> on a set of two
+            dedicated Shadow machines we set up for the occasion. This way, we want to make it so that both players experience latency. This is also an easy way to setup controls
+            for both characters: in particular, as a match is going on, we can prepare the controls for the next set on the other machine.
+          </p>
+          <p class="introduction">
+            This setup makes it so that the game works as if both player were fighting each other on a single computer, and because of that, keyboard VS keyboard is a bit troublesome
+            to setup properly. That is because on modern Windows, 2 different keyboards connected to the same computer will by default use the same input queue. However, both of them
+            are actually recognized as different external devices, and thanks to that, we can make the game work for 2 keyboards using a tool remapping one of them to a virtual XBOX 360
+            controller. You can find details on how to setup this <a href="/resources">here</a>.
+          </p>
+        </div>
       </div>
     </section>
   </main>

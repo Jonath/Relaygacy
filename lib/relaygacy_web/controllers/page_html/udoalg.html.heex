@@ -8,748 +8,1730 @@
     <header>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
+        <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/partners">Partners</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
     <div class="separator"></div>
     <section>
-      <h1>Unfinished Dream of All Living Ghost</h1>
-      <p>
-        Unfinished Dream of All Living Ghost is the latest versus shooting game in the Touhou series, that came out this year (2023 at the moment of writing).
-        It works pretty much the same as PoFV and PoDD, but has a few of its own peculiarities.
-      </p>
-      <div class="tierlist" x-data="{ openModal: '' }">
-        <table class="udoalg">
-          <tr>
-            <th id="ss" class="tier">SS</th>
-            <td>
-              <span id="chiyari" class="character" title="Chiyari" @click="openModal='chiyari'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="s" class="tier">S</th>
-            <td>
-              <span id="reimu_udoalg" class="character" title="Reimu" @click="openModal='reimu'"></span>
-            </td>
-            <td>
-              <span id="marisa_udoalg" class="character" title="Marisa" @click="openModal='marisa'"></span>
-            </td>
-            <td>
-              <span id="seiran" class="character" title="Seiran" @click="openModal='seiran'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="a" class="tier">A</th>
-            <td>
-              <span id="zanmu" class="character" title="Zanmu" @click="openModal='zanmu'"></span>
-            </td>
-            <td>
-              <span id="rin" class="character" title="Rin" @click="openModal='rin'"></span>
-            </td>
-            <td>
-              <span id="enoko" class="character" title="Enoko" @click="openModal='enoko'"></span>
-            </td>
-            <td>
-              <span id="yuuma" class="character" title="Yuuma" @click="openModal='yuuma'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="b" class="tier">B</th>
-            <td>
-              <span id="ran" class="character" title="Ran" @click="openModal='ran'"></span>
-            </td>
-            <td>
-              <span id="suika" class="character" title="Suika" @click="openModal='suika'"></span>
-            </td>
-            <td>
-              <span id="biten" class="character" title="Biten" @click="openModal='biten'"></span>
-            </td>
-            <td>
-              <span id="hisami" class="character" title="Hisami" @click="openModal='hisami'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="c" class="tier">C</th>
-            <td>
-              <span id="mamizou" class="character" title="Mamizou" @click="openModal='mamizou'"></span>
-            </td>
-            <td>
-              <span id="sanae" class="character" title="Sanae" @click="openModal='sanae'"></span>
-            </td>
-            <td>
-              <span id="yachie" class="character" title="Yachie" @click="openModal='yachie'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="d" class="tier">D</th>
-            <td>
-              <span id="saki" class="character" title="Saki" @click="openModal='saki'"></span>
-            </td>
-            <td>
-              <span id="tsukasa" class="character" title="Tsukasa" @click="openModal='tsukasa'"></span>
-            </td>
-            <td>
-              <span id="aunn" class="character" title="Aunn" @click="openModal='aunn'"></span>
-            </td>
-          </tr>
-          <tr>
-            <th id="e" class="tier">E</th>
-            <td>
-              <span id="nazrin" class="character" title="Nazrin " @click="openModal='nazrin'"></span>
-            </td>
-          </tr>
-        </table>
+      <div class="nodot socials">
+        <ul>
+          <li>
+            <a href="https://discord.gg/3kc6Sg5MC8" class="discord">
+              <img src="/images/discord.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitch.tv/relaygacy" class="twitch">
+              <img src="/images/twitch.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/relaygacy" class="twitter">
+              <img src="/images/twitter.svg" class="social">
+            </a>
+          </li>
+          <li>
+            <a href="mailto:relaygacy@gmail.com" class="discord">
+              <img src="/images/gmail.svg" class="social">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="subtext">
+          <h1>Unfinished Dream of All Living Ghost</h1>
+          <p>
+            Unfinished Dream of All Living Ghost is the latest versus shooting game in the Touhou series, that came out this year (2023 at the moment of writing).
+            It works pretty much the same as PoFV and PoDD, but has a few of its own peculiarities.
+          </p>
+          <h2>Gameplay Basics</h2>
+          <h3>Controls</h3>
+          <p>
+            The game opposes two players on a split screen setup. Each part of the screen dedicated to a single player will be referenced in this guide as "field".
+            In this game, the controls are more complex than usual: you have three of them.
+          </p>
+          <ul>
+            <li>A can be held to fire a character's basic shot, which is their main way to deal damage to enemies on their field</li>
+            <li>B can be held to activate a character's scope and charge up their meter/gauge, which allows access to special attacks</li>
+            <li>C can be pressed to bomb, clearing patterns and enemies off the field</li>
+          </ul>
+          <img src="/images/udoalg/manual.png" class="bigimg">
+          <figcaption>Game Screen Overview</figcaption>
+          <h3>Hearts</h3>
+          <p>
+            Health in this game is represented by hearts, however, as opposed to most other games of its kind, a hit will only damage a single heart.
+            That is, only if said player getting hit doesn't have their shield up.
+          </p>
+          <h3>Shield</h3>
+          <p>
+            In this game, since there aren't many ways to clear danmaku off the field, players instead get a shield, which allows them to sustain one hit
+            without losing a life. These get replenished by default whenever a player loses a heart, or uses their C3/C4 meter attacks (see below)
+          </p>
+          <img src="/images/udoalg/shield.png" class="sourceimg">
+          <figcaption>Character with a shield</figcaption>
+          <h3>Special attacks</h3>
+          <p>
+            First, let use define a few terms to make understanding of this guide easier:
+          </p>
+          <ul>
+            <li>Gauge/meter refers to the pipe displayed below each player's field</li>
+            <li>Energy refers to how much of this pipe is currently filled up</li>
+            <li>Opponent refers to the other player (player 2 if you are player 1 and vice-versa)</li>
+          </ul>
+          <p>
+            Using energy, a player can fire up to 4 different special meter attacks:
+          </p>
+          <ul>
+            <li>C1, also referenced as charged shot, is usually a stronger version of a character's shot</li>
+            <li>C2, also referenced as skill, is a special ability that differs wildly depending on the character played</li>
+            <li>C3, also referenced as extra attack in game, usually fires several ex attacks (also called passive attacks)</li>
+            <li>C4, also referenced as boss attack in game, sends a nonspell or a spellcard over the opponent's field</li>
+          </ul>
+          <img src="/images/udoalg/meter.png" class="sourceimg">
+          <figcaption>Standard Meter</figcaption>
+          <p>
+            The charge speed, as opposed to PoDD and PoFV, is the same for every character. However, the breakpoints for each attack has
+            a few variations on some characters (usually making C1, C2 and C3 more or less expensive).
+          </p>
+          <h3>Items</h3>
+          <p>
+            Items are the only way to refill your meter's energy. There are two ways to generate them in this game.
+          </p>
+          <ul>
+            <li>Killing enemies, in particular chaining several kills under a short time span grants bonus items.</li>
+            <li>Bullets entering your scope</li>
+            <li>Grazing</li>
+          </ul>
+          <h3>Enemies</h3>
+          <p>
+            There is a pretty great diversity of enemies in this game. Killing one of them by default does not reward any item, you need to kill several
+            of them in a chain one after the other in what is called a combo chain to spawn some. Killing one will however always will trigger an explosion
+            the size of which depends on the kind enemy killed. An explosion is a circular area in which splash damage is dealt to other surrounding enemies,
+            including any opposing character boss on your field. It also cancels pellets (and popcorns) in their vicinity and sends them back to the opponent's field.
+          </p>
+          <p>
+            In UDoALG, enemies are classified into two main categories:
+          </p>
+          <ul>
+            <li>Base enemies: they are fairies or wheel ghosts that come in organized formations</li>
+            <li>Spirits: they come in different flavours, namely divine and animal spirits</li>
+          </ul>
+          <h3>Spirits</h3>
+          <p>
+            Killing spirits sends them back to the opponent's field. The omake mentions that shooting down divine spirits (yellow wisps) will produce animal spirits
+            on the opponent's field, and that your distance to them as they die influences which spirit is spawned. From experimentation, here are the approximate distances:
+          </p>
+          <div class="nodot">
+            <ul>
+              <li><img src="/images/udoalg/eagle.png" class="animal">Spawns after 2/3 of the vertical height of the field away from the player</li>
+              <li><img src="/images/udoalg/otter.png" class="animal">Spawns between 1/3 and 2/3 of the vertical height of the field away from the player</li>
+              <li><img src="/images/udoalg/wolf.png" class="animal">Spawns between point blank and 1/3 of the vertical height of the field away from the player</li>
+            </ul>
+          </div>
+          <p>
+            Note that the distances used here are absolute and include both the vertical and horizontal components. This also applies to beast spirits themselves, so for example
+            an eagle can be sent back to the opponent's field as a wolf and vice versa. All three beast spirits have different behaviors as follows:
+          </p>
+          <div class="nodot">
+            <ul>
+              <li><img src="/images/udoalg/eagle.png" class="animal">Spawns at the top of the field and fly downwards quickly at a diagonal angle, firing 6 blue arrowheads in a circle</li>
+              <li><img src="/images/udoalg/otter.png" class="animal">Spawns at the sides of the field and slowly moving downwards between the two walls, firing 1 green arrowhead downwards</li>
+              <li><img src="/images/udoalg/wolf.png" class="animal">Spawns at the top of the field and fly downwards in a straight line, firing 1 red arrowhead behind them that then homes onto the opponent</li>
+            </ul>
+          </div>
+          <h3>Scope</h3>
+          <p>
+            The scope, also referenced as pacifying zone or exorcism zone in the manual, is the blue zone that appears on a player's field whenever they charge up their
+            meter. Each character has a different scope, but their main purpose an properties remain the same. They are as follows:
+          </p>
+          <ul>
+            <li>Dousing spirits that enter its area of effect, allowing the player to kill them much more easily</li>
+            <li>Slowing down bullets and base enemies that enter its area of effect</li>
+            <li>Spawning items whenever bullets enter its area of effect</li>
+          </ul>
+          <p>
+            Because of these three properties, usage of character's scope is often key in victory. Generally speaking, we would categorize scopes into two big families:
+          </p>
+          <ul>
+            <li>Offensive scopes: usually situated at a distance above a character, they are great to farm items when touching bullets at a distance</li>
+            <li>Defensive scopes: usually situated around a character, they are great to slow down patterns and activate spirits in their vicinity</li>
+          </ul>
+          
+          <div class="images">
+            <img src="/images/udoalg/defensive.png" class="cover">
+            <img src="/images/udoalg/offensive.png" class="cover">
+          </div>
+          <div class="images">
+            <figcaption class="covercap">Reimu's scope is defensive</figcaption>
+            <figcaption class="covercap">Marisa's scope is offensive</figcaption>
+          </div>
+          <h3>Bombs</h3>
+          <p>
+            At the start of each round, each player gets 3 bombs that they can use to clear patterns and enemies. They are pretty useful in tight spots,
+            in particular when dealing with bosses (as they can damage them). One very important aspect of bombs however, that doesn't seem well understood
+            generally speaking, is that the bullets and spirits they destroy send back a lot of things on the opponent's screen, often to such an extent it
+            forces them to use a bomb on their own!
+          </p>
+          <p>
+            Because of that, the game pretty often resolves in so called "bomb wars" that go as follows: one player bombs their screen as it is filled with
+            bullets and spirits. Because of that, a similar level of chaos is sent back to the opponent's screen, and they bomb in turn. Hence and repeat
+            until every bomb has been used. With the default number of bombs, this is very favorable to the player that didn't start the war, as long as there
+            is enough stuff on one's field to send back to the others. This means under normal circumstances, the first player to bomb loses the bomb war,
+            and often, with it, the round.
+          </p>
+          <h3>Bosses</h3>
+          <p>
+            Whenever a character uses their C4 ability, it sends over a boss on the opponent's screen. Depending on the level of said attack, it will either
+            start firing patterns corresponding to a spell or a nonspell. Usually, the first time a boss attack is performed, only the nonspell is cast, then
+            only the spell, and eventually both the nonspell and spell are performed one after the other.
+          </p>
+          <p>
+            A really interesting property of these attacks is that when cleared, either by damaging the boss enough or by timing out the pattern, the field
+            is fully cleared off any bullets and enemies. This makes it an additional mechanic that allows to reverse a lot of patterns onto the opponent's
+            screen, that works similar to bombs.
+          </p>
+          <div class="images">
+            <img src="/images/udoalg/nonspell.png" class="cover">
+            <img src="/images/udoalg/spellcard.png" class="cover">
+          </div>
+          <div class="images">
+            <figcaption class="covercap">Nonspell: no background change</figcaption>
+            <figcaption class="covercap">Spell card: notice the special background</figcaption>
+          </div>
+          <h3>Tier List</h3>
+          <p>
+            Please note that since the game came out pretty recently, this tentative tier list is mostly based off our feeling about characters, isn't rooted in
+            empiric data (actual PVP matches like for PoFV), and is subject to changes as the community discovers new game mechanics.
+          </p>
+        </div>
+        <div class="tierlist" x-data="{ openModal: '' }">
+          <table class="udoalg">
+            <tr>
+              <th id="ss" class="tier">SS</th>
+              <td>
+                <span id="chiyari" class="character" title="Chiyari" @click="openModal='chiyari'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="s" class="tier">S</th>
+              <td>
+                <span id="reimu_udoalg" class="character" title="Reimu" @click="openModal='reimu'"></span>
+              </td>
+              <td>
+                <span id="marisa_udoalg" class="character" title="Marisa" @click="openModal='marisa'"></span>
+              </td>
+              <td>
+                <span id="zanmu" class="character" title="Zanmu" @click="openModal='zanmu'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="a" class="tier">A</th>
+              <td>
+                <span id="rin" class="character" title="Rin" @click="openModal='rin'"></span>
+              </td>
+              <td>
+                <span id="enoko" class="character" title="Enoko" @click="openModal='enoko'"></span>
+              </td>
+              <td>
+                <span id="yuuma" class="character" title="Yuuma" @click="openModal='yuuma'"></span>
+              </td>
+              <td>
+                <span id="yachie" class="character" title="Yachie" @click="openModal='yachie'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="b" class="tier">B</th>
+              <td>
+                <span id="seiran" class="character" title="Seiran" @click="openModal='seiran'"></span>
+              </td>
+              <td>
+                <span id="tsukasa" class="character" title="Tsukasa" @click="openModal='tsukasa'"></span>
+              </td>
+              <td>
+                <span id="ran" class="character" title="Ran" @click="openModal='ran'"></span>
+              </td>
+              <td>
+                <span id="sanae" class="character" title="Sanae" @click="openModal='sanae'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="c" class="tier">C</th>
+              <td>
+                <span id="hisami" class="character" title="Hisami" @click="openModal='hisami'"></span>
+              </td>
+              <td>
+                <span id="biten" class="character" title="Biten" @click="openModal='biten'"></span>
+              </td>
+              <td>
+                <span id="suika" class="character" title="Suika" @click="openModal='suika'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="d" class="tier">D</th>
+              <td>
+                <span id="saki" class="character" title="Saki" @click="openModal='saki'"></span>
+              </td>
+              <td>
+                <span id="mamizou" class="character" title="Mamizou" @click="openModal='mamizou'"></span>
+              </td>
+              <td>
+                <span id="aunn" class="character" title="Aunn" @click="openModal='aunn'"></span>
+              </td>
+            </tr>
+            <tr>
+              <th id="e" class="tier">E</th>
+              <td>
+                <span id="nazrin" class="character" title="Nazrin " @click="openModal='nazrin'"></span>
+              </td>
+            </tr>
+          </table>
 
-        <div class="modal" x-show="openModal=='chiyari'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Chiyari Tenkajin</h2>
+          <div class="modal" x-show="openModal=='chiyari'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Chiyari Tenkajin</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/chiyari.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.8" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Base shot: best damage in game, enough to kill most enemies and clear bosses easily</li>
+                  <li>Ex attack: best in game, a purple non-cancellable, non-grazable purple wisp that moves towards the opponent</li>
+                  <li>C1: shoots needles in a semi circle above the player, allowing for crowd control</li>
+                  <li>C2: makes her ex attack bigger for a around 4 seconds before they start decreasing in size back to normal</li>
+                  <li>C3: spawns a considerable swarm of ex attacks in a circle around the opponent</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: small and only deals meagre damage to nearby enemies</li>
+                  <li>Base shot: slow speed, which means damage to enemies is a bit delayed</li>
+                  <li>Ex attack: opponents using their scope can slow them down (very useful for characters with centered scope)</li>
+                  <li>C1: locks her out of using her gauge for around 1 second, and that applies to C2/C3/C4</li>
+                  <li>Nonspell: feeds the opponent a lot of meter as she fires arrowheads lines that are easily scoped and streamed</li>
+                  <li>Spell: is a very slow to deploy and sparse pattern of red fireballs stopping before turning purple and moving again</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Use her C3, then C2 to fill up the opponent's field with her broken ex attack (hence her tier)</li>
+                  <li>Avoid using C1 and C4 as they are suboptimal</li>
+                </ul>
+              </div>
             </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/chiyari.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                She is in her own special tier because of how she breaks the game with her ex attack, and the way it works with her skill.
-                It is a purple non-cancellable, non-grazable purple "bullet" that moves towards the opponent. Chiyari's L2 makes them bigger
-                while her L3 spawns a bunch of them around the enemy: both of these used together can at times cover the full screen, making
-                it essentially undodgeable. They can even spawn directly on top of the opponent.
-              </p>
-              <p>
-                The only thing that can actually be done to somewhat help survive against that ex attack is to use your scope. However, that
-                can only delay things for so long: as the match progresses, unless you get to deal with her beforehand, her ex attacks will
-                eventually overtake the game.
-              </p>
-              <p>
-                On her side of the field, she also has a few good stats helping her: namely, her basic shot deals enough damage on its own to
-                be able to destroy most fairies and spirits. She's even able to deal with boss only using that, when other characters need to
-                rely on their L1/L2 for that (or in the most extreme cases, cannot even deal with it).
-              </p>
-              <p>
-                He boss non-spellcombines decently well with her ex attack as having to stream a pattern while being careful about the purple
-                spirits can be really hard: it divides the screen pretty well, removing even more options for the enemy to escape to.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Her boss nonspell feeds the opponent, because it fires long lines of bullets that can easily be streamed. Aside from that,
-                her boss spellcard is also pretty easy to deal with on its own. Essentially this means playing her in PVP, someone should rather
-                resort to using L3+L2 instead of L4.
-              </p>
+          </div>
+
+          <div class="modal" x-show="openModal=='reimu'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Reimu Hakurei</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/reimu.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.8" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>C1: shoots four amulets that pause for a while a bit above her, dealing a lot of damage</li>
+                  <li>C2: best in game, it cancels bullets around Reimu, deletes enemies and bosses, and often pays for itself</li>
+                  <li>C3: summons a lot of big bouncy yin yang orbs and upgrades really well</li>
+                  <li>Nonspell: fires red amulets that home onto the opponent after a while, forcing movement</li>
+                  <li>Spell: spams small yin yang orbs that bounce around and circle the opponent</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: pretty small and doesn't provide much defensively (slowdown) or offensively (farm)</li>
+                  <li>Base shot: unfocused it deals very weak damage, forcing her to focus to kill enemies, hurting mobility</li>
+                  <li>C2: bloom effect hurts visibility, making dodging non cancellable ex attacks challenging</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Spam C2 to clear field off bullets and bosses (move backwards after C2 for safety, forward to reach boss)</li>
+                  <li>Spam C3 to upgrade it, then fire it on top of C4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='marisa'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Marisa Kirisame</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/marisa.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.3" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.2" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            16 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: it takes up a lot of vertical space around Marisa, which is great to farm items and douse spirits</li>
+                  <li>Ex attack: lasers spawning on the bottom of the opponent's field in random locations, can stack up and wall them off</li>
+                  <li>C1: spawns a stationary laser dealing a lot of damage in a straight vertical line above Marisa</li>
+                  <li>C2: can easily hit an opponent too high up in their field (usual for instance for Yuuma)</li>
+                  <li>C3: combines well with her ex attacks that can spawn on the tiny gaps it lets for the opponent to get trapped in</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Nonspell: fires easily dodged lasers and packs of 6 pellets that can be reflected and scoped for meter</li>
+                  <li>Spell: 2/3 lasers spawn stars where they hit wall/floor after a delay, making it weak to point blank and boss killers</li>
+                  <li>C2: lasers converge at the bottom of the opponent's field so it is usually easily dodged (meter waste) and can be farmed</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Spam C1 to delete bosses, use base shot to deal with most enemies</li>
+                  <li>Spam C3 to upgrade it, then fire it on top of C4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='seiran'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Seiran</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/seiran.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="5.3" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.2" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            16 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            40 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: a circle at a distance above Seiran, it is a great tool to farm for items</li>
+                  <li>Base shot: rockets have a great balance of damage and speed, easily kills enemies</li>
+                  <li>Ex attack: a portal that fires a circle of slow bullets, applying pressure</li>
+                  <li>C1: fires many rockets in a row, great to speed kill bosses</li>
+                  <li>C3: sends over many ex attacks arranged in a big ring on the opponent's field, forcing micrododges</li>
+                  <li>Boss: triangles of bullets eventually take so much space on the screen they can wall the opponent</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Ex attack: generally speaking feeds the opponent a lot of meter as it can easily be scoped</li>
+                  <li>C2: rockets fired from everywhere at the bottom of her field, but worse damage than base shot C1 + locks gauge</li>
+                  <li>C3: backfires in some matchups, as characters that can cancel them can completely counter it</li>
+                  <li>Boss: easily dodged triangles initially feed the opponent meter</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid using C2 (akin to a timing error), spam C1 instead to kill tough enemies and bosses</li>
+                  <li>Susceptible to bullet cancelling mechanics so avoid these matchups: Reimu, Yachie, Yuuma, Enoko</li>
+                  <li>Spam C3 to upgrade it, then fire it on top of C4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='zanmu'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Zanmu Nippaku</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/zanmu.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="6.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            18 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Base shot: being spread out, it can easily pop off spirits created by her skill to start big hit chains</li>
+                  <li>Ex attack: non cancellable lance that pins into the floor and stays active for a while before disappearing</li>
+                  <li>C2: converts all enemies on her field, including beast spirits from matriarchs and Orin's ex attack</li>
+                  <li>C3: fires many needles, keeping the opponent off bottom and sides of their field, restricting navigable space</li>
+                  <li>Boss: fires orbs and fireballs arranged in loose chunks forcing the opponent to stream around, combines well with needles</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: doesn't deal a lot of damage, making her reliable on equipment cards to kill enemies when her skill isn't available</li>
+                  <li>C1: doesn't fire alongside her skill, meaning she needs to fire again after her 1 second charge delay is over to pop them off</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Great counterpick for characters with spirit based ex attacks (Rin, Yachie, Saki, Yuuma)</li>
+                  <li>Use C2 whenever a lot of enemies are on her field to score hit combos and meter</li>
+                  <li>Use equipment or C1 to boost her damage when C2 isn't ready</li>
+                  <li>C3 and C4 are usually both viable, combine both when possible</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='rin'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Rin Kaenbyou</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/rin.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="6.0" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.2" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            6 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: fast scope that scans an area above Rin, dousing spirits encountered along the way and generating items</li>
+                  <li>Ex attack: really tanky red evil spirits that are resilient to being doused and fire red arrowheads in a circle (in Lunatic)</li>
+                  <li>C1: cart following her scope, it deals good damage and synergizes well with her skill, popping off the wisps it generates</li>
+                  <li>C2: transforms base enemies (fairies, wheels) into wisps, that get popped off instantly by the C1 fired alongside</li>
+                  <li>C3: summons a swarm of red evil spirits that clump into a pretty hard to escape mass</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: weak damage and spread makes it hard to use efficiently, making C1 her main offense</li>
+                  <li>C2: only douses animal spirits instead of turning them into wisps like Zanmu's skill</li>
+                  <li>Nonspell: fires a checkered pattern that contains a few reflectable pellets</li>
+                  <li>Spell: zombie fairies are slow and easily killed, neutralizing the pattern for a while</li>
+                  <li>Bug: her skill may summon a wisp on top of her which triggers a hit if used on the upper half of her field</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her against Zanmu, or in this matchup avoid C3</li>
+                  <li>Use C2 whenever a lot of base enemies are on her field to score hit combos and meter</li>
+                  <li>Spam C3 to upgrade it, as her chains will then triggered enhanced versions, then fire it on top of C4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='enoko'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Enoko Mitsugashira</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/enoko.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.8" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: fast three headed scope at a distance above Enoko, great for its item farming potential</li>
+                  <li>Base shot: deals high damage, moves fast, in a spread while unfocused, or a smaller area while focused</li>
+                  <li>Ex attack: a stationary damaging zone that occupies a place on the opponent's field for an extended time</li>
+                  <li>C1: a set of three bear traps that deal great damage and cancel some bullets as they close toward the end of their path</li>
+                  <li>C2: many bear traps are fire in a tri-shot, cancelling bullets along their path and dealing high damage: a great defensive skill</li>
+                  <li>C3: summons of swarm of ex attacks in a random positions in a zone around the opponent's height, along their field's width</li>
+                  <li>Boss: combines well with C3 as it denies space in the upper part of the screen</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: not great defensively at it spawns at a distance from Enoko, meaning she also can't douse close up spirits</li>
+                  <li>C3: susceptible to the opponent misdirecting spawn by going up on the screen (keeping the bottom of their field empty)</li>
+                  <li>Boss: the patterns it fires during the spell and nonspell are easily dodged and farmed on their own</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her in matchups against boss killers (Marisa, Seiran) as they'll get an easier time dealing with ex attacks</li>
+                  <li>Use C2 to clear up bullets on her field or deal damage against bosses, use C1 instead when no meter for C2 / economizing it</li>
+                  <li>Spam C3 to upgrade it, but don't hesitate to fire a C4 early to deny the opponent space</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='yuuma'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Yuuma Toutetsu</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/yuuma.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.85" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            N/A
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            20 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: can eventually take up all of her field's area, slowing down most bullets and enemies, instantly dousing spirits</li>
+                  <li>Ex attack: eagles are likely the best enhanced animal spirits as they home in onto the opponent when coming out of stun</li>
+                  <li>C1: the spoon is a very useful tool to delete bullets and start chains, as it is Yuuma's main damaging option</li>
+                  <li>C3: summons several eagles in a circle that travel down, firing blue arrowheads in a circle even low on the opponent's field</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: weak damage and alternates between 1 and 2 forks, so Yuuma needs to fight high up on her field</li>
+                  <li>Ex attack: as enhanced eagles are an animal spirit, they can be destroyed, especially by a few specialist characters</li>
+                  <li>C2: the big spoon doesn't deal great damage or cancel a lot of bullets considering how long it takes to charge up / its graphics</li>
+                  <li>C3: dousing the eagles as they spawn makes them stack up on a single point, making the pattern much easier to dodge</li>
+                  <li>Nonspell: easily dodged and farmed flurry of red fireballs that form pretty wide corridors, allowing opponents to get reach her</li>
+                  <li>Spell: Yuuma spawns rice bullets behind her that take a while to turn into fireballs, making her susceptible for extended time</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her in matchups against animal spirits killers (Zanmu, Reimu) as they will get a lot of free C3/C4 attacks</li>
+                  <li>Use C1 and scope to make navigating patterns easier, turning Yuuma into one of the best characters defensively speaking</li>
+                  <li>Spam C3 to upgrade it, only fire C4 in late game if you can support it with a fully enhanced C3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='ran'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Ran Yakumo</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/ran.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.6" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            18 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Base shot: can strategically be placed (for instance under bosses) as it gets locked in place when Ran focuses</li>
+                  <li>C1: an enhanced version of her base shot that fires continuously for around 2 seconds, it combines well with her skill</li>
+                  <li>C2: upgrades her base shot from 2 to 4 options for around 10 seconds, doubling her damage input during this time frame</li>
+                  <li>C3: fires a lot of ex attacks that come from all 4 cardinal directions, upgrades pretty well into a pretty tight pattern</li>
+                  <li>Spell: while Ran fires amulets in a circle, she also summons Chen that homes onto the opponent after firing her own pattern.</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: spawns in Greek cross shape around ran, which isn't great either for offense or defense at it doesn't cover much space</li>
+                  <li>Bomb: is static and fails to reach very high or on the side of her field, making it weaker than most other characters'</li>
+                  <li>Ex attack: on its own not very threatening as it doesn't take much space and can be easily sidestepped</li>
+                  <li>Nonspell: Ran fires blue amulets in a circle, which is pretty trivial to dodge under normal circumstances</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Ran can turn into somewhat of a boss killer when combining her base shot lock on with C2 and C1</li>
+                  <li>Since both her C3 and C4 spell are viable, I suggest upgrading both equally to maximize chaos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='suika'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Suika Ibuki</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/suika.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.4" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Base shot: 2 options follow Suika, granting her choice between spread and concentrated attacks depending on movement</li>
+                  <li>C1: fires continuously for around 2 seconds, useful if in need of more damage in a rush</li>
+                  <li>C2: fires continuously for around 4 seconds, useful to kill tough enemies or bosses</li>
+                  <li>C3: fires many mini-suika that spawn at the top of the opponent's field along all of its width; it can eventually wall</li>
+                  <li>Nonspell: she spins and fire mentos and cancellable pellets, which can become pretty hard to dodge at later levels</li>
+                  <li>Spell: she morphs into invincible fog and moves down towards the opponent for 2 cycles before going back up the 3rd one</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: her options lock in place and small circles spawn around them, but they reset position once she stops charging</li>
+                  <li>Ex attack: it is destructible by shots and predictable (mini Suikas wobble synchronously left and right firing purple fireballs)</li>
+                  <li>Spell: when outside of her fog, Suika has sadly very low HP, making capturing this spellcard easy with damaging characters</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her against characters that have access to good damage or bullet cancel (as both hurt her slow ex attack a lot)</li>
+                  <li>Since Suika's spell can backfire during endgame, it is advised to upgrade it a bit first to improve its low HP</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='biten'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Biten Son</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/biten.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="6.2" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: an emptied out octagon taking a lot of space on her field, which is great to farm items</li>
+                  <li>Ex attack: big rods that home onto the opponent, forming pretty difficult patterns when stacked up</li>
+                  <li>C2: rods spawn from the bottom in two waves and dealing pretty good damage on all her field</li>
+                  <li>C3: big rods spawn around the opponents in up to two waves, sometimes in odd locations, making it challenging to dodge</li>
+                  <li>Boss: arrows move fast during the nonspell and form long corridors during the spell, both limiting movement</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: spreads on the sides while Biten is unfocused, so she needs to focus to deal decent damage, hurting mobility</li>
+                  <li>C1: spread attack that fires everywhere above her, hitting most enemies but not dealing great damage</li>
+                  <li>C2: sadly doesn't deal reliable enough damage to kill upgraded bosses, making it situational</li>
+                  <li>Boss: because it forms pretty consistent corridors, making it easy to farm for meter items</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Use Biten's scope to aggressively farm items and spam her C3 attack to upgrade it</li>
+                  <li>Her boss attack actually combines decently well with her ex attack and C3 as it limits movement</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='hisami'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Hisami Yomotsu</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/hisami.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.4" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            25 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: a circle that takes up a lot of space around Hisami, making it great to farm items but also defensively</li>
+                  <li>Ex attack: a bramble curvy lasers that slowly moves down the opponent's field, dividing easily space in it when stacked up</li>
+                  <li>C3: spawns a lot of brambles all around the opponent's field, suffocating them easily into tight spaces</li>
+                  <li>Spell: Hisumi fires several brambles that curve outwards before going back inwards, trapping the opponent in tight spaces</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: because it goes so far behind Hisami, it can sometimes be detrimental (for instance against Rin)</li>
+                  <li>Base shot: two dish options that home in onto enemies until killed and deals low damage, challenging to use</li>
+                  <li>C1/C2: two upgrades to her base shots that feel mandatory to use for her to kill enemies</li>
+                  <li>Ex attack: sadly cancellable, meaning her matchup against characters that have access to bullet cancel is bad</li>
+                  <li>Non spell: arrowheads and pellets are fired around before curving at the bottom of the field, easy to dodge on its own</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Susceptible to bullet cancelling mechanics so avoid these matchups: Reimu, Yachie, Yuuma, Enoko</li>
+                  <li>Spam her C3 during her C4 spellcard to drown the opponent in brambles</li>
+                  <li>Use her scope to farm for items (in particular against characters using spirit based ex attacks)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='mamizou'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Mamizou Futatsuiwa</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/mamizou.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.4" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.0" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Ex attack: green and red dogs coming from the sides, very fast blue eagles coming from the top, they are non cancellable</li>
+                  <li>C2: using this skill grants Mamizou 1/3 of a bomb, allowing her to farm them early on in a round</li>
+                  <li>C3: fires a lot of ex attacks that can stack in a pretty difficult pattern, easy to confound with animal spririts</li>
+                  <li>Spell: fires ex attacks that can be hard to dodge amidst other ones that spawn naturally or from her C3</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: spread when unfucosed, so she needs to focus in order to deal reliable damage, hurting mobility</li>
+                  <li>Bomb: being stationary hurts this bomb and Mamizou's skill a lot as she needs to stay high on her field for it to clear well</li>
+                  <li>C1: redundant with base shot and does deal damage in a spread, making it pretty situational</li>
+                  <li>C2: it takes a pretty long time to charge up, making it difficult to use under pressure</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Try to farm 1 or 2 bombs in early game to be able to win bomb wars (requires good placement when bombing)</li>
+                  <li>Spam her C3 during her C4 spellcard to drown the opponent in ex attacks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='sanae'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Sanae Kochiya</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/sanae.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.8" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.6" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            40 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Base shot: as it is fast and has homing properties, she's likely to keep hit combos as long as there is an enemy on her field</li>
+                  <li>Ex attack: these snake like lasers are non cancellable and cannot be slowed down by scope!</li>
+                  <li>C2: very useful to delete activated spirits and enemies around Sanae, potentially triggering automatic C3/C4</li>
+                  <li>C3: fires many lasers ex attacks that cross each other and can wall off the opponent once upgraded enough</li>
+                  <li>Nonspell: fast amulets and pellets circles are pretty hard to dodge properly</li>
+                  <li>Spell: fires fast amulets and pellets around Sanae in a incoherent pattern, making it hard to dodge</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: only starts being deployed after a delay of around 40 frames (2/3 of a second)</li>
+                  <li>Base shot: because it targets the enemy closest to Sanae's height, it tends to completely miss the boss, making it hard to kill</li>
+                  <li>C1: weak damage and targets enemies weirdly after a delay, making it subpar and situational compared to base shot or C2</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>You can activate spirits and detonate them with Sanae's C2 when an enemy chain comes close to try and send free C3/C4 attacks</li>
+                  <li>Try to also use C2 to clear the screen of enemies so that you can shoot a boss on her screen until the next wave</li>
+                  <li>Both her C3 and C4 are pretty good so you're free to upgrade either or both at the same time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='yachie'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Yachie Kicchou</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/yachie.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.6" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            8 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            10 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>C1: small yellow shield that can be spammed pretty fast and cancels bullets</li>
+                  <li>C2: big blue shield that extends in 2 waves deleting bullets, lasers and even some non cancellable ex attacks in a wide area</li>
+                  <li>C3: fires many enhanced otters that slowly go towards the bottom of the screen in diagonals, suffocating the opponent</li>
+                  <li>Spell: shards arrange themselves in hexagonal cells that trap the opponent, really nasty when combined with C3</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: unfocused diagonal spread, focused shotguns, forcing her to focus at point blank for passable damage</li>
+                  <li>Ex attack: otters can be doused again as they get unstunned, which allows some characters with closed scope to farm them</li> 
+                  <li>C1: very small zone and deals very low damage, only enough to kill an activated divine spirits (but not a base fairy)</li>
+                  <li>Nonspell: shards form pretty easy to spot corridors that can easily be farmed for items</li>
+                  <li>Spell: hexagonal cells can be farmed for so many items the opponent will fill all their meter easily</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her in matchups against animal spirits killers (Zanmu, Reimu, Aunn) as they will get a lot of free C3/C4 attacks</li>
+                  <li>She can actually cancel a few characters' otherwise non cancellable ex attacks (Zanmu, Mamizou)</li>
+                  <li>Use C2 to cancel patterns but also deal extended damage to chains and farm items</li>
+                  <li>Spam C3 to upgrade it, then fire it on top of C4</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='saki'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Saki Kurokoma</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/saki.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="6.2" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.6" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            8 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: great as it can both be used defensively (slow down incoming patterns, activate spirits) and offensively (item farm)</li>
+                  <li>Base shot/C1/C2: her lasers can pierce enemies, allowing her to hit a pack in several parts</li>
+                  <li>C3: fires a pack of enhanced walls that move down a bit before targeting the opponent, can easily wall</li>
+                  <li>Nonspell: fires fast arrowheads that slow down towards the bottom of the field, creating pressure</li>
+                  <li>Spell: slow lasers create pretty long corridor that are ideal for wolves to attack in</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Base shot: deals terrible damage which forces Saki to use her C1/C2 in some circumstances</li>
+                  <li>C1: slow charge attack that actually doesn't fire lasers directly in front of Saki, only her sides</li>
+                  <li>Ex attack: wolves can be doused again as they get unstunned, which allows some characters with closed scope to farm them</li>
+                  <li>Nonspell: because the pattern accumulates, characters with access to bullet cancel mechanics can benefit from it</li>
+                  <li>Spell: the pattern itself is actually trivial to dodge and farm, the lasers can be cancelled</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Avoid playing her in matchups against animal spirits killers (Zanmu, Reimu) as they will get a lot of free C3/C4 attacks</li>
+                  <li>Use her C1 to get past enemy waves that wall you, avoid using her C2 as it wastes meter</li>
+                  <li>Spam C3 to upgrade it, then fire it on top of C4 (unless fighting a bullet cancel character, then just spam C3)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='tsukasa'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Tsukasa Kudamaki</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/tsukasa.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="2.1" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            8 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Ex attack: they upgrade bullets that come through them (popcorn/pellets &rarr; ball &rarr; mentos &rarr; orb)</li>
+                  <li>Bomb: takes the shape of a rectangle that can be directed a bit and spins around several times, cancelling patterns in waves</li>
+                  <li>C1: fires tri-shot tubes continuously for 2 seconds in all 4 cardinal directions, great to hit enemies around her</li>
+                  <li>C3: fires an arc of balls and several ex attacks to upgrade them, this can eventually wall off the opponent</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: because it only extends on her sides, it is really hard to use both offensively and defensively</li>
+                  <li>Base shot: deals pretty low damage, which the shots that go behind her don't make up for (very situational)</li>
+                  <li>C2: only reflects pellets and popcorns in a zone around Tsukasa, making it pretty situational</li>
+                  <li>Nonspell: fires kunais and pellets arranged in easy to dodge and farm corridors</li>
+                  <li>Spell: fires lasers and kunais that are easily dodged</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Susceptible to bullet cancelling mechanics so avoid these matchups: Reimu, Yachie, Yuuma, Enoko</li>
+                  <li>Spam her C3 as much as possible to upgrade it as fast as possible and create walls of orbs</li>
+                  <li>Avoid using her C4 as it won't do anything unless there is also ex attacks on top of it</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal" x-show="openModal=='aunn'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Auun Komano</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/aunn.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="3.7" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.6" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            40/50 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            40 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: during the wind up, it draws a vertical ellipse that can activate spirits in a big zone</li>
+                  <li>Ex attack: non cancellable structures that slowly move towards the opponent, able to wall them with C3</li>
+                  <li>C1: fires blue and red shots in circles around Aunn, which she can even fire her base shot along with</li>
+                  <li>C2: grants Aunn 1 full second of invincibility, allowing her to get behind patterns other characters would have trouble with</li>
+                  <li>Nonspell: fires pellets and green/red shards that cross each other in a way that can under high pressure be hard to dodge</li>
+                  <li>Spell: fires pellets and curvy lasers, upgrades allows the laser to curve a second time. Combines well with C3</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Scope: after its delayed wind up is done, it is one of the smallest scopes in the game, forming a small ellipse around Aunn</li>
+                  <li>Base shot: unfocused fires on the sides, and even focused it deals mediocre damage, meaning Aunn needs to rely on her C1</li>
+                  <li>Ex attack: not very threatening on its own due to its very slow speed</li>
+                  <li>C2: because of Aunn's slow unfocused speed, you cannot abuse it too aggressively</li>
+                  <li>C3: fires many ex attacks in a circle that doesn't home onto the opponent as opposed to Aunn's base ex attacks</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Use Aunn's skill to get out of tough spots or get past pattern that come in waves (some nonspells and spells)</li>
+                  <li>Try to upgrade her C4 first, as the nonspell and spell can become deadly, then her C3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal" x-show="openModal=='nazrin'">
+            <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
+              <div class="modal-header">
+                <h2>Nazrin</h2>
+              </div>
+              <div class="modal-body">
+                <table class="noborders">
+                  <tr>
+                    <td>
+                      <div class="portrait">
+                        <img src="/images/udoalg/nazrin.png">
+                      </div>
+                    </td>
+                    <td>
+                      <table class="stats noborders">
+                        <tr>
+                          <td>
+                            Normal Speed
+                          </td>
+                          <td class="value">
+                            <progress value="4.8" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Focus Speed
+                          </td>
+                          <td class="value">
+                            <progress value="1.0" max="6.7"/>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Scope Speed
+                          </td>
+                          <td class="value">
+                            15 frames
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Charge Delay
+                          </td>
+                          <td class="value">
+                            60 frames
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <h3>Upsides:</h3>
+                <ul>
+                  <li>Scope: a small circle that spawns from Nazrin and homes onto the closest spirit</li>
+                  <li>Ex attack: spawns a blue stationary diamond that can kill the opponent and tanks their shots</li>
+                  <li>C1: fires homing yellow kunais for around 2 seconds, pretty useful to kill spirits activated by her scope</li>
+                  <li>C2: instantly killed doused spirits, which is very useful in matchups against the matriarchs</li>
+                  <li>C3: spawns many falling yellow diamonds in waves, that can wall off the opponent and tank shots</li>
+                </ul>
+                <h3>Downsides:</h3>
+                <ul>
+                  <li>Movement: fast while unfocused, but the slowest focus speed makes balancing the two difficult</li>
+                  <li>Base shot: bad damage, homes when focused which makes it difficult to hurt bosses with</li>
+                  <li>Scope: it is slow and moves on to another spirit once it doused one, making it hard to use efficiently</li>
+                  <li>Bomb: similarly to her scope, it follows spirits, making it terrible as it has trouble clearing patterns and hurting bosses</li>
+                  <li>C2: in most situations redundant with her C1, making it pretty redundant / useless</li>
+                  <li>Boss: fires easily dodged and farmed icicles, especially during the nonspell that forms corridors</li>
+                </ul>
+                <h3>Strategy:</h3>
+                <ul>
+                  <li>Decent counterpick against the matriarchs (although Zanmu fills that role better)</li>
+                  <li>Spam C3 to upgrade it and wall people, then only consider the C4 (as endgame ex attacks can protect it)</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="modal" x-show="openModal=='reimu'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Reimu Hakurei</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/reimu.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Reimu's main perk is her really useful L2 skill that allows her to cancel most bullets in the game. Because of the way bullet cancelling works
-                in this game, she gets back most of the energy she spent to trigger it. It lasts for a while, and protects from bullets during the whole animation.
-                It can even be used to destroy anything, from fairies to animal spirits, Rin's ex attacks and bosses, if used at point blank. Essentially you could
-                delete a boss spell / nonspell by going right below it as it triggers, and using L2.
-              </p>
-              <p>
-                Reimu also has other great things in her toolkit: her L1, used on its own, stops right above her a little bit before moving again. Because of that, it
-                can deal a lot of damage in that space where it stops, and can also be used to destroy hard to kill enemies (enraged animal spirits, bosses). Her L2
-                skill, like most in the game, also triggers the L1, meaning it gets to deal an even more absurd amount of damage in the right circumstances.
-              </p>
-              <p>
-                Her ex attack is a small ying yang orb that bounces on the side of the screen, and her L3 sends more bigger yin yang orbs that also bounce on the screen.
-                If upgraded, said L3 can have its time extended for a while, making it a menace on its own due to the weird pattern. Finally, her L4 boss is also pretty great,
-                the spellcard in particular sends over a lot of small yin yang orb that are hard to dodge and can stack up if the opponent uses their scope to deal with them
-                more easily. They also come from all sides, as they bounce on the wall, circling the enemy.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Reimu has a pretty bad scope, it is almost instant but also very small, which means she can't really use it to slow down bullets unless they're already pretty much
-                in her face. For that reason, she also can't really use it very well to douse animal spirits or farm patterns.
-              </p>
-              <p>
-                Her unfocused shot, homing amulets, deal very weak amounts of damage, forcing her to focus in order to deal damage a lot of the time, which hurts a bit her mobility.
-              </p>
-              <p>
-                She doesn't have a super strong nonspell (not really a weakness, it is just average): she fires a bunch of amulets that stop after a while before homing on the
-                opponent. These force them to move around in a way that redirects them (often towards the side of the screen), but can be streamed easily with scope, making it
-                a pattern that feeds the opponent energy.
-              </p>
-              <p>
-                Finally, her L2 skill has some bloom effect applied to it, which hurts visibility quite a lot, making dodging non cancellable ex attacks a bit challenging in some
-                matchups (these include Zanmu, Enoko, Aunn, Chiyari among others). As a result, she may want to step back a bit after firing it.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='marisa'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Marisa Kirisame</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/marisa.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Marisa's main perk is likely her great L1 charge attack. While stationary in this game, it deals a lot of damage and can be used to start combo chains
-                on enemies, or destroy bosses. Once fired, and after a short delay, she can even use her base shot, or charge up another L1 to fire for a short while
-                alongside it. Because of how good it is at killing bosses, it can even be used to clear the screen (since dealing with a spell clears the screen).
-              </p>
-              <p>
-                Alongside that, she has really great offense. Her ex attack is a laser that spawns on the bottom of the opponent's field at random, indicated by a blue
-                circle. Combined with her L2 and L3, the lasers can sometimes stack together in a way that makes the pattern undodgeable, forcing a hit on the enemy.
-              </p>
-              <p>
-                She has a really nice scope that is almost instant and takes up the entire vertical part of her field, including behind her. This can be used to farm
-                gauge items on any pattern directly situated right in front of her, and because it doesn't take a lot of lateral space, can be used to strategically
-                activate beast spirits.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Marisa's game plan actually suffers a bit from questionable patterns. Her L4 boss non-spell fires easily dodged lasers and packs of 6 pellets in a circle
-                that can easily be farmed with scope. Her spell is also a bit slow: it is made up of lasers that spawn after a noticeable time stars on the side of the screen
-                they touch. This makes said spell vulnerable to characters that specialize in killing bosses, such as Seiran or Marisa herself.
-              </p>
-              <p>
-                Her L2 attack actually isn't that great at pressuring the opponent because it spawns lasers that converge towards a point at the bottom of the screen, making
-                it pretty situational. If the other player hugs the bottom of the screen, they will likely dodge it without much of an issue. However, if the opponent is high
-                up on the screen, it can still punish them decently well (for instance pretty great against Yuuma mains using her spoon to start chains).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='seiran'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Seiran</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/seiran.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Seiran has a lot of good perks. Her L1 is able to delete bosses even faster than Marisa's lasers. Her L3 sends over a lot of ex attacks arranged
-                in a big ring on the opponent's screen. Her scope is a circle located a bit above her, and it allows her to farm patterns for a lot of gauge energy.
-              </p>
-              <p>
-                Generally speaking, her ex attack (and the related L3) is pretty good because it fires a lot of bullets on the opponent's screen that are slow and
-                end up taking a lot of space, eventually covering most of the screen.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Her first and likely biggest downside is her L2: it locks her ability to charge up her gauge (which also means she can't use her scope)
-                and fire normal shots during her entire duration. Usually I would advise against using it. This makes firing of her L2 akin to a built in nerf:
-                if you make a timing error, you're likely to be unable to use some of her vital skills for a bit.
-              </p>
-              <p>
-                Seiran also doesn't have a great boss L4 attack: both the non-spell and spell fire triangles made out of bullets that can really easily be scoped for
-                gauge points, and streamed. Essentially, as a lot of spell attacks in this game, it is only really viable when supported by an additional L3.
-              </p>
-              <p>
-                Finally, her great ex attack and L3 completely fall appart in some matchups, in particular characters that have access to bullet cancel mechanics (such
-                as Reimu, Yachie, Yuuma, Enoko) can completely counter it, making her otherwise wonderful offense unremarkable.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='zanmu'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Zanmu Nippaku</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/zanmu.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Zanmu is likely the best chainer in the game because of her L2 attack that can convert all enemies on the screen into normal divine spirits, that can
-                then be fired at for a big chain explosion. This allows her to easily cancel pellets coming her way, but also, and most importantly, to send free L3 and
-                L4 to her opponents. It is also really good at dealing with spirit based ex attacks, making her a great counterpick in some matchups (obviously Yachie,
-                Saki and Yuuma, but also Rin). Finally, it can deal damage to bosses.
-              </p>
-              <p>
-                Her base shot is quite spread out while unfocused, and can be also supported by her L1 charge attack that has an even wider range, making popping off spirits
-                after conversion easy from anywhere on the screen. These qualities can also be used to easily fire at multiple fairies from the middle of the screen, making
-                chaining easier by itself.
-              </p>
-              <p>
-                She has a pretty good ex attack and related L3 because it is a non-cancellable needle that takes up a lot of space on the screen and stays for a while before
-                disappearing once stuck in the floor. This counters a bit characters relying a bit too much on their ability to cancel patterns, and forces the opponent into
-                tiny spaces at the bottom of the screen. Some of them spawn around the walls, making moving too close to them pretty dangerous (especially as an L3 attack
-                is fired) because a hit can register as these needles spawn.
-              </p>
-              <p>
-                Her L4 is pretty great: both the nonspell and the spell fire orbs and fireballs arranged in loose chunks that force the opponent to move specific ways while
-                still being undefined enough to score the occasional hit on them.
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Zanmu suffers overall from a pretty bad basic shot in the realm of damage, meaning she might need to rely on cards that boost it to be able to deal more easily
-                with enemies when her L2 is not available, or bosses. This makes her a bit vulnerable to characters with a very strong boss attack.
-              </p>
-              <p>
-                Another tiny downside is that her L2 skill doesn't fire her L1 alongside it, as with most other characters. This is somewhat important because this means,
-                as opposed to Rin, she needs to fire again something at the converted spirits to be able to pop them off. After firing her L2, there is also a pretty noticeable
-                amount of time during which she won't be able to shoot at all, making said explosion delayed.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='rin'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Rin Kaenbyou</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/rin.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-              <p>
-                Rin's strength relies mainly in her ex attack and the related L3: they are red evil spirits that are very tanky and fire bullets once in a while (in Lunatic).
-                Dodging them properly, especially when they are packed together, is a bit challenging due to the way they interact with scope, and the fact that most characters
-                cannot reliably destroy them. They also tank shots, making it a great protection for her boss attack.
-              </p>
-              <p>
-                Her scope is pretty great because she gets to scan a good portion of the screen somewhat above her with it, dousing spirits encountered around the way for a
-                quick follow up with her L1 charge attack that destroys them right afterwards. Said charge attack is also great
-              </p>
-              <p>
-                Additionally, Rin is likely the best chainer in the game with Zanmu due to her very similar L2 skill that transforms fairies and yin yang wheels on her screen
-                into divine spirits. Combined with the L1 cart that is fired alongside, this usually results in an instant explosion chain, and the potential free related L3 and
-                L4 attacks (and the related chaos that ensues). It also automatically douses other spirits it encounters (instead of turning them into divine spirits).
-              </p>
-              <h3>Downsides:</h3>
-              <p>
-                Rin's L4 boss isn't that great. The nonspell fires pellets and arrowheads arranged in a diagonal checkered pattern. The boss summons zombie fairies, that 
-                fire more arrowheads. Some characters easily kill them, and, even if they revive after a while, that neutralizes the pattern for a while. This means L3
-                support is mandatory so that the fairies stay alive and get to fire their shots at the opponent.
-              </p>
-              <p>
-                She also boosts a pretty terrible base shot, meaning she needs to mostly rely on her L2 and L1 charge attack to be able to destroy most enemies in a
-                timely manner. That makes her a bit struggle with farming, especially in situations where she doesn't want to or can't use her gauge energy for L2.
-                In turn, this makes firing several L3 back to back (her main offense) challenging unless she's gaining tons of gauge energy from a boss fight on her field.
-              </p>
-              <p>
-                Apparently, in some circumstances, Orin's charge attacks can kill her. At this point, is wasn't exactly confirmed why, but it seems to be related to her L2
-                skill spawning a divine spirit on top of her if fired inside the upper half of the field, or her own wheelbarrow hurting her on L3.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='enoko'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Enoko Mitsugashira</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/enoko.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='yuuma'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Yuuma Toutetsu</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/yuuma.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='yuuma'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Yuuma Toutetsu</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/yuuma.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='ran'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Ran Yakumo</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/ran.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='suika'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Suika Ibuki</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/suika.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='biten'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Biten Son</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/biten.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='hisami'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Hisami Yomotsu</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/hisami.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='mamizou'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Mamizou Futatsuiwa</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/mamizou.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='sanae'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Sanae Kochiya</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/sanae.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='yachie'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Yachie Kicchou</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/yachie.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='saki'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Saki Kurokoma</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/saki.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='tsukasa'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Tsukasa Kudamaki</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/tsukasa.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-        
-        <div class="modal" x-show="openModal=='aunn'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Auun Komano</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/aunn.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal" x-show="openModal=='nazrin'">
-          <div class="modal-content" @click.outside="openModal=''" @keydown.escape.window="openModal=''">
-            <div class="modal-header">
-              <h2>Nazrin</h2>
-            </div>
-            <div class="modal-body">
-              <table class="noborders">
-                <tr>
-                  <td>
-                    <div class="portrait">
-                      <img src="/images/udoalg/nazrin.png">
-                    </div>
-                  </td>
-                  <td>
-                    <table class="stats noborders">
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              <h3>Upsides:</h3>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   </main>
