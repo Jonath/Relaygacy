@@ -35,3 +35,6 @@ relaygacy-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# All config files
+/config/dev.exs
+/config/prod.exs
