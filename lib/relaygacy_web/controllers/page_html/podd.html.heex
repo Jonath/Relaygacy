@@ -6,11 +6,11 @@
 <body>
   <main>
     <header>
+      <a class="subpage" href="/"><img src="/images/test.png" class="logo"></a>
       <ul class="menu">
-        <li><a class="subpage" href="/">Home</a></li>
+        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
-        <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/credits">Credits</a></li>
       </ul>
     </header>
@@ -41,124 +41,127 @@
         </ul>
       </div>
       <div class="content">
-        <h1>Phantasmagoria of Dim. Dream</h1>
-        <p>
-          東方夢時空 ~ The Phantasmagoria of Dim. Dream is the 3rd Touhou Project game and came out in 1997. This game is very inspired by Twinkle Star Sprites, with a notable
-          difference nonetheless: there is more emphasis on bullets instead of fireballs, and the default pellets can be cancelled with enemy explosions.
-        </p>
-        <h2>Gameplay Basics</h2>
-        <h3>Player field</h3>
-        <p>
-          The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
-          to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
-        </p>
-        <h3>Hearts</h3>
-        <img src="/images/podd/hearts.png" class="hearts">
-        <p>
-          Health in this game is represented by hearts, and works in a similar fashion to Twinkle Star Sprites. Initially both players start a round with 5
-          points, displayed at the top of their respective fields. When a player gets hit, an amount from 1/2 to 3 points is substracted from their health
-          pool, depending on how long since the last hit / start of the match they haven't been hit. A player cannot go under 1/2 heart as long as they have more
-          than 1/2 heart remaining, allowing them one last stand.
-        </p>
-        <h3>Enemies</h3>
-        <p>
-          Similarly to Twinkle Star Sprites, stage enemies come in a variety of sizes and colors. Their sizes determine the scale of the explosion that'll appear when they are destroyed.
-          Their color is an indication of the number of normal shots that will be required to destroy them. When shot, their colors change in order to denote their current remaining health: 
-        </p>
-        <div class="nodot">
+        <div class="subtext">
+          <h1>Phantasmagoria of Dim. Dream</h1>
+          <p>
+            東方夢時空 ~ The Phantasmagoria of Dim. Dream is the 3rd Touhou Project game and came out in 1997. This game is very inspired by Twinkle Star Sprites, with a notable
+            difference nonetheless: there is more emphasis on bullets instead of fireballs, and the default pellets can be cancelled with enemy explosions.
+          </p>
+          <h2>Gameplay Basics</h2>
+          <h3>Player field</h3>
+          <p>
+            The game opposes two players on a split screen setup. The controls are remarkably simple: one button to fire a basic shot, which you can hold
+            to charge up your power gauge, and another one to bomb, granting the player a few moments of invincibility and clearing the screen.
+          </p>
+          <h3>Hearts</h3>
+          <img src="/images/podd/hearts.png" class="hearts">
+          <p>
+            Health in this game is represented by hearts, and works in a similar fashion to Twinkle Star Sprites. Initially both players start a round with 5
+            points, displayed at the top of their respective fields. When a player gets hit, an amount from 1/2 to 3 points is substracted from their health
+            pool, depending on how long since the last hit / start of the match they haven't been hit. A player cannot go under 1/2 heart as long as they have more
+            than 1/2 heart remaining, allowing them one last stand.
+          </p>
+          <h3>Enemies</h3>
+          <p>
+            Similarly to Twinkle Star Sprites, stage enemies come in a variety of sizes and colors. Their sizes determine the scale of the explosion that'll appear when they are destroyed.
+            Their color is an indication of the number of normal shots that will be required to destroy them. When shot, their colors change in order to denote their current remaining health: 
+          </p>
+          <div class="nodot">
+            <ul>
+              <li><img src="/images/podd/purplestar.png"><div>4 hits</div></li>
+              <li><img src="/images/podd/bluestar.png"><div>3 hits</div></li>
+              <li><img src="/images/podd/greenstar.png"><div>2 hits</div></li>
+              <li><img src="/images/podd/redstar.png"><div>1 hit</div></li>
+            </ul>
+          </div>
+          <p>
+            The enemy appearance depends on the stage played, but doesn't influence gameplay at all.
+          </p>
+          <h3>Fireballs</h3>
+          <p>
+            In this game, fireballs are created when a certain amount of white pellets is removed from the field due to the detonation of enemies or other fireballs. They appear at
+            the top of a player's field and move in a vertical line downwards. Their speed depends on the difficulty setting and the time elapsed since the start of the current round.
+            They are tougher to kill than normal enemies, but charged shots destroys them instantly.
+          </p>
+          <div class="nodot">
+            <ul>
+              <li><img src="/images/podd/bluefireball.png"><div>Blue fireballs are newly created by cancelled pellets.</div></li>
+              <li><img src="/images/podd/redfireball.png"><div>Red fireballs are created from the destruction of another fireball (red or blue) on the other field's side.</div></li>
+            </ul>
+          </div>
+          <p>
+            When fireballs are caught in a regular stage enemy explosion, they explode with a much bigger radius as when directly killed by the player. This makes them pretty important
+            for chain combos, as they allow to bridge gaps between different chains of enemies (or a single chain with a lot of bulky enemies on higher difficulties). Their collateral
+            destruction also grants the most spell points.
+          </p>
+          <p>
+            Note that destroying a single fireball doesn't grant any spell point, and only sends it back. As a result, it is really advised you simply avoid to shoot them head on,
+            unless absolutely necessary to avoid getting hit.
+          </p>
+          <h3>Extra Attacks</h3>
+          <p>
+            These are character specific special attacks that spawn when you cancel pellets and chain enemies / fireballs with explosions (and only in that case: enemies and fireballs destroyed by direct
+            hits cannot spawn them). Aside from gauge attacks, they are the main offensive mechanic in this game.
+          </p>
+          <h3>Gauge</h3>
+          <p>
+            This game showcases a gauge with 4 levels of charge:
+          </p>
           <ul>
-            <li><img src="/images/podd/purplestar.png"><div>4 hits</div></li>
-            <li><img src="/images/podd/bluestar.png"><div>3 hits</div></li>
-            <li><img src="/images/podd/greenstar.png"><div>2 hits</div></li>
-            <li><img src="/images/podd/redstar.png"><div>1 hit</div></li>
+            <li>Level 1 (L1): modified shot (stronger shot). L2/3/4 also fire this special shot.</li>
+            <li>Level 2 (L2): a special attack that depends on the player character.</li>
+            <li>Level 3 (L3): a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
+            <li>Level 4 (L4): boss attack. In this game, the boss has a dedicated health bar.</li>
           </ul>
-        </div>
-        <p>
-          The enemy appearance depends on the stage played, but doesn't influence gameplay at all.
-        </p>
-        <h3>Fireballs</h3>
-        <p>
-          In this game, fireballs are created when a certain amount of white pellets is removed from the field due to the detonation of enemies or other fireballs. They appear at
-          the top of a player's field and move in a vertical line downwards. Their speed depends on the difficulty setting and the time elapsed since the start of the current round.
-          They are tougher to kill than normal enemies, but charged shots destroys them instantly.
-        </p>
-        <div class="nodot">
+          <img src="/images/podd/gauge.png">
+          <p>
+            In this game, just like in Twinkle Star Sprite, it might be ill advised to use the lvl1 special shot too much as you can send automatic patterns onto
+            the enemy screen by chaining enemies properly.
+          </p>
+          <h3>Bombs</h3>
+          <p>
+            They are very useful in dire situations, namely whenever a Boss Attack is present on your screen (as coupled with a few basic shots, it is enough to cancel
+            most of them without you having to dodge them). Additionally, once you have no bomb left, you can keep pressing the related button if your gauge is full to trigger
+            your Charge Max Ability. This is a defensive mode to use as a last resort that grants your character around 10s of invulnerability and turns their default shot into
+            a variation of the charged shot (which in turns mean you damage and clear better but at the cost of lower combo chains).
+          </p>
+          <img src="/images/podd/maxgauge.gif" class="imgcenter">
+          <figcaption>Reimu's Max Ability doesn't autofire, which is atypical</figcaption>
+          <h3>Spell Points</h3>
+          <p>
+            When enemies are destroyed or small white bullets are caught within the explosive radii of defeated enemies and removed from the field, spell points are accumulated
+            by the counter at the top-left corner of a player's field, beneath the hit combo display. At certain spell point values, special attacks are launched at your opponent: 
+          </p>
           <ul>
-            <li><img src="/images/podd/bluefireball.png"><div>Blue fireballs are newly created by cancelled pellets.</div></li>
-            <li><img src="/images/podd/redfireball.png"><div>Red fireballs are created from the destruction of another fireball (red or blue) on the other field's side.</div></li>
+            <li>51200: Boss Attack</li>
+            <li>300000: Boss Panic (L3 Spell Attack)</li>
           </ul>
+          <p>
+            After a brief duration of inactivity (no additional spell points are being collected), the counter will reset to 0. When this occurs,
+            the spell points are added directly to your score. The boss panic can only be triggered once per combo chain, so because of that, it might
+            be advised to drop scoring after triggering it. It is also important to note that if by any chance both thresholds are reached at the same time,
+            the boss attack takes priority over the boss panic.
+          </p>
+          <p>
+            Around the gauge, you can find two different numbers:
+          </p>
+          <ul>
+            <li>Spell Attack Level: In green on the left side of the gauge, it determines the relative strength of that player's lvl2 and lvl3 attacks.</li>
+            <li>Boss Attack Level: In red on the right side of the gauge, it determines the relative strength of that player's lvl4 attacks.</li>
+          </ul>
+          <p>
+            Every time an attack is fired, the corresponding level gets incremented by 1, up to 16 maximum. The relative strength here mostly determines the speed and number of
+            the bullets spawned by the related patterns.
+          </p>
+          <h3>Strategy</h3>
+          <p>
+            As you might have undestood from scheming through the sections above, you mainly want to concentrate on chaining enemy explosions to rake high spell points and trigger EX
+            Attacks and automated Spell / Boss Attacks. Additionally, you can use your spell gauge either aggressively (to chain automated and non automated attacks) or passively (keeping lvl4
+            to reflect a boss and/or use your Charge Max ability when left on no bombs)
+          </p>
+          <h3>Characters</h3>
         </div>
-        <p>
-          When fireballs are caught in a regular stage enemy explosion, they explode with a much bigger radius as when directly killed by the player. This makes them pretty important
-          for chain combos, as they allow to bridge gaps between different chains of enemies (or a single chain with a lot of bulky enemies on higher difficulties). Their collateral
-          destruction also grants the most spell points.
-        </p>
-        <p>
-          Note that destroying a single fireball doesn't grant any spell point, and only sends it back. As a result, it is really advised you simply avoid to shoot them head on,
-          unless absolutely necessary to avoid getting hit.
-        </p>
-        <h3>Extra Attacks</h3>
-        <p>
-          These are character specific special attacks that spawn when you cancel pellets and chain enemies / fireballs with explosions (and only in that case: enemies and fireballs destroyed by direct
-          hits cannot spawn them). Aside from gauge attacks, they are the main offensive mechanic in this game.
-        </p>
-        <h3>Gauge</h3>
-        <p>
-          This game showcases a gauge with 4 levels of charge:
-        </p>
-        <ul>
-          <li>Level 1 (L1): modified shot (stronger shot). L2/3/4 also fire this special shot.</li>
-          <li>Level 2 (L2): a special attack that depends on the player character.</li>
-          <li>Level 3 (L3): a special attack that depends on the player character, usually (but not always) taking more space on the screen than the level 2.</li>
-          <li>Level 4 (L4): boss attack. In this game, the boss has a dedicated health bar.</li>
-        </ul>
-        <img src="/images/podd/gauge.png">
-        <p>
-          In this game, just like in Twinkle Star Sprite, it might be ill advised to use the lvl1 special shot too much as you can send automatic patterns onto
-          the enemy screen by chaining enemies properly.
-        </p>
-        <h3>Bombs</h3>
-        <p>
-          They are very useful in dire situations, namely whenever a Boss Attack is present on your screen (as coupled with a few basic shots, it is enough to cancel
-          most of them without you having to dodge them). Additionally, once you have no bomb left, you can keep pressing the related button if your gauge is full to trigger
-          your Charge Max Ability. This is a defensive mode to use as a last resort that grants your character around 10s of invulnerability and turns their default shot into
-          a variation of the charged shot (which in turns mean you damage and clear better but at the cost of lower combo chains).
-        </p>
-        <img src="/images/podd/maxgauge.gif" class="imgcenter">
-        <figcaption>Reimu's Max Ability doesn't autofire, which is atypical</figcaption>
-        <h3>Spell Points</h3>
-        <p>
-          When enemies are destroyed or small white bullets are caught within the explosive radii of defeated enemies and removed from the field, spell points are accumulated
-          by the counter at the top-left corner of a player's field, beneath the hit combo display. At certain spell point values, special attacks are launched at your opponent: 
-        </p>
-        <ul>
-          <li>51200: Boss Attack</li>
-          <li>300000: Boss Panic (L3 Spell Attack)</li>
-        </ul>
-        <p>
-          After a brief duration of inactivity (no additional spell points are being collected), the counter will reset to 0. When this occurs,
-          the spell points are added directly to your score. The boss panic can only be triggered once per combo chain, so because of that, it might
-          be advised to drop scoring after triggering it. It is also important to note that if by any chance both thresholds are reached at the same time,
-          the boss attack takes priority over the boss panic.
-        </p>
-        <p>
-          Around the gauge, you can find two different numbers:
-        </p>
-        <ul>
-          <li>Spell Attack Level: In green on the left side of the gauge, it determines the relative strength of that player's lvl2 and lvl3 attacks.</li>
-          <li>Boss Attack Level: In red on the right side of the gauge, it determines the relative strength of that player's lvl4 attacks.</li>
-        </ul>
-        <p>
-          Every time an attack is fired, the corresponding level gets incremented by 1, up to 16 maximum. The relative strength here mostly determines the speed and number of
-          the bullets spawned by the related patterns.
-        </p>
-        <h3>Strategy</h3>
-        <p>
-          As you might have undestood from scheming through the sections above, you mainly want to concentrate on chaining enemy explosions to rake high spell points and trigger EX
-          Attacks and automated Spell / Boss Attacks. Additionally, you can use your spell gauge either aggressively (to chain automated and non automated attacks) or passively (keeping lvl4
-          to reflect a boss and/or use your Charge Max ability when left on no bombs)
-        </p>
-        <h3>Characters</h3>
+
         <div class="tierlist" x-data="{ openModal: '' }">
           <table class="podd">
             <tr>
@@ -889,12 +892,14 @@
           </div>
         </div>
 
-        <h3>References</h3>
-        <ul>
-          <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Dim.Dream/Gameplay">Touhou Wiki - PoDD Gameplay</a></li>
-          <li><a href="https://en.touhouwiki.net/wiki/User:KirbyComment/Phantasmagoria_of_Dimensional_Dream_Info">Informative Scoring Guide by KirbyComment</a></li>
-          <li><a href="https://www.youtube.com/watch?v=SyxatZtzw70">Enemy Formations Guide by Christian Azinn</a></li>
-        </ul>
+        <div class="subtext">
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://en.touhouwiki.net/wiki/Phantasmagoria_of_Dim.Dream/Gameplay">Touhou Wiki - PoDD Gameplay</a></li>
+            <li><a href="https://en.touhouwiki.net/wiki/User:KirbyComment/Phantasmagoria_of_Dimensional_Dream_Info">Informative Scoring Guide by KirbyComment</a></li>
+            <li><a href="https://www.youtube.com/watch?v=SyxatZtzw70">Enemy Formations Guide by Christian Azinn</a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>

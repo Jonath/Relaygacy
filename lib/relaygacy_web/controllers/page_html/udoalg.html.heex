@@ -6,6 +6,7 @@
 <body>
   <main>
     <header>
+      <a class="subpage" href="/"><img src="/images/test.png" class="logo"></a>
       <ul class="menu">
         <li><a class="subpage" href="/">Home</a></li>
         <li><a class="subpage" href="/tools">Tools</a></li>
@@ -112,6 +113,13 @@
             the size of which depends on the kind enemy killed. An explosion is a circular area in which splash damage is dealt to other surrounding enemies,
             including any opposing character boss on your field. It also cancels pellets (and popcorns) in their vicinity and sends them back to the opponent's field.
           </p>
+          <img src="/images/udoalg/hits.png" class="sourceimg">
+          <figcaption>The hit combo display is located on the top right of each field</figcaption>
+          <p>
+            Whenever you kill several base enemies in a row, the hit combo display is incremented for each kill. As long as you hit a base enemy, it will not reset,
+            however, as soon as you stop hitting one, an internal timer starts (its length depends on the combo value), at the end of which the hit count is reset back to 0.
+            This counter is important because it determines the number of items spawned by enemy deaths (and likely other things we still need to determine).
+          </p>
           <p>
             In UDoALG, enemies are classified into two main categories:
           </p>
@@ -182,6 +190,12 @@
             is enough stuff on one's field to send back to the others. This means under normal circumstances, the first player to bomb loses the bomb war,
             and often, with it, the round.
           </p>
+          <img src="/images/udoalg/bomb.png" class="sourceimg">
+          <figcaption>Reimu's bomb</figcaption>
+          <p>
+            In this game, bombs work with the meter energy you gathered and consumed all of it until only enough energy to use a character's C1 ability is left.
+            However, the length and maximum size of a bomb is actually impacted by the amount of energy consumed, so that energy isn't entirerly lost.
+          </p>
           <h3>Bosses</h3>
           <p>
             Whenever a character uses their C4 ability, it sends over a boss on the opponent's screen. Depending on the level of said attack, it will either
@@ -201,6 +215,165 @@
             <figcaption class="covercap">Nonspell: no background change</figcaption>
             <figcaption class="covercap">Spell card: notice the special background</figcaption>
           </div>
+          <h3>Ability Cards</h3>
+          <p>
+            This game allows you to use one ability card in PVP. Here is a detailed list of them:
+          </p>
+          <details>
+            <summary>Click to expand</summary>
+            <span>
+              <table class="cards">
+              <tr>
+                <td><img src="/images/udoalg/cards/narumi.png" class="card"></td>
+                <td>Increased damage to Beast Spirits</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/reimu1.png" class="card"></td>
+                <td>Additional homing shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/reimu2.png" class="card"></td>
+                <td>Smaller hitbox</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/marisa1.png" class="card"></td>
+                <td>Additional laser</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/aunn1.png" class="card"></td>
+                <td>Increases charge speed</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/aunn2.png" class="card"></td>
+                <td>Increases scope size</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/nazrin1.png" class="card"></td>
+                <td>Adds 2 bombs</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/nazrin2.png" class="card"></td>
+                <td>Bombs last longer</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/seiran1.png" class="card"></td>
+                <td>Additional front missile</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/sanae1.png" class="card"></td>
+                <td>Additional snake shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/sanae2.png" class="card"></td>
+                <td>Additional frog shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/ran1.png" class="card"></td>
+                <td>Additional vertical shikigami option</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/ran2.png" class="card"></td>
+                <td>Additional horizontal shikigami option</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/orin1.png" class="card"></td>
+                <td>Additional penetrating phantom shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/orin2.png" class="card"></td>
+                <td>Allows user to pass through quelled spirits safely</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/tsukasa1.png" class="card"></td>
+                <td>Additional vertical tube shot</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/tsukasa2.png" class="card"></td>
+                <td>Additional horizontal tube sho</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/mamizou1.png" class="card"></td>
+                <td>Additional leaf shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/mamizou2.png" class="card"></td>
+                <td>Destroy bullets when barrier breaks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/yachie1.png" class="card"></td>
+                <td>Powers up your Otter Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/yachie2.png" class="card"></td>
+                <td>Weakens enemy Otter Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/saki1.png" class="card"></td>
+                <td>Powers up your Wolf Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/saki2.png" class="card"></td>
+                <td>Weakens enemy Wolf Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/yuuma1.png" class="card"></td>
+                <td>Powers up your Eagle Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/yuuma2.png" class="card"></td>
+                <td>Weakens enemy Eagle Spirit attacks</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/suika1.png" class="card"></td>
+                <td>Additional movement-tracing option</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/suika2.png" class="card"></td>
+                <td>Buffs damage against nearby enemies</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/biten1.png" class="card"></td>
+                <td>Additional gold pole shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/biten2.png" class="card"></td>
+                <td>Allows user to pass through Otter Spirits</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/enoko1.png" class="card"></td>
+                <td>Additional trap shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/enoko2.png" class="card"></td>
+                <td>Allows user to pass through Wolf Spirits</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/chiyari1.png" class="card"></td>
+                <td>Additional syringe shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/chiyari2.png" class="card"></td>
+                <td>Allows user to pass through Eagle Spirits</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/hisami1.png" class="card"></td>
+                <td>Additional tracking shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/hisami2.png" class="card"></td>
+                <td>Some bullets become slower</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/zanmu1.png" class="card"></td>
+                <td>Additional oni shots</td>
+              </tr>
+              <tr>
+                <td><img src="/images/udoalg/cards/zanmu2.png" class="card"></td>
+                <td>C3 and C4 meter attacks now grant 1/3 of a bomb</td>
+              </tr>
+              </table>
+            </span>
+          </details>
           <h3>Tier List</h3>
           <p>
             Please note that since the game came out pretty recently, this tentative tier list is mostly based off our feeling about characters, isn't rooted in

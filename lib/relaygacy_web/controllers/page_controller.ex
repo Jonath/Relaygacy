@@ -17,10 +17,6 @@ defmodule RelaygacyWeb.PageController do
     render(conn, "tools.html")
   end
 
-  def partners(conn, _params) do
-    render(conn, "partners.html")
-  end
-
   def credits(conn, _params) do
     render(conn, "credits.html")
   end
