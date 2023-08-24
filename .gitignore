@@ -37,3 +37,6 @@ npm-debug.log
 
 # All config files
 /config/
+
+# VSCode project files
+/.vscode/

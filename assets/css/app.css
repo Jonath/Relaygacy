@@ -14,41 +14,28 @@ body {
   background-size: cover;
 }
 
-section {
-  margin: 0px auto 0px auto;
-  width: 80%;
-}
-
-.logo {
-  vertical-align: middle;
-}
-
 .content {
-  margin: 0px auto 0px auto;
-  width: 88%;
-  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  max-width: 85%;
   background-color: #222;
   box-shadow: 4px 4px 4px 2px #888;
   opacity: 0.9;
   padding: 15px;
 }
 
-.subtext {
-  margin-top: 30px;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.content a {
-	color: #19f;
-}
-
 .socials {
   float: right;
 }
 
-.subtext h1 {
-  font-size: 40px;
+.subtext {
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.content a {
+	color: #19f;
 }
 
 .subtext h2 {
@@ -56,31 +43,28 @@ section {
 }
 
 .subtext p {
-  font-size: 18px;
   margin-top: 30px;
 }
 
-.subtext ul {
-  font-size: 18px;
-}
-
 .subtext li {
-  font-size: 18px;
   margin-top: 10px;
 }
 
 .subtext pre {
   margin-top: 50px;
-  font-size: 18px;
 }
 
 .separator {
 	height: 120px;
 }
 
+.socials ul {
+  padding: 10%;
+  list-style-type: none;
+}
+
 .social {
-  width: 50px;
-  height: 50px;
+  width: 90%;
 }
 
 header {
@@ -100,8 +84,8 @@ header ul {
 }
 
 header ul .subpage {
-	display: block;
 	text-decoration: none;
+	display: block;
 }
 
 header ul .subpage:not(.flag_container) {
@@ -122,10 +106,6 @@ li.item:not(:last-child) {
   margin-bottom: 10px;  
 }
 
-hr {
-  margin-top: 25px;
-}
-
 .banner {
   display: block;
   margin-left: auto;
@@ -133,10 +113,14 @@ hr {
   width: 90%;
 }
 
+.logo {
+  vertical-align: middle;
+}
+
 .images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;
+  column-gap: 5%;
 }
 
 .cover {
@@ -193,6 +177,7 @@ hr {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
   width: auto;
 }
 
@@ -202,6 +187,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid #888;
+  max-width: 100%;
   width: auto;
 }
 
@@ -359,7 +345,7 @@ th {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 50%;
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
@@ -381,318 +367,326 @@ th {
   border: 1px solid #888;
 }
 
-@media (min-width: 1050px) {
-  h1 {
-    margin-top: inherit;
-  }
-
-  header li {
-		float: left;
-	}
-
-  header .menu, header .languages {
-		clear: none;
-		float: right;
-		max-height: none;
-	}
-
-  header ul .subpage {
-		border-left: 1px solid #888;
-	}
-
-  #ss {
-    background:radial-gradient(#552586,#804fb3,#b589d6)
-  }
-
-  #s {
-    background:radial-gradient(#8b0000,#c54500,#ff8c00)
-  }
-
-  #a {
-    background:radial-gradient(#ff8c00,orange,#ff0)
-  }
-
-  #b {
-    background:radial-gradient(#ff0,#d6ff18,#adff2f)
-  }
-
-  #c {
-    background:radial-gradient(#adff2f,#57a818,green)
-  }
-
-  #d {
-    background:radial-gradient(#004040,#006060,teal)
-  }
-
-  #e {
-    background:radial-gradient(teal,#00bfbf,#0ff)
-  }
-
-  #meirin {
-    background-position: 120px;
-  }
-
-  #sprites {
-    background-position: 240px;
-  }
-
-  #memory {
-    background-position: 360px;
-  }
-
-  #mevious {
-    background-position: 480px;
-  }
-
-  #darkran {
-    background-position: 600px;
-  }
-
-  #griffon {
-    background-position: 720px;
-  }
-
-  #tinker {
-    background-position: 840px;
-  }
-
-  #kim {
-    background-position: 960px;
-  }
-
-  #macky {
-    background-position: 1080px;
-  }
-
-  #nanja {
-    background-position: 1200px;
-  }
-
-  #yan {
-    background-position: 1320px;
-  }
-
-  #schmitt {
-    background-position: 1440px;
-  }
-
-  #till {
-    background-position: 1560px;
-  }
-
-  #loadran {
-    background-position: 1680px;
-  }
-
-  #yuuka_kg {
-    background-position: 120px;
-  }
-
-  #muse {
-    background-position: 240px;
-  }
-
-  #morgan {
-    background-position: 360px;
-  }
-
-  #erich {
-    background-position: 480px;
-  }
-
-  #marie {
-    background-position: 600px;
-  }
-
-  #gates {
-    background-position: 720px;
-  }
-
-  #meimai {
-    background-position: 840px;
-  }
-
-  #milia {
-    background-position: 960px;
-  }
-
-  #vivit {
-    background-position: 1080px;
-  }
-
-  #yumemi {
-    background-position: 120px;
-  }
-
-  #chiyuri {
-    background-position: 240px;
-  }
-
-  #rikako {
-    background-position: 360px;
-  }
-
-  #kana {
-    background-position: 480px;
-  }
-
-  #kotohime {
-    background-position: 600px;
-  }
-
-  #ellen {
-    background-position: 720px;
-  }
-
-  #marisa_podd {
-    background-position: 840px;
-  }
-
-  #mima {
-    background-position: 960px;
-  }
-
-  #reimu_podd {
-    background-position: 1080px;
-  }
-
-  #eiki {
-    background-position: 120px;
-  }
-
-  #komachi {
-    background-position: 240px;
-  }
-
-  #yuuka_pofv {
-    background-position: 360px;
-  }
-
-  #medicine {
-    background-position: 480px;
-  }
-
-  #aya {
-    background-position: 600px;
-  }
-
-  #tewi {
-    background-position: 720px;
-  }
-
-  #mystia {
-    background-position: 840px;
-  }
-
-  #lunasa {
-    background-position: 960px;
-  }
-
-  #merlin {
-    background-position: 1080px;
-  }
-
-  #lyrica {
-    background-position: 1200px;
-  }
-
-  #cirno {
-    background-position: 1320px;
-  }
-
-  #reisen {
-    background-position: 1440px;
-  }
-
-  #youmu {
-    background-position: 1560px;
-  }
-
-  #sakuya {
-    background-position: 1680px;
-  }
-
-  #marisa_pofv {
-    background-position: 1800px;
-  }
-
-  #reimu_pofv {
-    background-position: 1920px;
-  }
-
-  #zanmu {
-    background-position: 120px;
-  }
-
-  #hisami {
-    background-position: 240px;
-  }
-
-  #chiyari {
-    background-position: 360px;
-  }
-
-  #enoko {
-    background-position: 480px;
-  }
-
-  #biten {
-    background-position: 600px;
-  }
-
-  #suika {
-    background-position: 720px;
-  }
-
-  #yuuma {
-    background-position: 840px;
-  }
-
-  #saki {
-    background-position: 960px;
-  }
-
-  #yachie {
-    background-position: 1080px;
-  }
-
-  #mamizou {
-    background-position: 1200px;
-  }
-
-  #tsukasa {
-    background-position: 1320px;
-  }
-
-  #rin {
-    background-position: 1440px;
-  }
-
-  #seiran {
-    background-position: 1560px;
-  }
-
-  #nazrin {
-    background-position: 1680px;
-  }
-
-  #aunn {
-    background-position: 1800px;
-  }
-
-  #ran {
-    background-position: 1920px;
-  }
-
-  #sanae {
-    background-position: 2040px;
-  }
-
-  #marisa_udoalg {
-    background-position: 2160px;
-  }
+#ss {
+  background:radial-gradient(#552586,#804fb3,#b589d6)
+}
+
+#s {
+  background:radial-gradient(#8b0000,#c54500,#ff8c00)
+}
+
+#a {
+  background:radial-gradient(#ff8c00,orange,#ff0)
+}
+
+#b {
+  background:radial-gradient(#ff0,#d6ff18,#adff2f)
+}
+
+#c {
+  background:radial-gradient(#adff2f,#57a818,green)
+}
+
+#d {
+  background:radial-gradient(#004040,#006060,teal)
+}
+
+#e {
+  background:radial-gradient(teal,#00bfbf,#0ff)
+}
+
+#meirin {
+  background-position: 120px;
+}
+
+#sprites {
+  background-position: 240px;
+}
+
+#memory {
+  background-position: 360px;
+}
+
+#mevious {
+  background-position: 480px;
+}
+
+#darkran {
+  background-position: 600px;
+}
+
+#griffon {
+  background-position: 720px;
+}
+
+#tinker {
+  background-position: 840px;
+}
+
+#kim {
+  background-position: 960px;
+}
+
+#macky {
+  background-position: 1080px;
+}
+
+#nanja {
+  background-position: 1200px;
+}
+
+#yan {
+  background-position: 1320px;
+}
+
+#schmitt {
+  background-position: 1440px;
+}
+
+#till {
+  background-position: 1560px;
+}
+
+#loadran {
+  background-position: 1680px;
+}
+
+#yuuka_kg {
+  background-position: 120px;
+}
+
+#muse {
+  background-position: 240px;
+}
+
+#morgan {
+  background-position: 360px;
+}
+
+#erich {
+  background-position: 480px;
+}
+
+#marie {
+  background-position: 600px;
+}
+
+#gates {
+  background-position: 720px;
+}
+
+#meimai {
+  background-position: 840px;
+}
+
+#milia {
+  background-position: 960px;
+}
+
+#vivit {
+  background-position: 1080px;
+}
+
+#yumemi {
+  background-position: 120px;
+}
+
+#chiyuri {
+  background-position: 240px;
+}
+
+#rikako {
+  background-position: 360px;
+}
+
+#kana {
+  background-position: 480px;
+}
+
+#kotohime {
+  background-position: 600px;
+}
+
+#ellen {
+  background-position: 720px;
+}
+
+#marisa_podd {
+  background-position: 840px;
+}
+
+#mima {
+  background-position: 960px;
+}
+
+#reimu_podd {
+  background-position: 1080px;
+}
+
+#eiki {
+  background-position: 120px;
+}
+
+#komachi {
+  background-position: 240px;
+}
+
+#yuuka_pofv {
+  background-position: 360px;
+}
+
+#medicine {
+  background-position: 480px;
+}
+
+#aya {
+  background-position: 600px;
+}
+
+#tewi {
+  background-position: 720px;
+}
+
+#mystia {
+  background-position: 840px;
+}
+
+#lunasa {
+  background-position: 960px;
+}
+
+#merlin {
+  background-position: 1080px;
+}
+
+#lyrica {
+  background-position: 1200px;
+}
+
+#cirno {
+  background-position: 1320px;
+}
+
+#reisen {
+  background-position: 1440px;
+}
+
+#youmu {
+  background-position: 1560px;
+}
+
+#sakuya {
+  background-position: 1680px;
+}
+
+#marisa_pofv {
+  background-position: 1800px;
+}
+
+#reimu_pofv {
+  background-position: 1920px;
+}
 
-  #reimu_udoalg {
-    background-position: 2280px;
+#zanmu {
+  background-position: 120px;
+}
+
+#hisami {
+  background-position: 240px;
+}
+
+#chiyari {
+  background-position: 360px;
+}
+
+#enoko {
+  background-position: 480px;
+}
+
+#biten {
+  background-position: 600px;
+}
+
+#suika {
+  background-position: 720px;
+}
+
+#yuuma {
+  background-position: 840px;
+}
+
+#saki {
+  background-position: 960px;
+}
+
+#yachie {
+  background-position: 1080px;
+}
+
+#mamizou {
+  background-position: 1200px;
+}
+
+#tsukasa {
+  background-position: 1320px;
+}
+
+#rin {
+  background-position: 1440px;
+}
+
+#seiran {
+  background-position: 1560px;
+}
+
+#nazrin {
+  background-position: 1680px;
+}
+
+#aunn {
+  background-position: 1800px;
+}
+
+#ran {
+  background-position: 1920px;
+}
+
+#sanae {
+  background-position: 2040px;
+}
+
+#marisa_udoalg {
+  background-position: 2160px;
+}
+
+#reimu_udoalg {
+  background-position: 2280px;
+}
+
+h1 {
+  margin-top: inherit;
+}
+
+header li {
+  float: left;
+}
+
+header .menu, header .languages {
+  clear: none;
+  float: right;
+  max-height: none;
+}
+
+header ul .subpage {
+  border-left: 1px solid #888;
+}
+
+@media only screen and (max-width:1100px){
+  .content {
+    max-width: 100%;
+  }
+
+  .separator {
+    height: 58px;
   }
 }
