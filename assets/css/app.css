@@ -1,6 +1,6 @@
 * {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	margin: 0;
+  margin: 0;
   font-family: sans-serif;
   background: url(/images/space.png) center no-repeat fixed;
   background-size: cover;
@@ -26,6 +26,7 @@ body {
 
 .socials {
   float: right;
+  max-width: 10%;
 }
 
 .subtext {
@@ -35,7 +36,7 @@ body {
 }
 
 .content a {
-	color: #19f;
+  color: #19f;
 }
 
 .subtext h2 {
@@ -55,7 +56,7 @@ body {
 }
 
 .separator {
-	height: 120px;
+  height: 120px;
 }
 
 .socials ul {
@@ -68,24 +69,24 @@ body {
 }
 
 header {
-	background-color: #222;
-	box-shadow: 1px 1px 4px 0 #888;
+  background-color: #222;
+  box-shadow: 1px 1px 4px 0 #888;
   position: absolute;
-	width: 100%;
+  width: 100%;
   z-index: 1;
 }
 
 header ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	overflow: hidden;
-	background-color: #222;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #222;
 }
 
 header ul .subpage {
-	text-decoration: none;
-	display: block;
+  text-decoration: none;
+  display: block;
 }
 
 header ul .subpage:not(.flag_container) {
@@ -95,11 +96,11 @@ header ul .subpage:not(.flag_container) {
 }
 
 header ul .subpage:hover, .menu-icon:hover, .lang-icon:hover {
-	background-color: #444;
+  background-color: #444;
 }
 
 header ul .subpage:active, .menu-icon:active, .lang-icon:active {
-	background-color: #888;
+  background-color: #888;
 }
 
 li.item:not(:last-child) { 
@@ -686,7 +687,11 @@ header ul .subpage {
     max-width: 100%;
   }
 
+  .tierlist {
+    max-width: 100%;
+  }
+
   .separator {
-    height: 58px;
+    height: 116px;
   }
 }
