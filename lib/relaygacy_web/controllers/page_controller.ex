@@ -40,4 +40,9 @@ defmodule RelaygacyWeb.PageController do
   def udoalg(conn, _params) do
     render(conn, "udoalg.html")
   end
+
+  def splitter(conn, _params) do
+    path =  Application.app_dir(:relaygacy, "priv/static/files/splitter_presets.xml")
+    conn |> send_download({:file, path})
+  end
 end

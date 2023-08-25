@@ -28,6 +28,7 @@ defmodule RelaygacyWeb.Router do
     get "/games/podd", PageController, :podd
     get "/games/pofv", PageController, :pofv
     get "/games/udoalg", PageController, :udoalg
+    get "/files/splitter", PageController, :splitter
   end
 
   # Other scopes may use custom stacks.
