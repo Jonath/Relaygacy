@@ -116,25 +116,20 @@ li.item:not(:last-child) {
 
 .logo {
   vertical-align: middle;
+  max-width: 80%;
 }
 
 .images {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5%;
+  grid-template-columns: 33% 33%;
+  grid-gap: 5%;
+  justify-content: center;
+  align-items: center;
 }
 
 .cover {
-  display: block;
-  width: 75%;
   margin-top: 5%;
-  margin-left: 70%;
-}
-
-.covercap {
-  display: block;
-  width: 72%;
-  margin-left: 70%;
+  max-width: 100%;
 }
 
 .textcenter {
@@ -283,13 +278,6 @@ th {
   border: 1px solid #000
 }
 
-.character {
-  width: 120px;
-  height: 120px;
-  cursor: pointer;
-  display: inline-block;
-}
-
 .character:hover {
   background-color:#aaa;
 }
@@ -340,6 +328,10 @@ th {
   overflow-y: auto;
 }
 
+.modal-char {
+  max-width: 10%;
+}
+
 .modal-content {
   position: relative;
   background-color: #222;
@@ -368,8 +360,11 @@ th {
   border: 1px solid #888;
 }
 
-.tierlist {
-  overflow: hidden;
+.character {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 #ss {
@@ -693,5 +688,9 @@ header ul .subpage {
 
   .separator {
     height: 116px;
+  }
+
+  .modal-content {
+    width: 95%;
   }
 }
