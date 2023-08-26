@@ -104,7 +104,7 @@ header ul .subpage:active, .menu-icon:active, .lang-icon:active {
 }
 
 li.item:not(:last-child) { 
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .banner {
@@ -307,7 +307,6 @@ th {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -320,8 +319,8 @@ th {
 
 .modal-body {
   padding: 2px 16px;
-  max-height: 95vh;
   overflow-y: auto;
+  height: 90vh;
 }
 
 .modal-char {
@@ -694,5 +693,273 @@ header ul .subpage {
     background-size: cover;
     width: 60px;
     height: 60px;
+  }
+
+  #meirin {
+    background-position: 60px;
+  }
+
+  #sprites {
+    background-position: 120px;
+  }
+
+  #memory {
+    background-position: 180px;
+  }
+
+  #mevious {
+    background-position: 240px;
+  }
+
+  #darkran {
+    background-position: 300px;
+  }
+
+  #griffon {
+    background-position: 360px;
+  }
+
+  #tinker {
+    background-position: 420px;
+  }
+
+  #kim {
+    background-position: 480px;
+  }
+
+  #macky {
+    background-position: 720px;
+  }
+
+  #nanja {
+    background-position: 780px;
+  }
+
+  #yan {
+    background-position: 840px;
+  }
+
+  #schmitt {
+    background-position: 900px;
+  }
+
+  #till {
+    background-position: 960px;
+  }
+
+  #loadran {
+    background-position: 1020px;
+  }
+
+  #yuuka_kg {
+    background-position: 60px;
+  }
+
+  #muse {
+    background-position: 120px;
+  }
+
+  #morgan {
+    background-position: 180px;
+  }
+
+  #erich {
+    background-position: 240px;
+  }
+
+  #marie {
+    background-position: 300px;
+  }
+
+  #gates {
+    background-position: 360px;
+  }
+
+  #meimai {
+    background-position: 420px;
+  }
+
+  #milia {
+    background-position: 480px;
+  }
+
+  #vivit {
+    background-position: 540px;
+  }
+
+  #yumemi {
+    background-position: 60px;
+  }
+
+  #chiyuri {
+    background-position: 120px;
+  }
+
+  #rikako {
+    background-position: 180px;
+  }
+
+  #kana {
+    background-position: 240px;
+  }
+
+  #kotohime {
+    background-position: 300px;
+  }
+
+  #ellen {
+    background-position: 360px;
+  }
+
+  #marisa_podd {
+    background-position: 420px;
+  }
+
+  #mima {
+    background-position: 480px;
+  }
+
+  #reimu_podd {
+    background-position: 540px;
+  }
+
+  #eiki {
+    background-position: 60px;
+  }
+
+  #komachi {
+    background-position: 120px;
+  }
+
+  #yuuka_pofv {
+    background-position: 180px;
+  }
+
+  #medicine {
+    background-position: 240px;
+  }
+
+  #aya {
+    background-position: 300px;
+  }
+
+  #tewi {
+    background-position: 360px;
+  }
+
+  #mystia {
+    background-position: 420px;
+  }
+
+  #lunasa {
+    background-position: 480px;
+  }
+
+  #merlin {
+    background-position: 540px;
+  }
+
+  #lyrica {
+    background-position: 600px;
+  }
+
+  #cirno {
+    background-position: 660px;
+  }
+
+  #reisen {
+    background-position: 720px;
+  }
+
+  #youmu {
+    background-position: 780px;
+  }
+
+  #sakuya {
+    background-position: 840px;
+  }
+
+  #marisa_pofv {
+    background-position: 900px;
+  }
+
+  #reimu_pofv {
+    background-position: 960px;
+  }
+
+  #zanmu {
+    background-position: 60px;
+  }
+
+  #hisami {
+    background-position: 120px;
+  }
+
+  #chiyari {
+    background-position: 180px;
+  }
+
+  #enoko {
+    background-position: 240px;
+  }
+
+  #biten {
+    background-position: 300px;
+  }
+
+  #suika {
+    background-position: 360px;
+  }
+
+  #yuuma {
+    background-position: 420px;
+  }
+
+  #saki {
+    background-position: 480px;
+  }
+
+  #yachie {
+    background-position: 540px;
+  }
+
+  #mamizou {
+    background-position: 600px;
+  }
+
+  #tsukasa {
+    background-position: 660px;
+  }
+
+  #rin {
+    background-position: 720px;
+  }
+
+  #seiran {
+    background-position: 780px;
+  }
+
+  #nazrin {
+    background-position: 840px;
+  }
+
+  #aunn {
+    background-position: 900px;
+  }
+
+  #ran {
+    background-position: 960px;
+  }
+
+  #sanae {
+    background-position: 1020px;
+  }
+
+  #marisa_udoalg {
+    background-position: 1080px;
+  }
+
+  #reimu_udoalg {
+    background-position: 1140px;
   }
 }
