@@ -211,19 +211,8 @@ figcaption {
   margin-bottom: 5px;
 }
 
-.nodot ul li img .gauge {
-  width: 252px;
-}
-
 .nodot ul li img .coin {
   width: 32px;
-}
-
-.nodot ul li div {
-  margin-left: 35px;
-  margin-bottom: inherit;
-  display: inline-block;
-  width: 400px;
 }
 
 .box {
@@ -262,7 +251,15 @@ table {
   margin-right: auto;
 }
 
-.animal {
+th {
+  font-size: 32px;
+  color: black;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #000
+}
+
+.imgdot {
   margin-right: 10px;
 }
 
@@ -270,12 +267,11 @@ table {
   border: none;
 }
 
-th {
-  font-size: 32px;
-  color: black;
+.character {
   width: 120px;
   height: 120px;
-  border: 1px solid #000
+  cursor: pointer;
+  display: inline-block;
 }
 
 .character:hover {
@@ -358,13 +354,7 @@ th {
 
 .portrait img {
   border: 1px solid #888;
-}
-
-.character {
-  width: 120px;
-  height: 120px;
-  cursor: pointer;
-  display: inline-block;
+  max-width: 100%;
 }
 
 #ss {
@@ -692,5 +682,17 @@ header ul .subpage {
 
   .modal-content {
     width: 95%;
+  }
+
+  th {
+    font-size: 16px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .character {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
   }
 }
