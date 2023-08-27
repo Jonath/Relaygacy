@@ -51,8 +51,9 @@ body {
   margin-top: 10px;
 }
 
-.subtext pre {
-  margin-top: 50px;
+.code {
+  margin-top: 5%;
+  font-family: monospace;
 }
 
 .separator {
@@ -124,12 +125,19 @@ li.item:not(:last-child) {
   grid-template-columns: 33% 33%;
   grid-gap: 5%;
   justify-content: center;
-  align-items: center;
+  place-items: center;
+}
+
+.figure {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
 }
 
 .cover {
-  margin-top: 5%;
   max-width: 100%;
+  margin: 0;
 }
 
 .textcenter {
@@ -144,47 +152,22 @@ li.item:not(:last-child) {
   width: 65%;
 }
 
-.bigimg {
+.leftimg {
   display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.mediumimg {
-  display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-
-.smallimg {
-  display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+  max-width: 80%;
+  width: auto;
 }
 
 .sourceimg {
   display: block;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
+  max-width: 80%;
   width: auto;
 }
 
-.boxedimg {
-  display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+.boxed {
   border: 1px solid #888;
-  max-width: 100%;
-  width: auto;
 }
 
 .card {
@@ -239,11 +222,6 @@ figcaption {
 
 .red {
   background-color: #ff0000;
-}
-
-.tetra {
-  margin-right: 1%;
-  height: 200px;
 }
 
 table {
@@ -320,7 +298,7 @@ th {
 .modal-body {
   padding: 2px 16px;
   overflow-y: auto;
-  height: 90vh;
+  max-height: 90vh;
 }
 
 .modal-char {
@@ -654,6 +632,7 @@ th {
 
 h1 {
   margin-top: inherit;
+  max-width: 100%;
 }
 
 header li {
@@ -671,12 +650,21 @@ header ul .subpage {
 }
 
 @media only screen and (max-width:1100px){
+  section {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .content {
     max-width: 100%;
   }
 
   .separator {
     height: 116px;
+  }
+
+  .sourceimg {
+    max-width: 100%;
   }
 
   .modal-content {
