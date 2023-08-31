@@ -77,6 +77,10 @@ header {
   z-index: 1;
 }
 
+.menu-btn, .menu-icon {
+  display: none;
+}
+
 header ul {
   margin: 0;
   padding: 0;
@@ -88,19 +92,16 @@ header ul {
 header ul .subpage {
   text-decoration: none;
   display: block;
-}
-
-header ul .subpage:not(.flag_container) {
   padding-left: 20px;
   padding-right: 20px;
   line-height: 58px;
 }
 
-header ul .subpage:hover, .menu-icon:hover, .lang-icon:hover {
+header ul .subpage:hover, .menu-icon:hover {
   background-color: #444;
 }
 
-header ul .subpage:active, .menu-icon:active, .lang-icon:active {
+header ul .subpage:active, .menu-icon:active {
   background-color: #888;
 }
 
@@ -117,6 +118,7 @@ li.item:not(:last-child) {
 
 .logo {
   vertical-align: middle;
+  width: 317px;
   max-width: 80%;
 }
 
@@ -288,23 +290,6 @@ th {
   background-color: rgba(0,0,0,0.4);
 }
 
-.modal-header {
-  padding: 2px 16px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-}
-
-.modal-body {
-  padding: 2px 16px;
-  overflow-y: auto;
-  max-height: 90vh;
-}
-
-.modal-char {
-  max-width: 10%;
-}
-
 .modal-content {
   position: relative;
   background-color: #222;
@@ -315,6 +300,23 @@ th {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.modal-char {
+  max-width: 10%;
 }
 
 .portrait {
@@ -639,7 +641,7 @@ header li {
   float: left;
 }
 
-header .menu, header .languages {
+header .menu {
   clear: none;
   float: right;
   max-height: none;
@@ -649,7 +651,74 @@ header ul .subpage {
   border-left: 1px solid #888;
 }
 
-@media only screen and (max-width:1100px){
+@media only screen and (max-width: 1100px) {
+  body {
+    background: none;
+    background-color: rgb(48.45, 26.78, 76.68);
+  }
+
+  .separator {
+    height: 60px;
+    background-color: #222;
+    box-shadow: 1px 1px 4px 0 #888;
+  }
+
+  header, header .menu {
+    clear: right;
+    max-height: 0;
+    transition: max-height .1s ease-out;
+  }
+
+  header li {
+    float: none;
+  }
+
+  header ul .subpage {
+    border-left: none;
+  }
+
+  header .menu-btn:checked ~ .menu {
+    display: block;
+    max-height: 400px;
+    border: 1px solid #444;
+  }
+
+  .menu-icon {
+    display: block;
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+  }
+
+  .menu-icon .nav-icon:before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+  }
+
+  .menu-icon .nav-icon:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+  }
+
   section {
     width: 100%;
     max-width: 100%;
@@ -657,10 +726,6 @@ header ul .subpage {
 
   .content {
     max-width: 100%;
-  }
-
-  .separator {
-    height: 116px;
   }
 
   .sourceimg {

@@ -7,8 +7,10 @@
 <body>
   <main>
     <header>
-      <a class="subpage" href="/"><img src="/images/test.png" class="logo"></a>
-      <ul class="menu">
+      <a class="subpage" href="/"><img src="/images/logo.png" class="logo"></a>
+      <input class="menu-btn" type="checkbox" name="nav" id="menu-btn" unchecked>
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <ul id="main_list" class="menu">
         <li><a class="subpage" href="/events">Events</a></li>
         <li><a class="subpage" href="/tools">Tools</a></li>
         <li><a class="subpage" href="/resources">Resources</a></li>
@@ -115,6 +117,7 @@
           <img src="/images/kiohgyoku/cancel.gif" class="sourceimg">
           <figcaption>Cancelling a wall of bullets with guard break</figcaption>
           <h2>Characters</h2>
+          </div>
           <div class="tierlist" x-data="{ openModal: '' }">
             <table class="kg">
               <tr>
@@ -937,7 +940,6 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
