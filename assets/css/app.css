@@ -81,6 +81,10 @@ header {
   display: none;
 }
 
+ul {
+  word-break: break-word;
+}
+
 header ul {
   margin: 0;
   padding: 0;
