@@ -21,6 +21,14 @@ defmodule RelaygacyWeb.PageController do
     render(conn, "credits.html")
   end
 
+  def games(conn, _params) do
+    render(conn, "games.html")
+  end
+
+  def md3(conn, _params) do
+    render(conn, "md3.html")
+  end
+
   def twinklestar(conn, _params) do
     render(conn, "twinklestar.html")
   end

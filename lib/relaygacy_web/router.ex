@@ -23,6 +23,8 @@ defmodule RelaygacyWeb.Router do
     get "/tools", PageController, :tools
     get "/credits", PageController, :credits
     get "/discord", PageController, :discord
+    get "/games", PageController, :games
+    get "/games/md3", PageController, :md3
     get "/games/twinklestar", PageController, :twinklestar
     get "/games/kiohgyoku", PageController, :kiohgyoku
     get "/games/podd", PageController, :podd
