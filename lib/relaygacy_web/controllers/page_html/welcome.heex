@@ -7,7 +7,7 @@
 <body>
   <main>
     <header>
-      <a class="subpage" href="/"><img src="/images/logo2.png" class="logo"></a>
+      <a class="subpage" href="/"><img src="/images/logo.png" class="logo"></a>
       <input class="menu-btn" type="checkbox" name="nav" id="menu-btn" unchecked>
       <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
       <ul id="main_list" class="menu">
@@ -46,39 +46,111 @@
           </ul>
         </div>
         <div class="subtext">
-          <h1 class="textcenter">Phantasmagoria Fest 2</h1>
-          <img src="/images/yumemi.jpg" class="banner">
+          <h1 class="textcenter">Phantasmagoria Fest 3</h1>
+          <!--img src="/images/yumemi.jpg" class="banner"-->
           <p class="introduction">
-            We are happy to announce for the <time datetime="2023-11-26">26th of November 2023</time> the second edition of the Phantasmagoria Fest,
-            a PVP tournament centered around the versus shmup subgenre. For this edition, the tournament will be centered around Touhou 3:
-            東方夢時空　～ The Phantasmagoria of Dim.Dream, the first game of this genre in the Touhou series. You can find a guide that sumarizes the game a bit <a href="/games/podd">here</a>.
+            We are happy to announce for the <time datetime="2024-09-22">22nd September 2023 </time> the third edition of the Phantasmagoria Fest,
+            a PVP tournament centered around the versus shmup subgenre. For this edition, the tournament will be centered around Touhou 9:
+            東方花映塚　～ Phantasmagoria of Flower View, the second game of this genre in the Touhou series. You can find a guide that sumarizes the game a bit <a href="/games/pofv">here</a>.
           </p>
           <div class="images">
-            <img src="/images/podd/cover.png" class="cover">
-            <img src="/images/podd/selectScreen.png" class="cover">
+            <img src="/images/pofv/cover.jpg" class="cover">
+            <img src="/images/pofv/selectScreen.png" class="cover">
           </div>
           <p class="introduction">
-            Because there is no online VS mode implemented for this game, the tournament will be ran through <a href="/tools/#parsec">Parsec</a> on a set of two
-            dedicated Shadow machines we set up for the occasion. This way, we want to make it so that both players experience latency. This is also an easy way to setup controls
-            for both characters: in particular, as a match is going on, we can prepare the controls for the next set on the other machine.
+            Despite there being an online VS mode implemented for this game (adonis.exe), this tournament will be ran through <a href="/tools/#parsec">Parsec</a> on a set of two dedicated machines we set up for the occasion.
+            This way, we want to make it so that both players experience latency. This is also an easy way to setup the stream, because the spectate mode given with adonis.exe needs to catch up to players.
+            Additionally, as a match is going on, this setup allows us to prepare the controls for the next set on the other machine.
           </p>
           <p class="introduction">
-            As for the emulator of choice for the tournament, we have elected to use DosBox-X as it is one of the most stable ones for PC-98 emulation. Because PoDD offer no keybind mapping,
-            we recommend you to look into <a href="/tools/#ksplit">KeyboardSplitter</a> if you plan to participate in this tournament using a keyboard. If you plan to use a controller instead,
-            we recommend you use <a href="/tools/#joytokey">JoyToKey</a> instead. We've been able to test and confirm all possible setups work properly on our end, but feel free to test them before
-            the tournament using the archive available on our Discord server.
+            Parsec allows players to play as if they were doing so locally on the same machine.
+            Because of that, playing with two keyboards at the same time can be challenging (as on local PoFV this would force players to use the keyboard left and keyboard right input modes).
+            To solve this issue, we recommend you to look into <a href="/tools/#ksplit">KeyboardSplitter</a> if you plan to participate in this tournament using a keyboard.
+            We've been able to test and confirm all possible setups work properly on our end, but feel free to test them before the tournament using the archive available on our Discord server.
           </p>
           <p class="introduction">
-            The format of the tournament will be Bo3 (best of 3), with default rulesets. This means a match will itself last up to 3 rounds.
-            We also have plans for a losers bracket, if the time and number of participants allows for it. Additionally, the game will be played for all matches in the Lunatic difficulty.
-            As last time, uou do not have to pick a main character. Instead, the ruling goes as follows:
+            The format of the tournament will be Bo3 (best of 3), except for the finals which will be Bo5 (best of 5), with a new dedicated ruleset. We also have plans for a losers bracket,
+            if the time and number of participants allows for it. Additionally, the game will be played for all matches in the Lunatic difficulty. The new dedicated ruleset works as follows:
           </p>
           <ul>
-            <li>For the first match in each set, a random person will be picked up to select their character first. Their opponent can then counterpick.</li>
-            <li>For any subsequent match in a set, the loser will get to counterpick, while the winner needs to keep the character they selected (and won with) previously.</li>
+            <li>Each player will be given 100 points to choose 3 characters among the roster. Here are the cost of each character:</li>
+          </ul>
+          <table id="fuel">
+            <tr>
+              <th>Marisa</th>
+              <td>44</td>
+            </tr>
+            <tr>
+              <th>Reimu</th>
+              <td>44</td>
+            </tr>
+            <tr>
+              <th>Youmu</th>
+              <td>43</td>
+            </tr>
+            <tr>
+              <th>Youmu</th>
+              <td>40</td>
+            </tr>
+            <tr>
+              <th>Eiki</th>
+              <td>40</td>
+            </tr>
+            <tr>
+              <th>Lyrica</th>
+              <td>37</td>
+            </tr>
+            <tr>
+              <th>Medicine</th>
+              <td>35</td>
+            </tr>
+            <tr>
+              <th>Reisen</th>
+              <td>33</td>
+            </tr>
+            <tr>
+              <th>Merlin</th>
+              <td>31</td>
+            </tr>
+            <tr>
+              <th>Lunasa</th>
+              <td>31</td>
+            </tr>
+            <tr>
+              <th>Yuuka</th>
+              <td>29</td>
+            </tr>
+            <tr>
+              <th>Sakuya</th>
+              <td>29</td>
+            </tr>
+            <tr>
+              <th>Aya</th>
+              <td>27</td>
+            </tr>
+            <tr>
+              <th>Tewi</th>
+              <td>26</td>
+            </tr>
+            <tr>
+              <th>Mystia</th>
+              <td>25</td>
+            </tr>
+            <tr>
+              <th>Cirno</th>
+              <td>25</td>
+            </tr>
+          </table>
+          <ul>
+            <li>For this choice of 3 characters, each player needs to define a primary character (that will be played the first match) and two secondary characters (that will be played the second and third match if any).</li>
           </ul>
           <p>
-            We are hosting the tournament through challonge <a href="https://challonge.com/phantasmfest2">here</a>. If you do plan to participate, please, do register as soon as possible, since
+            For example, for a total of 100 points, player 1 could select Eiki, Lunasa and Sakuya (40+31+29). Player 2 could select Marisa, Merlin and Cirno (44+31+25). The primaries could be Eiki and Marisa, but not necessarily!
+            In that case however, the first match would be Eiki vs Marisa. If player 2 wins, then they choose for the second match their secondary, here Merlin. Player 1 then can counterpick with Lunasa or Sakuya.
+            Let's say they select Lunasa here, and win. In such a case, the third match would have to be Sakuya vs Cirno.
+          </p>
+          <p>
+            We are hosting the tournament through challonge <a href="https://challonge.com/phantasmfest3">here</a>. If you do plan to participate, please, do register as soon as possible, since
             that would allow us to plan ahead!
           </p>
         </div>

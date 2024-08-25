@@ -230,12 +230,17 @@ figcaption {
   background-color: #ff0000;
 }
 
+#fuel td, #fuel th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
 table {
   margin-left: auto;
   margin-right: auto;
 }
 
-th {
+.tierlist th {
   font-size: 32px;
   color: black;
   width: 120px;
@@ -740,7 +745,7 @@ header ul .subpage {
     width: 95%;
   }
 
-  th {
+  .tierlist th {
     font-size: 16px;
     width: 60px;
     height: 60px;
